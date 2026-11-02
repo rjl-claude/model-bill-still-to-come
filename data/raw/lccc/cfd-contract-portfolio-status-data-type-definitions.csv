@@ -1,0 +1,9 @@
+Field Name,Datatype
+CfD ID,varchar(15)
+Name of CfD Unit,varchar(100)
+Allocation round,varchar(25)
+Technology Type,varchar(50)
+Transmission or Distribution connection,varchar(15)
+Status,varchar(50)
+Estimated Start Date,datetime
+Maximum Contract Capacity (MW),"numeric(13,3)"

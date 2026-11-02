@@ -1,0 +1,12 @@
+Field Name,Datatype
+Quarterly_Obligation_Period,varchar(100)
+Sensitivity,varchar(30)
+Period Start,date
+Period End,date
+Total Reserve Amount_GBP,numeric(38,4)
+Interim Levy Rate_GBP_Per_MWh,numeric(38,4)
+Forecast_CFD_Payments_GBP,numeric(38,4)
+CfD_Generation,numeric(38,4)
+Forecast_LCDCFD_Payments_GBP,numeric(38,4)
+LCDCfD_Generation,numeric(38,4)
+CfD_Capacity,numeric(38,4)

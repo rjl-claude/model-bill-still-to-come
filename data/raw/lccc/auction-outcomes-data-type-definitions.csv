@@ -1,0 +1,12 @@
+Field Name,Datatype
+Auction,varchar(10)
+Version,varchar(20)
+Publication Date,date
+Project Name,varchar(250)
+Developer,varchar(250)
+Technology Type,varchar(100)
+Capacity (MW),"numeric(13,2)"
+Strike Price (GBP per MWh),"numeric(13,3)"
+Delivery Year,varchar(10)
+Homes Powered,int
+Region,varchar(20)

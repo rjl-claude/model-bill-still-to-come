@@ -1,0 +1,6 @@
+Field Name,Datatype
+QOP,varchar(100)
+Settlement Day,datetime
+Payment Day,datetime
+Technology,varchar(100)
+Forecast CfD payments (GBP),"numeric(38,4)"

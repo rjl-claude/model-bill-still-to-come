@@ -1,0 +1,14 @@
+Field Name,Datatype
+Allocation Round,varchar(25)
+Avoided GHG (tonnes CO2e),"numeric(38,4)"
+Avoided GHG Cost (GBP),"numeric(38,4)"
+CfD ID,varchar(50)
+Name of CfD Unit,varchar(250)
+CfD Generation (MWh),"numeric(38,4)"
+CfD Payments (GBP),"numeric(38,4)"
+Market Reference Price (GBP/MWh),"numeric(38,4)"
+Reference Type,varchar(5)
+Technology,varchar(100)
+Weighted IMRP (GBP/MWh),"numeric(38,4)"
+Strike Price (GBP per MWh),"numeric(38,4)"
+Settlement Date,date

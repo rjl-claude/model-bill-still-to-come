@@ -1,0 +1,5 @@
+Field Name,Datatype
+QOP,varchar(100)
+DateTime,datetime
+Technology,varchar(100)
+Forecast generation (MWh),"numeric(38,4)"

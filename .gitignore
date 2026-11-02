@@ -1,0 +1,3 @@
+data/raw/**/*.tmp
+.venv/
+__pycache__/
