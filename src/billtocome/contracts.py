@@ -23,7 +23,19 @@ HPC_STARTS = (pd.Timestamp("2030-04-01"), pd.Timestamp("2031-04-01"))
 # Last day of each reactor's target commissioning window (CfD cl. 2.1, 2.2: four years from 1 May 2025
 # and 1 Nov 2025, to but excluding the end date), no extension assumed (point 24).
 HPC_WINDOW_LAST_DAY = (pd.Timestamp("2029-04-30"), pd.Timestamp("2029-10-31"))
-HPC_CAP_MWH = 910_000_000  # Contracted Generation Cap, both reactors together (cl. 1.1, 6.1)
+HPC_CAP_MWH = 910_000_000
+# Investment Contracts with a fixed end instead of 15 years (DECC FIDeR contracts; model-subsidy-book
+# gaps-closed.md F02): Drax unit 1 and Lynemouth end 31 Mar 2027.
+FIXED_END = {"INV-DRX-001": pd.Timestamp("2027-03-31"), "INV-LYN-001": pd.Timestamp("2027-03-31")}
+# The two biomass bridging contracts (low-carbon dispatchable CfDs), not in LCCC's portfolio list:
+# 1 Apr 2027 to 31 Mar 2031, top-up only (no payback), paid on output up to a 27% load factor.
+# Drax: 4 x 645 MW, £109.90/MWh (2012 prices; signed LCD CfD, LCCC). Lynemouth: 406.79 MW, £154/MWh
+# (2024 prices; DESNZ notice 9 Jul 2026). Both in data/raw/bridging/.
+BRIDGING = [
+    dict(cfd_id="LCD-DRX", name="Drax bridging contract (4 units)", capacity_mw=4 * 645.0, strike_2012=109.90),
+    dict(cfd_id="LCD-LYN", name="Lynemouth bridging contract", capacity_mw=406.79, strike_2024=154.0),
+]
+BRIDGING_START, BRIDGING_END, BRIDGING_LF = pd.Timestamp("2027-04-01"), pd.Timestamp("2031-03-31"), 0.27  # Contracted Generation Cap, both reactors together (cl. 1.1, 6.1)
 ROUND = {f"Allocation Round {i}": f"AR{i}" for i in range(1, 8)}
 # Units whose LCCC portfolio name differs from the auction list's (AR3 Dogger Bank).
 NAME_OVERRIDE = {
@@ -121,4 +133,13 @@ def load(raw: Path = RAW, hpc_strike_2012: float = HPC_STRIKE_2012, hpc_term: st
                          end=start + pd.DateOffset(years=term_years(r)), term_years=term_years(r),
                          strike_2024=strike, strike_source=source, auction_strike_2024=auction,
                          cap_mwh=None))
-    return pd.DataFrame(rows)
+    for b in BRIDGING:
+        strike = b.get("strike_2024") or b["strike_2012"] * P2012_TO_2024
+        rows.append(dict(cfd_id=b["cfd_id"], name=b["name"], round="Bridging", technology="Biomass Conversion",
+                         status="Signed", built=True, capacity_mw=b["capacity_mw"], start=BRIDGING_START,
+                         end=BRIDGING_END, term_years=4, strike_2024=strike, strike_source="bridging contract",
+                         auction_strike_2024=None, cap_mwh=None))
+    out = pd.DataFrame(rows)
+    for cid, end in FIXED_END.items():
+        out.loc[out.cfd_id == cid, "end"] = end
+    return out

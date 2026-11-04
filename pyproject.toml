@@ -3,7 +3,12 @@ name = "billtocome"
 version = "0.1.0"
 description = "The bill still to come: what signed contracts already oblige Britain's bill-payers and taxpayers to pay for climate policy on electricity (Report No. 2)."
 requires-python = "==3.13.*"
-dependencies = ["pandas>=2.2", "openpyxl>=3.1", "odfpy>=1.4", "pyyaml>=6"]
+dependencies = [
+    "pandas>=2.2",
+    "openpyxl>=3.1",
+    "odfpy>=1.4",
+    "pyyaml>=6",
+]
 
 [dependency-groups]
 dev = ["pytest>=8"]

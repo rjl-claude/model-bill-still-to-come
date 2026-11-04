@@ -1,0 +1,11 @@
+# Written explanations for checks over the 15% margin (build plan point 14). One entry per line and period.
+# Read by the checks report (aios-harness#77); a gap over 15% without an entry fails the build.
+- check: LCCC two-year forecast, base case
+  line: Renewables
+  period: 2027-04 to 2028-03
+  gap: model about 1.7 x LCCC
+  explanation: >
+    LCCC prices on the market's forward curve (winter 2026-27 reference prices £108-152/MWh cash);
+    the model uses DESNZ Annex M (2026 baseload £75/MWh, 2024 prices), as ruled (ADR 0003), so its
+    top-up per MWh is about £56 cash against LCCC's £41. The model also starts new contracts on
+    LCCC's expected dates at each farm's measured output, about a third more MWh than LCCC's quarters.

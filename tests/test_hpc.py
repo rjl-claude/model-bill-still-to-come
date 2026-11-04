@@ -42,5 +42,14 @@ def test_early_start_inside_reactor_one_window():
 
 def test_every_other_contract_ends_term_years_after_start():
     c = load()
-    o = c[c.technology != "Nuclear"]
+    o = c[(c.technology != "Nuclear") & (c["round"] != "Bridging") & ~c.cfd_id.isin(["INV-DRX-001", "INV-LYN-001"])]
     assert (o.end == o.apply(lambda r: r.start + pd.DateOffset(years=int(r.term_years)), axis=1)).all()
+
+
+def test_fixed_ends_and_bridging():
+    c = load().set_index("cfd_id")
+    assert c.loc["INV-DRX-001", "end"] == c.loc["INV-LYN-001", "end"] == pd.Timestamp("2027-03-31")
+    b = c[c["round"] == "Bridging"]
+    assert sorted(b.index) == ["LCD-DRX", "LCD-LYN"]
+    assert (b.start == pd.Timestamp("2027-04-01")).all() and (b.end == pd.Timestamp("2031-03-31")).all()
+    assert b.loc["LCD-DRX", "strike_2024"] == pytest.approx(153.14, abs=0.01)

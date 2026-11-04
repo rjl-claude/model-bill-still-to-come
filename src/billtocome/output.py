@@ -13,11 +13,25 @@ import pandas as pd
 RAW = Path(__file__).resolve().parents[2] / "data" / "raw" / "lccc"
 HOURS = 8760
 DECLINE = 0.016
+# Decline with age by technology, the same in every scheme (build plan point 17): wind 1.6%/yr
+# (Staffell & Green 2014), solar PV 0.5%/yr (Jordan & Kurtz 2013), everything else flat.
+WIND_TECH = {"Offshore Wind", "Onshore Wind", "Floating Offshore Wind", "Remote Island Wind"}
+
+
+def decline_for(technology: str, wind: float = DECLINE, solar: float = 0.005) -> float:
+    if technology in WIND_TECH:
+        return wind
+    if technology == "Solar PV":
+        return solar
+    return 0.0
+
+
 # No British CfD record yet: DESNZ Electricity Generation Costs 2023 (floating offshore, tidal stream);
 # nuclear 90% (stated assumption, a bracket step); geothermal 80% (stated; 12 MW in all).
 ASSUMED_LF = {"Floating Offshore Wind": 0.56, "Tidal Stream": 0.38, "Nuclear": 0.90, "Geothermal": 0.80}
 # No record of its own: treated as its nearest measured technology.
-LIKE = {"Remote Island Wind": "Onshore Wind", "Biomass Conversion": "Biomass Conversion"}
+LIKE = {"Remote Island Wind": "Onshore Wind", "Biomass Conversion": "Biomass Conversion",
+        "Advanced Conversion Technology": "Energy from Waste"}  # waste gasification: nearest is EfW
 BASE_YEARS = (2023, 2024, 2025)
 
 

@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
+OLD_SUMS = Path("/srv/aios/projects/model-subsidy-book/data/raw/SHA256SUMS")
 
 
 def _latest() -> dict:
@@ -37,7 +38,13 @@ def test_every_file_on_disk_matches_its_latest_record():
         rel = path.relative_to(RAW).as_posix()
         assert rel in latest, f"{rel} is not in MANIFEST"
         rec = latest[rel]
-        assert rec["url"].startswith("https://"), rel
+        # Either fetched from its publisher, or copied from the 16 Oct fetch (model-subsidy-book), whose
+        # own checksum list must then hold the same file.
+        if rec["url"].startswith("copied from model-subsidy-book"):
+            sums = OLD_SUMS.read_text() if OLD_SUMS.exists() else ""
+            assert rec["sha256"] in sums, f"{rel}: copied, but not in the old checksum list"
+        else:
+            assert rec["url"].startswith("https://"), rel
         assert hashlib.sha256(path.read_bytes()).hexdigest() == rec["sha256"], f"{rel} changed since fetch"
 
 

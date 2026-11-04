@@ -35,3 +35,10 @@ def test_decline_with_age():
     assert yearly_mwh(100, 0.40, start_year=2020, year=2034) == pytest.approx(base * 0.984 ** 10)
     # a farm not yet built starts at its full level
     assert yearly_mwh(100, 0.40, start_year=2030, year=2030) == pytest.approx(100 * 8760 * 0.40)
+
+
+def test_decline_by_technology():
+    from billtocome.output import decline_for
+    assert decline_for("Offshore Wind") == 0.016 and decline_for("Onshore Wind") == 0.016
+    assert decline_for("Solar PV") == 0.005
+    assert decline_for("Nuclear") == decline_for("Biomass Conversion") == 0.0
