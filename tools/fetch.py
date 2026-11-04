@@ -83,6 +83,21 @@ FILES = {
         "https://www.ofgem.gov.uk/sites/default/files/2026-03/RO_24-25_SY23_Annual_Report-20260327121336.pdf",
     "ofgem/ro-buy-out-price-mutualisation-2026-27.html":
         "https://www.ofgem.gov.uk/data/renewables-obligation-buy-out-price-and-mutualisation-threshold-and-ceilings-2026-2027",
+    # CfD standard terms by round (negative-price rules; aios-harness#63)
+    "cfd-terms/AR1_Generic_CfD_TCs_29_August_2014.pdf":
+        "https://assets.publishing.service.gov.uk/media/5a7d5b1ce5274a3356f2bb87/Generic_CfD_TCs__29_August_2014_.pdf",
+    "cfd-terms/AR2_CFD_Standard_Terms_V2_13_March_2017.pdf":
+        "https://assets.publishing.service.gov.uk/media/5a8198f040f0b62305b8fcff/FINAL_CFD_Standard_Terms_and_Conditions_V2-_13_March_2017_.pdf",
+    "cfd-terms/AR3_Standard_Terms_and_Conditions.pdf":
+        "https://assets.publishing.service.gov.uk/media/5cc981abe5274a1ac83aff12/AR3-Standard-Terms-and-Conditions.pdf",
+    "cfd-terms/AR4_Standard_Terms_and_Conditions.pdf":
+        "https://assets.publishing.service.gov.uk/media/61e04175d3bf7f054db937f6/AR4_Standard_Terms_and_Conditions.pdf",
+    "cfd-terms/AR5_Standard_Terms_and_Conditions.pdf":
+        "https://assets.publishing.service.gov.uk/media/6412f9b8e90e0776a0d957de/ar5-standard-terms-and-conditions.pdf",
+    "cfd-terms/AR6_Standard_Terms_and_Conditions.pdf":
+        "https://assets.publishing.service.gov.uk/media/65f1ab91133c221271cd3861/cfd-ar6-standard-terms-and-conditions.pdf",
+    "cfd-terms/AR7_Standard_Terms_and_Conditions_July_2025.pdf":
+        "https://assets.publishing.service.gov.uk/media/688b9b55fdde2b8f73469577/AR7_-_Standard_Terms_and_Conditions_July_2025_84916781.18_.pdf",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.
