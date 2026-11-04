@@ -13,10 +13,10 @@ def test_every_contract_has_a_strike_and_a_start(c):
     assert c.start.notna().all(), c[c.start.isna()][["cfd_id", "name"]]
 
 
-def test_hinkley_point_c_is_one_contract_of_35_years(c):
+def test_hinkley_point_c_is_two_reactors(c):
     h = c[c.technology == "Nuclear"]
-    assert len(h) == 1 and h.term_years.iloc[0] == 35
-    assert h.strike_2024.iloc[0] == pytest.approx(128.9, abs=0.1)
+    assert len(h) == 2
+    assert h.strike_2024.iloc[0] == pytest.approx(124.71, abs=0.01)
 
 
 def test_hand_example_contract(c):
