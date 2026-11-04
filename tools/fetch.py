@@ -103,6 +103,25 @@ FILES = {
         "https://api.neso.energy/dataset/549b0667-b533-4748-95bd-f6e13933a47d/resource/6c78a777-b885-4bb6-bc35-8100f9e137a2/download/fes2025_es1_v006.csv",
     "neso-fes/10yo2026_es1_v001.csv":
         "https://api.neso.energy/dataset/549b0667-b533-4748-95bd-f6e13933a47d/resource/b3bf8ac0-d27a-447c-975c-208ae92c0fa5/download/10yo2026_es1_v001.csv",
+    # Stage 0 facts (aios-harness#79)
+    "desnz/DUKES_5.1.xlsx":
+        "https://assets.publishing.service.gov.uk/media/6a6a35d80ddb7e4831c629ef/DUKES_5.1.xlsx",
+    "hmt/AB26_Policy_Costing.pdf":
+        "https://assets.publishing.service.gov.uk/media/6ae1883fe4367e5c8b0467df/AB26_Policy_Costing.pdf",
+    "bics/sau-report-on-bics-2026-07-24.pdf":
+        "https://assets.publishing.service.gov.uk/media/6a61f3c49a419980593b2aba/final_report.pdf",
+    "bics/pq-17079-bics-budget-2026-07-13.json":
+        "https://questions-statements-api.parliament.uk/api/writtenquestions/questions/1925771",
+    "lccc/market-reference-prices.html":
+        "https://www.lowcarboncontracts.uk/our-schemes/contracts-for-difference/market-reference-prices",
+    "lccc/baseload-market-reference-price-winter-2026.html":
+        "https://www.lowcarboncontracts.uk/news/baseload-market-reference-price-winter-2026-published",
+    "nrel/jordan-kurtz-2012-pv-degradation-rates-nrel-ja-5200-51664.pdf":
+        "https://www.osti.gov/servlets/purl/1045052",
+    "legislation/uksi-2014-2043-Electricity-Capacity-Regulations-2014-latest.pdf":
+        "https://www.legislation.gov.uk/uksi/2014/2043/data.pdf",
+    "legislation/uksi-2014-2043-Electricity-Capacity-Regulations-2014-latest.xml":
+        "https://www.legislation.gov.uk/uksi/2014/2043/data.xml",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.
