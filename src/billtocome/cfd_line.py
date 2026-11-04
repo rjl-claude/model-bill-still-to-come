@@ -41,11 +41,16 @@ class Settings:
     wind_decline: float = O.DECLINE
     solar_decline: float = 0.005
     contracts: pd.DataFrame | None = None
+    abandonment: bool = False  # bracket: unbuilt renewables cut by their measured termination rate
+    late_starts: bool = False  # bracket: unbuilt contracts start as late as their round implies
 
 
 def build(s: Settings | None = None, last_year: int = 2066) -> pd.DataFrame:
     s = s or Settings()
     c = s.contracts if s.contracts is not None else C.load()
+    if s.late_starts:
+        from .unbuilt import late_starts
+        c = late_starts(c)
     lf = O.measured(c[c["round"] != "Bridging"])
     new = O.new_farm_lf(c, lf)
     own = D.own_discounts()
@@ -78,6 +83,10 @@ def build(s: Settings | None = None, last_year: int = 2066) -> pd.DataFrame:
                              load_factor=load_f, lf_source=lf_src, strike=strike, market=market,
                              capture=capture, neg_share=ns, payment=pay))
     out = pd.DataFrame(rows)
+    if s.abandonment:
+        from .unbuilt import termination_rate
+        k = ~out.built & (out.line == "Renewables")
+        out.loc[k, "payment"] *= 1 - out.loc[k, "technology"].map(termination_rate)
     return _apply_hpc_cap(out, c)
 
 
