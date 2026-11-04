@@ -17,6 +17,17 @@ def top_up(strike: float, market: float, capture: float, mwh: float) -> float:
     return (strike - market * capture) * mwh
 
 
+def top_up_with_rule(strike: float, market: float, capture: float, mwh: float,
+                     neg_share: float, neg_price: float) -> float:
+    """Top-up when the contract is not paid in some negative-price hours (aios-harness#67).
+
+    neg_share: the share of `mwh` generated in hours the contract's rule leaves unpaid
+    neg_price: the average (negative) price in those hours, £/MWh
+    The plain top-up counts every hour at (strike - price); the unpaid hours' share is taken off.
+    """
+    return top_up(strike, market, capture, mwh) - neg_share * mwh * (strike - neg_price)
+
+
 def contract_end(start: date, years: int) -> date:
     """The day the term ends: the same calendar day, `years` later."""
     return start.replace(year=start.year + years)

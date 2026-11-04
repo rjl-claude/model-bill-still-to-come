@@ -157,3 +157,73 @@ def own_discounts(raw: Path = RAW) -> pd.Series:
     w = (a.Weighted_IMRP_GBP_Per_MWh * a.CFD_Generation_MWh).groupby(a.CfD_ID).sum() / a.groupby("CfD_ID").CFD_Generation_MWh.sum()
     hh = pd.concat([pd.read_csv(raw / "halfhourly" / f"elexon_{y}.csv") for y in BASE_YEARS])
     return (w / hh.price.mean()).rename("own")
+
+
+# --- Hours of negative price (build plan point 12; aios-harness#67) --------------------------------
+# A CfD's rule decides which negative-price hours it is not paid for (docs/facts.md 8-10):
+#   "none": AR1 and the Investment Contracts (paid through negative hours);
+#   "6h":   AR2 and AR3, runs of six or more consecutive hours (12 half-hours);
+#   "any":  AR4 to AR7, every negative hour.
+# Measured on the half-hourly MID price, a stand-in for the hourly day-ahead price the contracts use.
+RULE_BY_ROUND = {"Allocation Round 1": "none", "Investment Contract": "none", "Bespoke": "none",
+                 "Allocation Round 2": "6h", "Allocation Round 3": "6h"}
+
+
+def rule_for(round_: str) -> str:
+    return RULE_BY_ROUND.get(round_, "any")
+
+
+@cache
+def negative_measured() -> pd.DataFrame:
+    """Per year: share of wind (and solar) output in negative half-hours, any and in 6-hour runs,
+    and the output-weighted negative price."""
+    rows = []
+    for y in range(2017, 2026):
+        e = pd.read_csv(RAW / "halfhourly" / f"elexon_{y}.csv")
+        d = pd.read_csv(RAW / "halfhourly" / f"demanddata_{y}.csv")
+        d["date"] = pd.to_datetime(d.SETTLEMENT_DATE, format="mixed", dayfirst=True).dt.strftime("%Y-%m-%d")
+        e["settlement_date"] = pd.to_datetime(e.settlement_date).dt.strftime("%Y-%m-%d")
+        m = (e.merge(d, left_on=["settlement_date", "settlement_period"], right_on=["date", "SETTLEMENT_PERIOD"])
+             .sort_values(["settlement_date", "settlement_period"]))
+        m = m[m.price.notna()].reset_index(drop=True)
+        neg = m.price < 0
+        run = neg.groupby((neg != neg.shift()).cumsum()).transform("size")
+        neg6 = neg & (run >= 12)
+        row = {"year": y}
+        for kind, q in (("wind", m.wind_tx_mw + m.EMBEDDED_WIND_GENERATION), ("solar", m.EMBEDDED_SOLAR_GENERATION)):
+            row[f"{kind}_any"] = (q * neg).sum() / q.sum()
+            row[f"{kind}_6h"] = (q * neg6).sum() / q.sum()
+            row[f"{kind}_price"] = (m.price[neg] * q[neg]).sum() / q[neg].sum()
+        rows.append(row)
+    return pd.DataFrame(rows).set_index("year")
+
+
+@cache
+def negative_fit(kind: str, rule: str) -> Line:
+    """Share of output in excluded negative hours against the kind's share; 2017-25 without 2022."""
+    n, m = negative_measured().loc[list(FIT_YEARS)], measured().loc[list(FIT_YEARS)]
+    x, y = m[f"{kind}_share"], n[f"{kind}_{rule}"]
+    b, a = np.polyfit(x, y, 1)
+    return Line(float(a), float(b), float(np.corrcoef(x, y)[0, 1] ** 2))
+
+
+def negative_price(kind: str) -> float:
+    """Output-weighted price in negative hours, 2023-25 average, £/MWh (cash; small and held flat)."""
+    return float(negative_measured().loc[list(BASE_YEARS), f"{kind}_price"].mean())
+
+
+@dataclass(frozen=True)
+class NegativeHours:
+    """The share of a contract's output in hours its rule leaves unpaid. Same inputs as the discount."""
+    path: str = "EEP"
+    slope_scale: float = 1.0  # bracket: steeper or gentler, turned about today's share
+
+    def __call__(self, year: int, technology: str, rule: str) -> float:
+        kind = "wind" if technology in WIND else "solar" if technology in SOLAR else None
+        if kind is None or rule == "none":
+            return 0.0
+        f = negative_fit(kind, rule)
+        pivot = float(measured().loc[list(BASE_YEARS), f"{kind}_share"].mean())
+        slope = f.slope * self.slope_scale
+        v = f(pivot) + slope * (share(kind, year, self.path) - pivot)
+        return float(min(max(v, 0.0), 1.0))

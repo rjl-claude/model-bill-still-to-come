@@ -17,7 +17,7 @@
 
 ## CfD negative-price rules (standard terms, `cfd-terms/`)
 
-8. **AR1 (Aug 2014 terms):** no negative-price rule; when the hourly reference price is negative the generator is paid strike minus a negative price. The Investment Contracts (FIDeR, 2014) are taken to be the same: open, to confirm from `fider-IC_*.zip` in #67.
+8. **AR1 (Aug 2014 terms):** no negative-price rule; when the hourly reference price is negative the generator is paid strike minus a negative price. The Investment Contracts (FIDeR, 2014) are the same: the Hornsea Phase 1 Investment Contract (statement, agreement and conditions, in `model-subsidy-book/data/raw/desnz/fider-IC_H-S.zip`) has no negative-price clause (checked 4 Nov, #67).
 9. **AR2 (Mar 2017) and AR3 (2019):** for intermittent plant, no payment in any run of **six or more consecutive hours** of negative day-ahead price ("Intermittent Rolling Negative Price Period"); baseload plant, twelve or more.
 10. **AR4, AR5, AR6, AR7:** no payment in **any hour** of negative price ("Intermittent Negative Price Period": one or more settlement units).
 
@@ -45,4 +45,3 @@
 - Solar decline 0.5%/yr (Jordan & Kurtz, *Prog. Photovolt.* 21, 2013): nrel.gov unreachable from this machine; to save in #70.
 - Capacity Market agreement indexation (CPI, Capacity Market Rules): to cite in #72.
 - EDF's own release on the Hinkley schedule: #65.
-- Investment Contracts' negative-price terms: #67.
