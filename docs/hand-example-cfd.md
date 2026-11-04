@@ -6,7 +6,7 @@ East Anglia One, phase 2 (LCCC contract CAA-EAS-167), offshore wind, Allocation 
 2. **Strike price:** £163.68/MWh in 2024 (the contract's own CPI-indexed price, weighted by 2024 output). Indexed to inflation, it stays about £163.68 in 2024 prices every year.
 3. **Output:** 1,122 GWh a year (average of 2023-25).
 4. **Market price:** Annex M baseload power price for 2030, reference case: 6.03p/kWh = £60.30/MWh.
-5. **Offshore wind's discount:** in 2023-25 this farm earned 94.5% of the average market price (its output-weighted reference price against the plain average), so its price is £60.30 × 0.945 = £57.0/MWh.
+5. **Offshore wind's discount:** in 2023-25 this farm earned 94.6% of the average market price (its output-weighted reference price against the plain average of the half-hourly MID price), so its price is £60.30 × 0.946 = £57.0/MWh. (From aios-harness#66 this discount moves with the wind share: `docs/hand-example-discount.md`.)
 6. **Payment:** (163.68 − 57.0) × 1,122,200 MWh = **£119.7m** in 2030.
 
 Brackets, Annex M low and high: £134.3m (low gas price: £44.0/MWh) and £102.4m (high: £72.4/MWh). A cheaper market means a bigger top-up.

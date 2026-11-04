@@ -98,6 +98,11 @@ FILES = {
         "https://assets.publishing.service.gov.uk/media/65f1ab91133c221271cd3861/cfd-ar6-standard-terms-and-conditions.pdf",
     "cfd-terms/AR7_Standard_Terms_and_Conditions_July_2025.pdf":
         "https://assets.publishing.service.gov.uk/media/688b9b55fdde2b8f73469577/AR7_-_Standard_Terms_and_Conditions_July_2025_84916781.18_.pdf",
+    # NESO Future Energy Scenarios, Electricity Supply data table ES1 (wind and solar split; point 25)
+    "neso-fes/fes2025_es1_v006.csv":
+        "https://api.neso.energy/dataset/549b0667-b533-4748-95bd-f6e13933a47d/resource/6c78a777-b885-4bb6-bc35-8100f9e137a2/download/fes2025_es1_v006.csv",
+    "neso-fes/10yo2026_es1_v001.csv":
+        "https://api.neso.energy/dataset/549b0667-b533-4748-95bd-f6e13933a47d/resource/b3bf8ac0-d27a-447c-975c-208ae92c0fa5/download/10yo2026_es1_v001.csv",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.
