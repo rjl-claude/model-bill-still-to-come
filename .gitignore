@@ -1,3 +1,7 @@
 data/raw/**/*.tmp
 .venv/
 __pycache__/
+# Large official registers (over 20 MB each): kept on disk and recorded in MANIFEST.jsonl with sha256,
+# not in git. Ofgem republishes them daily; the cut-off-date fetch (aios-harness#78) is the one archived.
+data/raw/ofgem-rer/
+data/raw/ofgem/Feed-in-Tariff-Installation-Report-Part-*.xlsx
