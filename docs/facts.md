@@ -27,7 +27,7 @@
 
 ## Renewables Obligation
 
-12. **End dates.** Stations first accredited on or before 25 June 2008 get no certificates for their original capacity after **31 March 2027**; later stations none on or after the 20th anniversary of accreditation or 31 March 2037, whichever is earlier (RO Order 2015 art. 44; ROS Order 2009 art. 17A; NIRO 2009 art. 18A; in `model-subsidy-book/data/raw/legislation/`, to copy in #70). The build plan's "20 years or March 2037" misses the 2027 cut-off.
+12. **End dates.** Stations first accredited on or before 25 June 2008 get no certificates for their original capacity after **31 March 2027**; later stations none on or after the 20th anniversary of accreditation or 31 March 2037, whichever is earlier (RO Order 2015 art. 44; ROS Order 2009 art. 17A; NIRO 2009 art. 18A; copied to `data/raw/legislation/` in #70). The build plan's "20 years or March 2037" misses the 2027 cut-off.
 13. **Taxpayers' share.** 75% of the domestic share of the RO funded by the Exchequer in 2026-27, 2027-28 and 2028-29, from 1 April 2026; domestic share "approximately 41 per cent" (DESNZ); Exchequer cost £2,580m, £2,100m, £2,195m (`hmt/Budget_2025-Policy_Costings.pdf`, p.12). Budget 2026 restates it (`hmt/budget-2026.pdf`).
 14. **Indexation.** The buy-out price is indexed by CPI from 1 April 2026 (was RPI): 2026-27 buy-out £69.34 (`ofgem/ro-buy-out-price-mutualisation-2026-27.html`; DESNZ decision 28 Jan 2026).
 
