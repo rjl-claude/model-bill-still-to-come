@@ -8,7 +8,7 @@
   gap: model 1.75 x OBR (calendarised, cash)
   explanation: >
     Market price. The model prices power on DESNZ Annex M (2026: £75.3/MWh, 2024 prices), as ruled
-    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2026 figure at a
+    (ADR 0211, point 26); the OBR prices on the market. The model meets the OBR's 2026 figure at a
     market price of about £109.6/MWh (2024 prices), all else unchanged.
 - check: OBR
   line: CfD
@@ -16,7 +16,7 @@
   gap: model 2.54 x OBR (calendarised, cash)
   explanation: >
     Market price. The model prices power on DESNZ Annex M (2027: £62.7/MWh, 2024 prices), as ruled
-    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2027 figure at a
+    (ADR 0211, point 26); the OBR prices on the market. The model meets the OBR's 2027 figure at a
     market price of about £99.3/MWh (2024 prices), all else unchanged.
 - check: OBR
   line: CfD
@@ -24,7 +24,7 @@
   gap: model 1.50 x OBR (calendarised, cash)
   explanation: >
     Market price. The model prices power on DESNZ Annex M (2028: £59.1/MWh, 2024 prices), as ruled
-    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2028 figure at a
+    (ADR 0211, point 26); the OBR prices on the market. The model meets the OBR's 2028 figure at a
     market price of about £75.4/MWh (2024 prices), all else unchanged. Contracts not yet built are 12% of the model's 2028;
     a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
 - check: OBR
@@ -33,7 +33,7 @@
   gap: model 1.32 x OBR (calendarised, cash)
   explanation: >
     Market price. The model prices power on DESNZ Annex M (2029: £57.2/MWh, 2024 prices), as ruled
-    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2029 figure at a
+    (ADR 0211, point 26); the OBR prices on the market. The model meets the OBR's 2029 figure at a
     market price of about £68.6/MWh (2024 prices), all else unchanged. Contracts not yet built are 24% of the model's 2029;
     a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
 - check: OBR
@@ -42,7 +42,7 @@
   gap: model 1.48 x OBR (calendarised, cash)
   explanation: >
     Market price. The model prices power on DESNZ Annex M (2030: £57.9/MWh, 2024 prices), as ruled
-    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2030 figure at a
+    (ADR 0211, point 26); the OBR prices on the market. The model meets the OBR's 2030 figure at a
     market price of about £73.4/MWh (2024 prices), all else unchanged. Contracts not yet built are 37% of the model's 2030;
     a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
 - check: OBR
@@ -51,7 +51,7 @@
   gap: model 1.67 x OBR (calendarised, cash)
   explanation: >
     Market price. The model prices power on DESNZ Annex M (2031: £57.7/MWh, 2024 prices), as ruled
-    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2031 figure at a
+    (ADR 0211, point 26); the OBR prices on the market. The model meets the OBR's 2031 figure at a
     market price of about £76.7/MWh (2024 prices), all else unchanged. Contracts not yet built are 53% of the model's 2031;
     a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
 - check: LCCC
