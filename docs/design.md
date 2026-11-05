@@ -18,8 +18,8 @@ results = run(Scenario(case="FFP_High"))   # one bracket
 | Module | Interface | Behind it | State |
 |---|---|---|---|
 | **Scenario** | one frozen record of every contested choice, central by default, including the price path as a table (year -> £/MWh) | the 26 rulings as defaults | built (`scenario.py`) |
-| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 10 declared; 6 more in `LATER` with their stage |
-| **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | CfD, RO, FiT, CM on the seam (`model.Line`); SZC to build |
+| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 11 declared; 6 more in `LATER` with their stage |
+| **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | all five on the seam (`model.Line`) |
 | **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | `annex_m_path` built; forward-then-Annex M in stage 6 |
 | **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | one interface (`MarketResponse.for_contract`, adapter `SimpleFit`) |
 | **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | to build |
@@ -70,3 +70,9 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 - FiT on the Clock's measure (scheme value: generation + export + qualifying costs), not the levelisation fund; 869,279 installations in 6,914 groups; total £16.35bn 2026-42 (2024 prices). Output: DUKES load factors scaled to Ofgem's 7.97 TWh; payments at SY15 tariffs about 5% under Ofgem's.
 - Capacity Market: 7,669 live awarded agreements; whole levy within 6% of the OBR 2026-29; net-zero share 14.6% (point 9): £2.99bn 2026-44. 2030-31 below the OBR: auctions not yet held (explained).
 - Found: the Clock's published CM data predates its own v4-s43 pin (27.7% share, not 14.6%).
+
+## Stage 3 (5 Nov): Sizewell C
+
+- The levy from the licence: RAB from the Day-1 RAB to £40.509bn at COD (29 Dec 2039), spend spread evenly (not published); return 6.73%; opex, social benefits, cost of debt and FDP from the licence and Ofgem's 2026 values; tax and the other blocks fitted to the First Charging Year's Allowed Revenue (-7.7% of the return).
+- 2040-2099 (Richard: choice a): return 6.73% held, 60-year straight-line write-off, BEIS 2016 nuclear running costs, power sold at the Scenario price, tax left out; the levy runs both ways (Sizewell C pays back from 2072 at Annex M prices).
+- £31.1bn 2026-2099 (2024 prices): £22.8bn to 2039, £8.3bn after. OBR within 11% 2026 and 2028-31; 2027 explained.

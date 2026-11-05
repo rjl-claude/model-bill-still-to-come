@@ -1,0 +1,53 @@
+flowchart TD
+    subgraph IN["1 · Official records, saved unchanged"]
+        D1["Contracts and registers<br/>LCCC · Ofgem · NESO"]
+        D2["Prices and inflation<br/>DESNZ Annex M · ONS · OBR"]
+        D3["Rules and facts<br/>contracts · laws · docs/facts.md"]
+    end
+
+    SC["2 · Scenario<br/>every disputed choice, set to your rulings<br/>(change one setting = one bracket)"]
+
+    subgraph SH["3 · Shared parts every scheme uses"]
+        P["Prices<br/>power price, inflation,<br/>turned into 2024 money"]
+        M["Market response<br/>wind and solar earn less<br/>as there is more of them;<br/>hours of below-zero prices"]
+        O["Output<br/>what each farm makes,<br/>wearing out with age"]
+    end
+
+    subgraph LN["4 · One part per scheme (same plug for each)"]
+        L1["CfD contracts<br/>renewables · Hinkley · biomass<br/>£71bn"]
+        L2["Renewables Obligation<br/>£48bn"]
+        L3["Feed-in Tariffs<br/>£16bn"]
+        L4["Capacity Market<br/>£3bn"]
+        L5["Sizewell C<br/>£31bn"]
+    end
+
+    R["5 · One results table<br/>scheme · item · year · £ (2024 prices)<br/>+ the working tables behind it"]
+
+    subgraph CH["6 · Checks"]
+        C1["Joins the Clock's 2025?"]
+        C2["Within 15% of OBR and LCCC,<br/>or the gap explained in writing?"]
+    end
+
+    subgraph NX["7 · Still to build"]
+        W["Who pays<br/>households · businesses · taxpayers<br/>step 4"]
+        PV["Today's value<br/>step 5"]
+        BR["Low and high ranges<br/>step 6"]
+        FR["Freeze the figures<br/>step 7"]
+    end
+
+    OUT["Report No. 2, chapter 12<br/>the bill still to come<br/>(chapters 1-11: the Clock, 2002-2025)"]
+
+    IN --> SC
+    IN --> SH
+    SC --> SH
+    SC --> LN
+    SH --> LN
+    LN --> R
+    R --> CH
+    R --> W --> PV --> BR --> FR --> OUT
+    CH --> OUT
+
+    classDef done fill:#d8f0d8,stroke:#2e7d32,color:#000
+    classDef todo fill:#fff3cd,stroke:#b8860b,color:#000,stroke-dasharray: 5 3
+    class D1,D2,D3,SC,P,M,O,L1,L2,L3,L4,L5,R,C1,C2 done
+    class W,PV,BR,FR todo

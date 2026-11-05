@@ -18,14 +18,16 @@ RAW = ROOT / "data" / "raw"
 CLOCK = Path("/srv/aios/projects/web-subsidy-clock/site/data")  # the released Clock's data files
 MARGIN = 0.15
 GROUPS = {"CfD": ("CfD renewables", "Hinkley Point C", "Biomass bridging"), "RO": ("RO",), "FiT": ("FiT",),
-          "Capacity Market": ("Capacity Market",)}
+          "Capacity Market": ("Capacity Market",), "Sizewell C": ("Sizewell C",)}
 # The OBR forecasts no FiT after 2025-26 (Table 4.20 shows 0), so FiT has no OBR check. The Capacity
 # Market is checked as the whole levy, before net zero's share (point 9).
 OBR_ROWS = {"CfD": "Contracts for difference", "RO": "Renewables obligation",
-            "Capacity Market (whole levy)": "Capacity market1"}
+            "Capacity Market (whole levy)": "Capacity market1", "Sizewell C": "Sizewell C RAB levy1"}
 # Table 4.20 note 1: the ONS's outturn leaves the Capacity Market out; "If they were included, they would
-# have been £1.6 billion [...] in 2025-26."
-OBR_OVERRIDE = {"Capacity Market (whole levy)": {2025: 1.6e9}}
+# have been £1.6 billion and £0.5 billion respectively in 2025-26" (the second is Sizewell C's RAB levy).
+# Sizewell C's levy began on 1 December 2025, so its £0.5bn is four months (December-March): an annual
+# rate of £1.5bn, of which calendarise() then puts the January-March part (three quarters of £0.5bn) in 2026.
+OBR_OVERRIDE = {"Capacity Market (whole levy)": {2025: 1.6e9}, "Sizewell C": {2025: 0.5e9 * 12 / 4}}
 CLOCK_FILES = {"CfD": "cfd.csv", "RO": "renewables-obligation.csv", "FiT": "feed-in-tariffs.csv",
                "Capacity Market": "capacity-market.csv"}
 OBR_YEARS = range(2026, 2032)  # 2031 needs 2031-32, the OBR's last year
@@ -91,8 +93,8 @@ def check(results, explanations: list[dict] | None = None) -> Report:
 
     first = int(t.year.min())
     for g in GROUPS:
-        if not real[g].sum():
-            continue  # a line this run does not have
+        if not real[g].sum() or g not in CLOCK_FILES:
+            continue  # a line this run does not have, or one the Clock does not count (Sizewell C)
         y, c = _clock(g)
         add("Clock join", g, f"{first} vs {y}", float(real[g].get(first, 0.0)), c)
     for g in OBR_ROWS:
@@ -100,6 +102,7 @@ def check(results, explanations: list[dict] | None = None) -> Report:
             for yr, ref in obr(g).items():
                 add("OBR", g, str(yr), float(real[g].get(yr, 0.0)) * cpih(yr), ref)
     r = t[t.line == "CfD renewables"].groupby("year").cash.sum()
-    add("LCCC", "CfD renewables", "2026-10 to 2027-03",
-        0.25 * (r.get(2026, 0.0) * cpih(2026) + r.get(2027, 0.0) * cpih(2027)), _lccc())
+    if r.sum():
+        add("LCCC", "CfD renewables", "2026-10 to 2027-03",
+            0.25 * (r.get(2026, 0.0) * cpih(2026) + r.get(2027, 0.0) * cpih(2027)), _lccc())
     return Report(pd.DataFrame(rows))

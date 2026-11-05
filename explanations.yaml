@@ -90,3 +90,13 @@
     includes the capacity still to be bought. The four-year-ahead auction for 2030/31 has not been held
     (NESO auction data: no clearing price), nor any one-year-ahead auction from 2027/28, so from October 2030
     only the multi-year agreements of earlier auctions remain in the model.
+- check: OBR
+  line: Sizewell C
+  period: "2027"
+  gap: model 1.18 x OBR (calendarised, cash)
+  explanation: >
+    The model is fitted to the Allowed Revenue the Secretary of State set for the First Charging Year,
+    £1,443.6m for 4 November 2025 to 31 March 2027 (DESNZ notice, 23 Oct 2025). The OBR's levy for the same
+    months is £1,245m (£0.5bn for December-March 2025-26, Table 4.20 note 1, plus £745m for 2026-27), £0.20bn
+    less; calendar 2027 takes a quarter of 2026-27, so it carries that gap. From 2028 the model is within 11% of
+    the OBR (below it).

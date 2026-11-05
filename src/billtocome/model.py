@@ -59,8 +59,8 @@ def _cut_off() -> dt.date:
 
 
 def _lines() -> tuple[Callable[[Scenario], Line], ...]:
-    from . import cfd_line, cm, fit, ro
-    return (cfd_line.build, ro.build, fit.build, cm.build)
+    from . import cfd_line, cm, fit, ro, szc
+    return (cfd_line.build, ro.build, fit.build, cm.build, szc.build)
 
 
 def run(scenario: Scenario | None = None, lines: tuple[Callable[[Scenario], Line], ...] | None = None) -> Results:

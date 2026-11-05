@@ -29,6 +29,8 @@ class Scenario:
     hpc_shift_years: int = 0  # point 13 bracket: -1 or +2
     ro_recycle: float = RECYCLE_CENTRAL  # RO recycle value, share of the buy-out price
     cm_share: float = CM_SHARE  # point 9: net zero's share of the Capacity Market, the Clock's 2025
+    szc_cost: float = 40_509_000_000  # point 10: the licence's Original Lower Regulatory Threshold
+    szc_ops_return: float = 0.0673  # Richard 5 Nov, choice (a): the IWACC held after 2039 (stated)
 
     def price_path(self) -> dict[int, float]:
         return dict(self.prices) if self.prices is not None else prices.annex_m_path(self.case)
@@ -64,10 +66,11 @@ BRACKETS = (
     Bracket("Hinkley start", replace(_C, hpc_shift_years=-1), replace(_C, hpc_shift_years=2)),
     Bracket("RO recycle value", replace(_C, ro_recycle=RECYCLE_LOW), replace(_C, ro_recycle=RECYCLE_HIGH)),
     Bracket("Capacity Market share", replace(_C, cm_share=CM_LOW), replace(_C, cm_share=CM_HIGH)),
+    Bracket("Sizewell C build cost", replace(_C, szc_cost=38_000_000_000), replace(_C, szc_cost=47_720_000_000)),
 )
 
 LATER = (
-    ("Sizewell C build cost", 3),
+    ("Sizewell C return after 2039", 6),  # Richard 5 Nov, choice (a): "the return goes in the ranges"; values to choose
     ("Households' share", 4),
     ("Forward prices, then Annex M", 6),
     ("Decline with age", 6),  # Hamilton 0.2-0.5%/yr gentler; Hughes (REF 2012) steeper: its rate not yet in facts

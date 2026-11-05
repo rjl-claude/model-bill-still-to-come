@@ -127,6 +127,18 @@ FILES = {
         "https://assets.publishing.service.gov.uk/media/6a6a276f8319ab05f7caa1cf/DUKES_6.3.xlsx",
     "ons/rpi-12-month-rate-czbh.csv":
         "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/czbh/mm23",
+    # Stage 3 (aios-harness#82): Sizewell C's Day-1 RAB and first Allowed Revenue, Ofgem's 2026 PCFM values,
+    # nuclear running costs (BEIS 2016; the 2020 and 2025 editions publish none)
+    "sizewell-c/DESNZ-Day-1-RAB-and-Y1-AR-Letter-to-Ofgem.pdf":
+        "https://www.ofgem.gov.uk/sites/default/files/2025-11/DESNZ-Day-1-RAB-and-Y1-AR-Letter-to-Ofgem.pdf",
+    "sizewell-c/Annex-Sizewell-C-variable-value-proposal-to-modify.xlsx":
+        "https://www.ofgem.gov.uk/sites/default/files/2026-10/Annex-Sizewell-C-variable-value-proposal-to-modify.xlsx",
+    "sizewell-c/SZC-PCFM-variables-determination-v2.2.pdf":
+        "https://www.ofgem.gov.uk/sites/default/files/2026-10/SZC-PCFM-variables-determination-v2.2.pdf",
+    "desnz/Generation_Costs_Report_2016_Annexes.xlsx":
+        "https://assets.publishing.service.gov.uk/media/5ce55ca0ed915d247979f938/Generation_Costs_Report_2016_Annexes.xlsx",
+    "desnz/GC20_Key_Data_and_Assumptions.xlsx":
+        "https://assets.publishing.service.gov.uk/media/5f450d378fa8f55de885e1b8/GC20_Key_Data_and_Assumptions.xlsx",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.
