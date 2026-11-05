@@ -50,6 +50,8 @@ class Results:
             scenario=repr(self.scenario), valuation_date=self.valuation_date.isoformat(),
             cut_off_date=self.cut_off_date.isoformat() if self.cut_off_date else None,
             manifest_sha256=self.manifest_sha256), indent=1))
+        from .figures import write
+        write(self, folder / "figures.json")  # the one results file the paper reads by key
 
 
 def _cut_off() -> dt.date:
