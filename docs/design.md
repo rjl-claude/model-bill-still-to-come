@@ -18,8 +18,8 @@ results = run(Scenario(case="FFP_High"))   # one bracket
 | Module | Interface | Behind it | State |
 |---|---|---|---|
 | **Scenario** | one frozen record of every contested choice, central by default, including the price path as a table (year -> £/MWh) | the 26 rulings as defaults | built (`scenario.py`) |
-| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 9 declared; 7 more in `LATER` with their stage |
-| **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | CfD, RO on the seam (`model.Line`); FiT, CM, SZC to build |
+| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 10 declared; 6 more in `LATER` with their stage |
+| **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | CfD, RO, FiT, CM on the seam (`model.Line`); SZC to build |
 | **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | `annex_m_path` built; forward-then-Annex M in stage 6 |
 | **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | one interface (`MarketResponse.for_contract`, adapter `SimpleFit`) |
 | **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | to build |
@@ -64,3 +64,9 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 - The Clock's RO record ends in 2024, so the RO join sets the model's 2026 against 2024.
 - Checks, central: RO within 7% of the OBR every year 2026-31; CfD joins the Clock within 2%; CfD runs 1.3-2.5 x the OBR and 2.3 x LCCC, each explained by the market price (`explanations.yaml`).
 - Still missing for stage 6: the steeper decline rate from Hughes (REF 2012) is not in `docs/facts.md`.
+
+## Stage 2 (5 Nov): FiT and Capacity Market
+
+- FiT on the Clock's measure (scheme value: generation + export + qualifying costs), not the levelisation fund; 869,279 installations in 6,914 groups; total £16.35bn 2026-42 (2024 prices). Output: DUKES load factors scaled to Ofgem's 7.97 TWh; payments at SY15 tariffs about 5% under Ofgem's.
+- Capacity Market: 7,669 live awarded agreements; whole levy within 6% of the OBR 2026-29; net-zero share 14.6% (point 9): £2.99bn 2026-44. 2030-31 below the OBR: auctions not yet held (explained).
+- Found: the Clock's published CM data predates its own v4-s43 pin (27.7% share, not 14.6%).

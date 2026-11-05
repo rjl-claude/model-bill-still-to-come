@@ -23,13 +23,15 @@ def test_central_totals_unchanged(central):
     assert t["Hinkley Point C"] == pytest.approx(30.07, abs=0.01)
     assert t["Biomass bridging"] == pytest.approx(2.64, abs=0.01)
     assert t["RO"] == pytest.approx(47.83, abs=0.01)
+    assert t["FiT"] == pytest.approx(16.35, abs=0.01)  # stage 2
+    assert t["Capacity Market"] == pytest.approx(2.99, abs=0.01)  # stage 2
 
 
 def test_results_table_shape(central):
     r = central.table
     assert list(r.columns) == ["line", "item", "technology", "built", "payer", "year", "cash"]
     assert r.year.min() == 2026
-    assert set(r.line) == CFD_LINES | {"RO"}
+    assert set(r.line) == CFD_LINES | {"RO", "FiT", "Capacity Market"}
     assert set(r.built) == {True, False}
     assert set(r.payer) == {"all"}  # split by who pays in stage 4
     assert not r.duplicated(["line", "item", "payer", "year"]).any()
@@ -43,7 +45,8 @@ def test_results_carry_scenario_dates_and_manifest(central):
 
 
 def test_in_between_tables_saved(central, tmp_path):
-    for name in ("prices", "cfd_contracts", "cfd_contract_years", "ro_stations", "ro_station_years"):
+    for name in ("prices", "cfd_contracts", "cfd_contract_years", "ro_stations", "ro_station_years",
+                 "fit_groups", "fit_group_years", "fit_code_rates", "cm_agreements", "cm_agreement_years"):
         assert name in central.tables and len(central.tables[name]), name
     central.save(tmp_path)
     assert (tmp_path / "results.csv").exists() and (tmp_path / "run.json").exists()

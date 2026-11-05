@@ -8,6 +8,7 @@ dependencies = [
     "openpyxl>=3.1",
     "odfpy>=1.4",
     "pyyaml>=6",
+    "python-calamine>=0.3",
 ]
 
 [dependency-groups]

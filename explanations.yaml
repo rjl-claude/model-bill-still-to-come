@@ -62,3 +62,31 @@
     Market price. LCCC forecasts on market prices (Winter 2026 baseload reference price £114.50/MWh cash,
     docs/facts.md 21); the model uses Annex M (2026: £75.3/MWh, 2027: £62.7/MWh, 2024 prices), as ruled.
     Run at £114.50 cash for 2026 and 2027, the model is within 7% of LCCC (model 0.93 x LCCC).
+- check: Clock join
+  line: Capacity Market
+  period: "2026 vs 2025"
+  gap: model 0.84 x Clock (2024 prices)
+  explanation: >
+    Two things. (1) The Clock's published 2025 (£382m, 2024 prices; site/data built 1 Nov 2026 12:06) still uses
+    the older 27.7% net-zero share; the Clock's pin to engine v4-s43 (commit 65b0c3c0a, 1 Nov 2026 20:23), whose
+    14.6% share this model uses (point 9), gives 2025 as 14.6% of £1,431m = £209m cash. (2) Against that, the
+    model's 2026 is higher because the 2026/27 four-year-ahead auction cleared at £63/kW/yr against £30.59 for
+    2025/26: its October-December 2026 payments are £0.96bn of the whole levy (cash).
+- check: OBR
+  line: Capacity Market (whole levy)
+  period: "2030"
+  gap: model 0.60 x OBR (calendarised, cash)
+  explanation: >
+    Auctions not yet held. The model counts only agreements already signed (point 15); the OBR's forecast
+    includes the capacity still to be bought. The four-year-ahead auction for 2030/31 has not been held
+    (NESO auction data: no clearing price), nor any one-year-ahead auction from 2027/28, so from October 2030
+    only the multi-year agreements of earlier auctions remain in the model.
+- check: OBR
+  line: Capacity Market (whole levy)
+  period: "2031"
+  gap: model 0.27 x OBR (calendarised, cash)
+  explanation: >
+    Auctions not yet held. The model counts only agreements already signed (point 15); the OBR's forecast
+    includes the capacity still to be bought. The four-year-ahead auction for 2030/31 has not been held
+    (NESO auction data: no clearing price), nor any one-year-ahead auction from 2027/28, so from October 2030
+    only the multi-year agreements of earlier auctions remain in the model.

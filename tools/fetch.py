@@ -122,6 +122,11 @@ FILES = {
         "https://www.legislation.gov.uk/uksi/2014/2043/data.pdf",
     "legislation/uksi-2014-2043-Electricity-Capacity-Regulations-2014-latest.xml":
         "https://www.legislation.gov.uk/uksi/2014/2043/data.xml",
+    # Stage 2 (aios-harness#81): FiT output by technology, and the RPI uplift of April 2025
+    "desnz/DUKES_6.3.xlsx":
+        "https://assets.publishing.service.gov.uk/media/6a6a276f8319ab05f7caa1cf/DUKES_6.3.xlsx",
+    "ons/rpi-12-month-rate-czbh.csv":
+        "https://www.ons.gov.uk/generator?format=csv&uri=/economy/inflationandpriceindices/timeseries/czbh/mm23",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.

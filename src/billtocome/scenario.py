@@ -8,6 +8,7 @@ from dataclasses import dataclass, field, replace
 from typing import NamedTuple
 
 from . import prices
+from .cm import SHARE_CENTRAL as CM_SHARE, SHARE_HIGH as CM_HIGH, SHARE_LOW as CM_LOW
 from .contracts import HPC_STRIKE_2012
 from .discount import MarketResponse, SimpleFit
 from .output import DECLINE
@@ -27,6 +28,7 @@ class Scenario:
     hpc_term: str = "contract"  # point 24; bracket "from_start"
     hpc_shift_years: int = 0  # point 13 bracket: -1 or +2
     ro_recycle: float = RECYCLE_CENTRAL  # RO recycle value, share of the buy-out price
+    cm_share: float = CM_SHARE  # point 9: net zero's share of the Capacity Market, the Clock's 2025
 
     def price_path(self) -> dict[int, float]:
         return dict(self.prices) if self.prices is not None else prices.annex_m_path(self.case)
@@ -61,10 +63,10 @@ BRACKETS = (
     Bracket("Hinkley term", _C, replace(_C, hpc_term="from_start")),
     Bracket("Hinkley start", replace(_C, hpc_shift_years=-1), replace(_C, hpc_shift_years=2)),
     Bracket("RO recycle value", replace(_C, ro_recycle=RECYCLE_LOW), replace(_C, ro_recycle=RECYCLE_HIGH)),
+    Bracket("Capacity Market share", replace(_C, cm_share=CM_LOW), replace(_C, cm_share=CM_HIGH)),
 )
 
 LATER = (
-    ("Capacity Market share", 2),
     ("Sizewell C build cost", 3),
     ("Households' share", 4),
     ("Forward prices, then Annex M", 6),
