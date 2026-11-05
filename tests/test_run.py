@@ -32,9 +32,9 @@ def test_results_table_shape(central):
     r = central.table
     assert list(r.columns) == ["line", "item", "technology", "built", "payer", "year", "cash"]
     assert r.year.min() == 2026
-    assert set(r.line) == CFD_LINES | {"RO", "FiT", "Capacity Market", "Sizewell C"}
+    assert set(r.line) == CFD_LINES | {"RO", "FiT", "Capacity Market", "Sizewell C", "VAT"}
     assert set(r.built) == {True, False}
-    assert set(r.payer) == {"all"}  # split by who pays in stage 4
+    assert set(r.payer) == {"households", "businesses", "taxpayers"}  # stage 4
     assert not r.duplicated(["line", "item", "payer", "year"]).any()
 
 
@@ -75,7 +75,7 @@ def test_a_new_scheme_line_needs_no_change_to_run():
     def fake(s):
         rows = pd.DataFrame(dict(line="Fake", item="x", technology="t", built=True, year=[2026, 2027], cash=1.0))
         return model.Line(rows, {"fake_detail": rows})
-    r = model.run(Scenario(), lines=(fake,))
+    r = model.run(Scenario(), lines=(fake,), split=False)
     assert r.table.cash.sum() == 2.0 and "fake_detail" in r.tables
 
 

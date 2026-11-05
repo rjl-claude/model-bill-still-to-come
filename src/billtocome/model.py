@@ -63,17 +63,22 @@ def _lines() -> tuple[Callable[[Scenario], Line], ...]:
     return (cfd_line.build, ro.build, fit.build, cm.build, szc.build)
 
 
-def run(scenario: Scenario | None = None, lines: tuple[Callable[[Scenario], Line], ...] | None = None) -> Results:
+def run(scenario: Scenario | None = None, lines: tuple[Callable[[Scenario], Line], ...] | None = None,
+        split: bool = True) -> Results:
+    """`split`: share every row between households, businesses and taxpayers, and add VAT (stage 4)."""
     s = scenario or Scenario()
     rows, tables = [], {"prices": pd.DataFrame(sorted(s.price_path().items()), columns=["year", "price_2024"])}
     for build in lines or _lines():
         ln = build(s)
         r = ln.rows.copy()
         if "payer" not in r:
-            r["payer"] = "all"  # split by who pays in stage 4
+            r["payer"] = "all"
         rows.append(r[COLUMNS])
         tables.update(ln.tables)
     table = pd.concat(rows, ignore_index=True)
     table = table[table.year >= VALUATION_DATE.year].reset_index(drop=True)
+    if split:
+        from .who_pays import split as who_pays
+        table = who_pays(table, s)[COLUMNS]
     return Results(table=table, scenario=s, tables=tables, cut_off_date=_cut_off(),
                    manifest_sha256=hashlib.sha256(MANIFEST.read_bytes()).hexdigest())

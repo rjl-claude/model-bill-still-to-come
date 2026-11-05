@@ -100,3 +100,47 @@
     months is £1,245m (£0.5bn for December-March 2025-26, Table 4.20 note 1, plus £745m for 2026-27), £0.20bn
     less; calendar 2027 takes a quarter of 2026-27, so it carries that gap. From 2028 the model is within 11% of
     the OBR (below it).
+- check: Budget
+  line: RO (Exchequer share)
+  period: "2026"
+  gap: model 0.82 x Budget 2025 costing (calendarised, cash)
+  explanation: >
+    Households' share. The Budget costs 75% of the RO's domestic share at "approximately 41 per cent"
+    (DESNZ's estimate of the share of RO costs on domestic bills; Budget 2025 policy costings, p.12) and the
+    OBR's RO receipts; the model applies 75% to households' 34.9% share of electricity (DUKES 2025, point 18)
+    on its own RO line. 0.349/0.41 = 0.85 (a 15% gap) is most of it; the rest is the model's RO being 4-7%
+    below the OBR's (the OBR check) and the Budget's own figures running up to 6% above 75% x 41% of the
+    OBR's RO (2026-27 -1%, 2027-28 +3%, 2028-29 +6%).
+- check: Budget
+  line: RO (Exchequer share)
+  period: "2027"
+  gap: model 0.79 x Budget 2025 costing (calendarised, cash)
+  explanation: >
+    Households' share. The Budget costs 75% of the RO's domestic share at "approximately 41 per cent"
+    (DESNZ's estimate of the share of RO costs on domestic bills; Budget 2025 policy costings, p.12) and the
+    OBR's RO receipts; the model applies 75% to households' 34.9% share of electricity (DUKES 2025, point 18)
+    on its own RO line. 0.349/0.41 = 0.85 (a 15% gap) is most of it; the rest is the model's RO being 4-7%
+    below the OBR's (the OBR check) and the Budget's own figures running up to 6% above 75% x 41% of the
+    OBR's RO (2026-27 -1%, 2027-28 +3%, 2028-29 +6%).
+- check: Budget
+  line: RO (Exchequer share)
+  period: "2028"
+  gap: model 0.77 x Budget 2025 costing (calendarised, cash)
+  explanation: >
+    Households' share. The Budget costs 75% of the RO's domestic share at "approximately 41 per cent"
+    (DESNZ's estimate of the share of RO costs on domestic bills; Budget 2025 policy costings, p.12) and the
+    OBR's RO receipts; the model applies 75% to households' 34.9% share of electricity (DUKES 2025, point 18)
+    on its own RO line. 0.349/0.41 = 0.85 (a 15% gap) is most of it; the rest is the model's RO being 4-7%
+    below the OBR's (the OBR check) and the Budget's own figures running up to 6% above 75% x 41% of the
+    OBR's RO (2026-27 -1%, 2027-28 +3%, 2028-29 +6%).
+- check: Budget
+  line: RO (Exchequer share)
+  period: "2029"
+  gap: model 0.74 x Budget 2025 costing (calendarised, cash)
+  explanation: >
+    Households' share. The Budget costs 75% of the RO's domestic share at "approximately 41 per cent"
+    (DESNZ's estimate of the share of RO costs on domestic bills; Budget 2025 policy costings, p.12) and the
+    OBR's RO receipts; the model applies 75% to households' 34.9% share of electricity (DUKES 2025, point 18)
+    on its own RO line. 0.349/0.41 = 0.85 (a 15% gap) is most of it; the rest is the model's RO being 4-7%
+    below the OBR's (the OBR check) and the Budget's own figures running up to 6% above 75% x 41% of the
+    OBR's RO (2026-27 -1%, 2027-28 +3%, 2028-29 +6%).

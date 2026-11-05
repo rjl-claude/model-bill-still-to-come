@@ -18,11 +18,11 @@ results = run(Scenario(case="FFP_High"))   # one bracket
 | Module | Interface | Behind it | State |
 |---|---|---|---|
 | **Scenario** | one frozen record of every contested choice, central by default, including the price path as a table (year -> £/MWh) | the 26 rulings as defaults | built (`scenario.py`) |
-| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 11 declared; 6 more in `LATER` with their stage |
+| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 12 declared; 5 more in `LATER` with their stage |
 | **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | all five on the seam (`model.Line`) |
 | **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | `annex_m_path` built; forward-then-Annex M in stage 6 |
 | **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | one interface (`MarketResponse.for_contract`, adapter `SimpleFit`) |
-| **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | to build |
+| **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | built (`who_pays.py`) |
 | **Present value** | `present_value(results, rate) -> table` | Green Book (3.5%/3.0%), hurdle rate by technology, to 1 Jan 2026 | to build |
 | **Figures** | `figure(key) -> number`, keys built from the table (line.year.measure, line.total.measure ...), not a fixed list | the one results file the paper reads by key | to build |
 | **Checks** | `check(results) -> report`; fails on an unexplained gap over 15% | Clock 2025 join, OBR (calendarised), LCCC; `explanations.yaml` | built (`checks.py`) |
@@ -76,3 +76,9 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 - The levy from the licence: RAB from the Day-1 RAB to £40.509bn at COD (29 Dec 2039), spend spread evenly (not published); return 6.73%; opex, social benefits, cost of debt and FDP from the licence and Ofgem's 2026 values; tax and the other blocks fitted to the First Charging Year's Allowed Revenue (-7.7% of the return).
 - 2040-2099 (Richard: choice a): return 6.73% held, 60-year straight-line write-off, BEIS 2016 nuclear running costs, power sold at the Scenario price, tax left out; the levy runs both ways (Sizewell C pays back from 2072 at Annex M prices).
 - £31.1bn 2026-2099 (2024 prices): £22.8bn to 2039, £8.3bn after. OBR within 11% 2026 and 2028-31; 2027 explained.
+
+## Stage 4 (5 Nov): who pays
+
+- Every row split households 34.9% / businesses (point 18, 19); Exchequer 75% of households' RO share Apr 2026-Mar 2029; BICS £600m a year Apr 2027-Mar 2035 plus the 2026-27 back payment, shared by businesses' part of RO, FiT and the whole CM levy; VAT 5% of households' part, its own line. Each scheme line's whole unchanged.
+- Totals 2026-2099 (2024 prices): households £57.0bn (incl. VAT £2.7bn), businesses £106.6bn, taxpayers £8.7bn.
+- The Budget's Exchequer cost uses DESNZ's 41% domestic share of the RO; the model's is 18-26% lower (explained).

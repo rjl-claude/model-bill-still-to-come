@@ -33,7 +33,7 @@
 
 ## Who pays
 
-15. **Households' share.** DESNZ's own estimate for the RO: about 41% levied on households (fact 13). Used as the households' share central; DESNZ's projection by sector (EEP Annex F) as the bracket, in #74.
+15. **Households' share.** DESNZ's own estimate for the RO: about 41% of RO costs levied on households (fact 13). Not the model's split: point 18 holds households' 2025 share of electricity (34.9%, fact 18), with DESNZ's projection (fact 19) as the bracket. The 41% is what the Budget's Exchequer costing uses; the gap is checked and explained (Stage 4).
 16. **Manufacturers' exemption.** From 1 April 2027, eligible firms in Great Britain are exempt from the indirect costs of the RO, FiT and Capacity Market, with a back payment for 2026-27; about 10,000 firms (`hmt/budget-2026.pdf`). CfD costs are not exempted.
 
 ## OBR

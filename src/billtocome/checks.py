@@ -30,7 +30,10 @@ OBR_ROWS = {"CfD": "Contracts for difference", "RO": "Renewables obligation",
 OBR_OVERRIDE = {"Capacity Market (whole levy)": {2025: 1.6e9}, "Sizewell C": {2025: 0.5e9 * 12 / 4}}
 CLOCK_FILES = {"CfD": "cfd.csv", "RO": "renewables-obligation.csv", "FiT": "feed-in-tariffs.csv",
                "Capacity Market": "capacity-market.csv"}
-OBR_YEARS = range(2026, 2032)  # 2031 needs 2031-32, the OBR's last year
+OBR_YEARS = range(2026, 2032)
+# Budget 2025 policy costings p.12 (fact 13): Exchequer cost of 75% of the RO's domestic share, £ cash, by
+# financial year (keyed by its starting year)
+BUDGET_EXCHEQUER_RO = {2025: 0.0, 2026: 2_580e6, 2027: 2_100e6, 2028: 2_195e6, 2029: 0.0}  # 2031 needs 2031-32, the OBR's last year
 
 
 @dataclass
@@ -101,6 +104,11 @@ def check(results, explanations: list[dict] | None = None) -> Report:
         if g in real and real[g].sum():
             for yr, ref in obr(g).items():
                 add("OBR", g, str(yr), float(real[g].get(yr, 0.0)) * cpih(yr), ref)
+    x = t[t.item.str.startswith("Exchequer") & (t.payer == "taxpayers")].groupby("year").cash.sum()
+    if x.sum():
+        for yr in range(2026, 2030):
+            add("Budget", "RO (Exchequer share)", str(yr), float(x.get(yr, 0.0)) * cpih(yr),
+                calendarise(BUDGET_EXCHEQUER_RO, yr))
     r = t[t.line == "CfD renewables"].groupby("year").cash.sum()
     if r.sum():
         add("LCCC", "CfD renewables", "2026-10 to 2027-03",
