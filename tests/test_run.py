@@ -60,7 +60,7 @@ def test_scenario_is_frozen_and_central_by_default():
     s = Scenario()
     with pytest.raises(dataclasses.FrozenInstanceError):
         s.case = "FFP_High"  # type: ignore[misc]
-    assert s.case == "Reference" and s.hpc_strike_2012 == 89.50 and s.wind_decline == 0.016
+    assert s.case == "Reference" and s.hpc_strike_2012 == 89.50 and s.decline == "central" and s.wind_decline == 0.016
 
 
 def test_price_path_is_a_table():

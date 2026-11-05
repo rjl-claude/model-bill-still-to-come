@@ -53,6 +53,8 @@ def build(s: "Scenario | None" = None, last_year: int = 2066) -> "Line":
             load_f, lf_src = C.BRIDGING_LF, "bridging cap"
         else:
             load_f, lf_src = O.load_factor(r, lf, new)
+            if s.output == "DESNZ 2023" and O.desnz_2023_lf(r.technology, r.start.year) is not None:
+                load_f, lf_src = O.desnz_2023_lf(r.technology, r.start.year), "DESNZ 2023 (bracket)"
         rule = D.rule_for(r["round"])
         kind = "wind" if r.technology in D.WIND else "solar" if r.technology in D.SOLAR else None
         for y in range(VALUATION_YEAR, last_year + 1):

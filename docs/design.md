@@ -18,9 +18,9 @@ results = run(Scenario(case="FFP_High"))   # one bracket
 | Module | Interface | Behind it | State |
 |---|---|---|---|
 | **Scenario** | one frozen record of every contested choice, central by default, including the price path as a table (year -> £/MWh) | the 26 rulings as defaults | built (`scenario.py`) |
-| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 12 declared; 5 more in `LATER` with their stage |
+| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 17 declared, `LATER` empty; run and ranked by `brackets.tornado()` |
 | **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | all five on the seam (`model.Line`) |
-| **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | `annex_m_path` built; forward-then-Annex M in stage 6 |
+| **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | built (`prices.annex_m_path`, `prices.forward_then_annex_m`) |
 | **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | one interface (`MarketResponse.for_contract`, adapter `SimpleFit`) |
 | **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | built (`who_pays.py`) |
 | **Present value** | `present_value(results, rate) -> table` | Green Book (3.5%/3.0%), hurdle rate by technology, to 1 Jan 2026 | built (`present_value.py`) |
@@ -89,3 +89,9 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 - Hurdle rates (point 8, DESNZ 2025 medium): solar, onshore 7.6%; fixed offshore, gas 8.9%; floating, tidal, geothermal 10.1%. No 2025 rate, nearest (Richard, 5 Nov): nuclear 6.73% (Sizewell C licence WACC); hydro, small wind and solar 7.6%; other fuelled or firm 8.9%. VAT's PV is 5% of households' PV of its line; Exchequer and exemption rows take their line's factor.
 - Keys `line[.built][.payer].period.measure` (measures cash, pv_green_book, pv_hurdle), every combination with rows; `tools/results.py` writes `results/figures.json` with the run's dates and MANIFEST hash (`results/` not in git until the stage 7 freeze). Paper source writes `{{key}}`; `figures.typed` lists any money or % typed outside a key.
 - Central, 2026-2099, £bn 2024 prices (cash / Green Book / hurdle): whole bill 172.3 / 141.1 / 111.5; built 93.3 / 81.8 / 69.6; not yet built 79.1 / 59.4 / 41.9.
+
+## Stage 6 (5 Nov): brackets and the tornado
+
+- Five brackets added, each one Scenario input: forward prices to Mar 2027 then Annex M (2026 £81.59, 2027 £72.84/MWh vs Annex M £75.26, £62.66); decline with age as one setting (gentler: wind 0.17%/yr, Hamilton 2020; steeper: wind 5.4%/yr, Hughes 2012, solar 0.8%/yr, Jordan & Kurtz mean; facts 33-34); output level high end, CfD wind and solar at DESNZ 2023 load factors by commissioning year (fact 35; RO and FiT on their own records, Richard 5 Nov); build path, ends Falling Behind (lowest) and Holistic Transition (highest) of the four FES pathways, all above central EEP; Sizewell C return after 2039, 3.5% to 6.73% (Richard 5 Nov).
+- `brackets.tornado()`: each bracket's ends run, the rest central; whole bill at each end, swing, ranked; also at both present values. `figures.bracket_keys`: `bracket.<name>.<low|high|swing|rank>.<measure>`, `range.<low|high>.<measure>`; `tools/results.py` writes them into `results/figures.json` (about five minutes).
+- Central £172.3bn cash; range £132.8bn (Sizewell C return 3.5%) to £221.8bn (Annex M low prices); Green Book £120.7-166.8bn; hurdle £96.5-127.2bn. Largest swings: Annex M prices £74.6bn, Sizewell C return £39.6bn, Sizewell C cost £33.9bn, decline £19.7bn, output £15.1bn.

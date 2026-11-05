@@ -58,11 +58,33 @@ def build(results) -> dict[str, float]:
     return out
 
 
-def write(results, path: Path) -> None:
+def slug(name: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", name.lower().replace("'", "")).strip("_")
+
+
+def bracket_keys(tornado: pd.DataFrame) -> dict[str, float]:
+    """`bracket.<name>.<low|high|swing|rank>.<measure>` and `range.<low|high>.<measure>` from `brackets.tornado()`.
+    Low and high are the bill at each end of the bracket's input; rank is by swing in cash."""
+    from .brackets import MEASURES, range_of
+    out: dict[str, float] = {}
+    for i, r in tornado.reset_index(drop=True).iterrows():
+        for m in MEASURES:
+            sfx = "" if m == "cash" else f"_{m}"
+            for end, col in (("low", "low_bill"), ("high", "high_bill"), ("swing", "swing")):
+                out[f"bracket.{slug(r.bracket)}.{end}.{m}"] = float(r[col + sfx])
+        out[f"bracket.{slug(r.bracket)}.rank.cash"] = i + 1
+    for m in MEASURES:
+        out[f"range.low.{m}"], out[f"range.high.{m}"] = range_of(tornado, m)
+    return out
+
+
+def write(results, path: Path, tornado: pd.DataFrame | None = None) -> None:
+    """The results file. With `tornado` (from `brackets.tornado()`), its bracket and range keys too."""
     meta = dict(units=UNITS, scenario=repr(results.scenario), valuation_date=results.valuation_date.isoformat(),
                 cut_off_date=results.cut_off_date.isoformat() if results.cut_off_date else None,
                 manifest_sha256=results.manifest_sha256)
-    Path(path).write_text(json.dumps(dict(meta=meta, figures=build(results)), indent=0, sort_keys=True))
+    figs = build(results) | (bracket_keys(tornado) if tornado is not None else {})
+    Path(path).write_text(json.dumps(dict(meta=meta, figures=figs), indent=0, sort_keys=True))
 
 
 def figure(key: str, path: Path = FILE) -> float:

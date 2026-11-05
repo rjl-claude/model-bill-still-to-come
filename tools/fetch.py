@@ -139,6 +139,15 @@ FILES = {
         "https://assets.publishing.service.gov.uk/media/5ce55ca0ed915d247979f938/Generation_Costs_Report_2016_Annexes.xlsx",
     "desnz/GC20_Key_Data_and_Assumptions.xlsx":
         "https://assets.publishing.service.gov.uk/media/5f450d378fa8f55de885e1b8/GC20_Key_Data_and_Assumptions.xlsx",
+    # Added for aios-harness#85 (Stage 6): the output and decline-with-age brackets (build plan, Output).
+    "desnz/electricity-generation-costs-2023.pdf":
+        "https://assets.publishing.service.gov.uk/media/6556027d046ed400148b99fe/electricity-generation-costs-2023.pdf",
+    "desnz/electricity-generation-costs-2023-annex-a.xlsx":
+        "https://assets.publishing.service.gov.uk/media/6555cb6d046ed4000d8b99bb/annex-a-additional-estimates-and-key-assumptions.xlsx",
+    "decline/hamilton-2020-wind-performance-with-age-joule.pdf":  # LBNL's open-access copy (eScholarship)
+        "https://escholarship.org/content/qt40x7b47b/qt40x7b47b.pdf",
+    "decline/hughes-2012-ref-performance-of-wind-farms-uk-denmark.pdf":  # not on ref.org.uk now; a mirror copy
+        "https://s3.amazonaws.com/windaction23/attachments/3106/ref.hughes.19.12.12.pdf",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.

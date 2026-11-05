@@ -18,6 +18,30 @@ DECLINE = 0.016
 WIND_TECH = {"Offshore Wind", "Onshore Wind", "Floating Offshore Wind", "Remote Island Wind"}
 
 
+# Point 17's brackets, the same in every scheme (facts 22, 33, 34): (wind, solar PV) per year.
+DECLINES = {"gentler": (0.0017, 0.005),  # Hamilton et al. 2020, newer plants; solar: no gentler source
+            "central": (DECLINE, 0.005),  # Staffell & Green 2014; Jordan & Kurtz median
+            "steeper": (0.054, 0.008)}  # Hughes 2012, UK onshore 24% to 11% over ages 1-15; J&K mean
+
+# The output bracket's high end (build plan "Output"; fact 35): DESNZ Electricity Generation Costs 2023,
+# Annex A, average net load factor by commissioning year. CfD wind and solar only (Richard, 5 Nov).
+DESNZ_2023 = {
+    "Onshore Wind": {2025: 0.45, 2030: 0.48, 2035: 0.48, 2040: 0.48},
+    "Offshore Wind": {2025: 0.61, 2030: 0.65, 2035: 0.69, 2040: 0.69},
+    "Floating Offshore Wind": {2025: 0.56, 2030: 0.64, 2035: 0.68, 2040: 0.69},
+    "Solar PV": {2025: 0.11, 2030: 0.11, 2035: 0.11, 2040: 0.11},
+}
+DESNZ_2023["Remote Island Wind"] = DESNZ_2023["Onshore Wind"]
+
+
+def desnz_2023_lf(technology: str, start_year: int) -> float | None:
+    """DESNZ's 2023 load factor for the commissioning year nearest `start_year` (2025 for any earlier)."""
+    t = DESNZ_2023.get(technology)
+    if t is None:
+        return None
+    return t[min(t, key=lambda y: abs(y - max(start_year, 2025)))]
+
+
 def decline_for(technology: str, wind: float = DECLINE, solar: float = 0.005) -> float:
     if technology in WIND_TECH:
         return wind

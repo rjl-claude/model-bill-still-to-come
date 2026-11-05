@@ -11,7 +11,7 @@ from . import prices
 from .cm import SHARE_CENTRAL as CM_SHARE, SHARE_HIGH as CM_HIGH, SHARE_LOW as CM_LOW
 from .contracts import HPC_STRIKE_2012
 from .discount import MarketResponse, SimpleFit
-from .output import DECLINE
+from .output import DECLINES
 from .ro import RECYCLE_CENTRAL, RECYCLE_HIGH, RECYCLE_LOW
 
 
@@ -20,8 +20,8 @@ class Scenario:
     case: str = "Reference"  # Annex M fossil-price case, the price path when `prices` is not given
     prices: tuple[tuple[int, float], ...] | None = None  # any price path: (year, £/MWh 2024 CPIH) pairs
     market: MarketResponse = field(default_factory=SimpleFit)  # discount and unpaid negative hours
-    wind_decline: float = DECLINE  # point 17: Staffell & Green 2014
-    solar_decline: float = 0.005  # point 17: Jordan & Kurtz 2013 (facts 22)
+    decline: str = "central"  # point 17: wind and solar decline with age, `output.DECLINES` (facts 22, 33, 34)
+    output: str = "measured"  # build plan "Output": each farm's own record; bracket "DESNZ 2023" (fact 35)
     abandonment: bool = False  # point 16 bracket: unbuilt renewables cut by their termination rate
     late_starts: bool = False  # point 16 bracket: unbuilt contracts start late by their round's delay
     hpc_strike_2012: float = HPC_STRIKE_2012  # point 23
@@ -33,6 +33,14 @@ class Scenario:
     szc_ops_return: float = 0.0673  # Richard 5 Nov, choice (a): the IWACC held after 2039 (stated)
     households: str = "held"  # point 18: households' share held at 2025's; bracket "EEP" (DESNZ's projection)
     bics_a_year: float = 600_000_000  # point 20, fact 20: the manufacturers' exemption, £ cash a year
+
+    @property
+    def wind_decline(self) -> float:
+        return DECLINES[self.decline][0]
+
+    @property
+    def solar_decline(self) -> float:
+        return DECLINES[self.decline][1]
 
     def price_path(self) -> dict[int, float]:
         return dict(self.prices) if self.prices is not None else prices.annex_m_path(self.case)
@@ -57,6 +65,8 @@ class Bracket(NamedTuple):
 
 
 _C = Scenario()
+# Points 7, 25: the NESO FES 2025 pathways giving the lowest and highest bill, found by running (stage 6).
+BUILD_LOW, BUILD_HIGH = "Falling Behind", "Holistic Transition"
 BRACKETS = (
     Bracket("Annex M prices", replace(_C, case="FFP_Low"), replace(_C, case="FFP_High")),
     Bracket("Discount slope", replace(_C, market=SimpleFit(discount_bound=-1)), replace(_C, market=SimpleFit(discount_bound=1))),
@@ -70,12 +80,11 @@ BRACKETS = (
     Bracket("Capacity Market share", replace(_C, cm_share=CM_LOW), replace(_C, cm_share=CM_HIGH)),
     Bracket("Sizewell C build cost", replace(_C, szc_cost=38_000_000_000), replace(_C, szc_cost=47_720_000_000)),
     Bracket("Households' share", replace(_C, households="EEP"), _C),
+    Bracket("Forward prices, then Annex M", replace(_C, prices=tuple(prices.forward_then_annex_m().items())), _C),
+    Bracket("Decline with age", replace(_C, decline="gentler"), replace(_C, decline="steeper")),
+    Bracket("Output level", _C, replace(_C, output="DESNZ 2023")),
+    Bracket("Build path", replace(_C, market=SimpleFit(path=BUILD_LOW)), replace(_C, market=SimpleFit(path=BUILD_HIGH))),
+    Bracket("Sizewell C return after 2039", replace(_C, szc_ops_return=0.035), _C),  # Richard 5 Nov: 3.5% to 6.73%
 )
 
-LATER = (
-    ("Sizewell C return after 2039", 6),  # Richard 5 Nov, choice (a): "the return goes in the ranges"; values to choose
-    ("Forward prices, then Annex M", 6),
-    ("Decline with age", 6),  # Hamilton 0.2-0.5%/yr gentler; Hughes (REF 2012) steeper: its rate not yet in facts
-    ("Output level", 6),  # DESNZ's assumed load factors as the high end
-    ("Build path", 6),  # NESO FES pathways (point 25), which end is low found by running
-)
+LATER: tuple = ()  # every bracket in the build plan is declared (stage 6)

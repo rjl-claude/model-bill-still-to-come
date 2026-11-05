@@ -114,3 +114,17 @@ def annex_m_path(case: str = "Reference") -> dict[int, float]:
     """The price path as a table: Annex M baseload, £/MWh in 2024 CPIH prices, 2024 to 2050.
     A Scenario holds any such table; later years take the last year's price (point 3)."""
     return {y: power_price(y, case) for y in range(BASE, LAST_ANNEX_M + 1)}
+
+
+# Fact 21: the season-ahead baseload prices (LCCC BMRP, £/MWh cash) for the months to March 2027.
+FORWARD_MONTHS = {2026: [84.75] * 3 + [75.30] * 6 + [114.50] * 3, 2027: [114.50] * 3}
+
+
+def forward_then_annex_m(case: str = "Reference") -> dict[int, float]:
+    """Point 26's bracket: the market's season-ahead prices to March 2027, then Annex M. Each calendar
+    year is the mean of its months, forward months deflated by that year's CPIH, the rest Annex M's."""
+    path = annex_m_path(case)
+    for y, months in FORWARD_MONTHS.items():
+        rest = 12 - len(months)
+        path[y] = (sum(months) / cpih(y) + rest * path[y]) / 12
+    return path
