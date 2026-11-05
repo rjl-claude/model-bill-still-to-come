@@ -5,7 +5,6 @@ hours, both ways (a negative top-up is a payment back), all in 2024 CPIH prices.
 renewables (allocation rounds and Investment Contracts), Hinkley Point C, and the biomass bridging
 contracts (top-up only; output at the 27% load-factor cap). Built and not yet built are kept apart.
 """
-from dataclasses import dataclass, field
 from datetime import date
 
 import pandas as pd
@@ -14,7 +13,7 @@ from . import contracts as C
 from . import discount as D
 from . import output as O
 from .cfd import top_up_with_rule
-from .prices import cpi_to_cpih, power_price
+from .prices import cpi_to_cpih
 
 VALUATION_YEAR = 2026  # valuation date 1 Jan 2026 (build plan point 4)
 
@@ -30,24 +29,15 @@ def line_of(row) -> str:
         return "Hinkley Point C"
     if row["round"] == "Bridging":
         return "Biomass bridging"
-    return "Renewables"
+    return "CfD renewables"
 
 
-@dataclass
-class Settings:
-    case: str = "Reference"
-    discount: D.Discount = field(default_factory=D.SimplePattern)
-    negative: object = field(default_factory=D.NegativeHours)
-    wind_decline: float = O.DECLINE
-    solar_decline: float = 0.005
-    contracts: pd.DataFrame | None = None
-    abandonment: bool = False  # bracket: unbuilt renewables cut by their measured termination rate
-    late_starts: bool = False  # bracket: unbuilt contracts start as late as their round implies
-
-
-def build(s: Settings | None = None, last_year: int = 2066) -> pd.DataFrame:
-    s = s or Settings()
-    c = s.contracts if s.contracts is not None else C.load()
+def build(s: "Scenario | None" = None, last_year: int = 2066) -> "Line":
+    """The CfD scheme-line adapter: three lines, one row per contract-year (design: Scheme line)."""
+    from .model import Line
+    from .scenario import Scenario
+    s = s or Scenario()
+    c = C.load(hpc_strike_2012=s.hpc_strike_2012, hpc_term=s.hpc_term, hpc_shift_years=s.hpc_shift_years)
     if s.late_starts:
         from .unbuilt import late_starts
         c = late_starts(c)
@@ -72,9 +62,8 @@ def build(s: Settings | None = None, last_year: int = 2066) -> pd.DataFrame:
             mwh = O.yearly_mwh(r.capacity_mw, load_f, r.start.year, y,
                                decline=O.decline_for(r.technology, s.wind_decline, s.solar_decline)) * frac
             strike = r.strike_2024 * cpi_to_cpih(y)
-            market = power_price(y, s.case)
-            capture = s.discount(y, r.technology, own.get(r.cfd_id)) if kind else 1.0
-            ns = s.negative(y, r.technology, rule) if kind else 0.0
+            market = s.power(y)
+            capture, ns = s.market.for_contract(y, r.technology, rule, own.get(r.cfd_id)) if kind else (1.0, 0.0)
             pay = top_up_with_rule(strike, market, capture, mwh, ns, neg_price.get(kind, 0.0))
             if ln == "Biomass bridging":
                 pay = max(pay, 0.0)  # top-up only
@@ -85,9 +74,11 @@ def build(s: Settings | None = None, last_year: int = 2066) -> pd.DataFrame:
     out = pd.DataFrame(rows)
     if s.abandonment:
         from .unbuilt import termination_rate
-        k = ~out.built & (out.line == "Renewables")
+        k = ~out.built & (out.line == "CfD renewables")
         out.loc[k, "payment"] *= 1 - out.loc[k, "technology"].map(termination_rate)
-    return _apply_hpc_cap(out, c)
+    out = _apply_hpc_cap(out, c)
+    tidy = out.rename(columns={"cfd_id": "item", "payment": "cash"})[["line", "item", "technology", "built", "year", "cash"]]
+    return Line(tidy, {"cfd_contracts": c, "cfd_contract_years": out})
 
 
 def _apply_hpc_cap(out: pd.DataFrame, c: pd.DataFrame) -> pd.DataFrame:

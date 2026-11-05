@@ -83,17 +83,24 @@ def share_of_year(year: int, end: pd.Timestamp) -> float:
     return max(0.0, (min(y1, end + pd.Timedelta(days=1)) - y0).days) / (y1 - y0).days
 
 
-def build(recycle: float = RECYCLE_CENTRAL, wind_decline: float = 0.016, solar_decline: float = 0.005,
-          first: int = 2026, last: int = 2037) -> pd.DataFrame:
-    s = stations()
+def build(s=None, first: int = 2026, last: int = 2037):
+    """The RO scheme-line adapter: one row per station-year (design: Scheme line)."""
+    from .model import Line
+    from .scenario import Scenario
+    s = s or Scenario()
+    st = stations()
     rows = []
-    for ref, r in s.iterrows():
-        d = decline_for(_tech(r.Technology), wind_decline, solar_decline)
+    for ref, r in st.iterrows():
+        d = decline_for(_tech(r.Technology), s.wind_decline, s.solar_decline)
         for y in range(first, last + 1):
             f = share_of_year(y, r.end)
             if f == 0:
                 continue
             rocs = r.rocs_a_year * (1 - d) ** (y - 2024) * f
+            v = roc_value(y, s.ro_recycle)
             rows.append(dict(station=ref, technology=r.Technology, country=r.Country, year=y, rocs=rocs,
-                             value=roc_value(y, recycle), payment=rocs * roc_value(y, recycle)))
-    return pd.DataFrame(rows)
+                             value=v, payment=rocs * v))
+    out = pd.DataFrame(rows)
+    tidy = out.rename(columns={"station": "item", "payment": "cash"}).assign(line="RO", built=True)
+    return Line(tidy[["line", "item", "technology", "built", "year", "cash"]],
+                {"ro_stations": st.reset_index(), "ro_station_years": out})

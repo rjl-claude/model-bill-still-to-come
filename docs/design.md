@@ -17,15 +17,15 @@ results = run(Scenario(case="FFP_High"))   # one bracket
 
 | Module | Interface | Behind it | State |
 |---|---|---|---|
-| **Scenario** | one frozen record of every contested choice, central by default, including the price path as a table (year -> £/MWh) | the 26 rulings as defaults | new |
-| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | new |
-| **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | CfD, RO built; FiT, CM, SZC to build |
-| **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | Annex M built |
-| **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | built as two parts; join into one interface |
+| **Scenario** | one frozen record of every contested choice, central by default, including the price path as a table (year -> £/MWh) | the 26 rulings as defaults | built (`scenario.py`) |
+| **Brackets** | `BRACKETS`: name, low Scenario, high Scenario | every bracket in the build plan, declared once; a test fails if any bracket moves nothing | built: 9 declared; 7 more in `LATER` with their stage |
+| **Scheme line** (seam, 5 adapters) | `build(scenario) -> rows` | CfD (renewables, Hinkley, bridging), RO, FiT, Capacity Market, Sizewell C | CfD, RO on the seam (`model.Line`); FiT, CM, SZC to build |
+| **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | `annex_m_path` built; forward-then-Annex M in stage 6 |
+| **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | one interface (`MarketResponse.for_contract`, adapter `SimpleFit`) |
 | **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | to build |
 | **Present value** | `present_value(results, rate) -> table` | Green Book (3.5%/3.0%), hurdle rate by technology, to 1 Jan 2026 | to build |
 | **Figures** | `figure(key) -> number`, keys built from the table (line.year.measure, line.total.measure ...), not a fixed list | the one results file the paper reads by key | to build |
-| **Checks** | `check(results) -> report`; fails on an unexplained gap over 15% | Clock 2025 join, OBR (calendarised), LCCC; `explanations.yaml` | to build |
+| **Checks** | `check(results) -> report`; fails on an unexplained gap over 15% | Clock 2025 join, OBR (calendarised), LCCC; `explanations.yaml` | built (`checks.py`) |
 
 Inputs stay as now: `tools/fetch.py`, MANIFEST with sha256, `docs/facts.md`.
 
@@ -57,3 +57,10 @@ Each stage starts from map #61 and this file, reads only the modules it touches,
 ## Roast (4 Nov): what changed
 
 Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches; prices as data, not a seam; a dead-bracket test; figure keys built from the table; FiT on Opus; in-between tables saved for open data. Kept: one `run`, one Scheme line seam, one Scenario.
+
+## Stage 1 (5 Nov): what it settled in the code
+
+- Slope brackets (discount, negative hours): each end of the fitted slope's 95% interval (eight years, t = 2.447); a gentler end past zero is held flat.
+- The Clock's RO record ends in 2024, so the RO join sets the model's 2026 against 2024.
+- Checks, central: RO within 7% of the OBR every year 2026-31; CfD joins the Clock within 2%; CfD runs 1.3-2.5 x the OBR and 2.3 x LCCC, each explained by the market price (`explanations.yaml`).
+- Still missing for stage 6: the steeper decline rate from Hughes (REF 2012) is not in `docs/facts.md`.

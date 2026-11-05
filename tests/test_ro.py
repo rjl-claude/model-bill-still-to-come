@@ -7,7 +7,7 @@ from billtocome import ro
 
 @pytest.fixture(scope="module")
 def o():
-    return ro.build()
+    return ro.build().tables["ro_station_years"]
 
 
 def test_end_dates_in_law():
@@ -37,9 +37,3 @@ def test_pre_2008_stations_stop_in_2027(o):
     s = ro.stations()
     old = s.index[s.accredited <= ro.CUTOFF_2008]
     assert o[o.station.isin(old)].year.max() == 2027
-
-
-def test_against_the_obr_october_2026(o):
-    from billtocome.prices import cpih
-    cash26 = o[o.year == 2026].payment.sum() * cpih(2026)
-    assert abs(cash26 / 8.465e9 - 1) < 0.15  # OBR Table 4.20, 2026-27

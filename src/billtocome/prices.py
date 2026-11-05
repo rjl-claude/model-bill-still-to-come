@@ -108,3 +108,9 @@ def power_price(year: int, case: str = "Reference") -> float:
         raise ValueError(case)
     y = min(year, LAST_ANNEX_M)
     return _annex_m(case).baseload_p_kwh[y] * 10 * gdp_to_cpih(y)
+
+
+def annex_m_path(case: str = "Reference") -> dict[int, float]:
+    """The price path as a table: Annex M baseload, £/MWh in 2024 CPIH prices, 2024 to 2050.
+    A Scenario holds any such table; later years take the last year's price (point 3)."""
+    return {y: power_price(y, case) for y in range(BASE, LAST_ANNEX_M + 1)}

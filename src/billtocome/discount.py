@@ -36,6 +36,25 @@ class Discount(Protocol):
     def __call__(self, year: int, technology: str, own: float | None = None) -> float: ...
 
 
+class MarketResponse(Protocol):
+    """The seam (design: Market response): for one contract-year, the share of the average price the
+    farm earns and the share of its output in hours its rule leaves unpaid. `SimpleFit` now; Grid Sim later."""
+    def for_contract(self, year: int, technology: str, rule: str, own: float | None = None) -> tuple[float, float]: ...
+
+
+T95_6DF = 2.4469  # Student's t, 97.5th percentile, 6 degrees of freedom (eight fitted years less two)
+
+
+def bounded_slope(ln: "Line", bound: int, n: int = 8) -> float:
+    """The fitted slope (bound 0), or the end of its 95% confidence interval (bound -1 gentler, +1 steeper).
+    A gentler end past zero is held at zero (flat), not turned round."""
+    if bound == 0:
+        return ln.slope
+    se = abs(ln.slope) * ((1 - ln.r2) / (ln.r2 * (n - 2))) ** 0.5
+    b = ln.slope + bound * T95_6DF * se * (1 if ln.slope >= 0 else -1)
+    return b if b * ln.slope > 0 else 0.0
+
+
 @cache
 def measured() -> pd.DataFrame:
     """Per year: wind and solar share, and their value factors (output-weighted / average price)."""
@@ -127,13 +146,14 @@ def share(kind: str, year: int, path: str = "EEP") -> float:
 @dataclass(frozen=True)
 class SimplePattern:
     path: str = "EEP"
-    slope_scale: float = 1.0  # bracket: steeper (>1) or gentler (<1) slope
+    slope_scale: float = 1.0  # steeper (>1) or gentler (<1) slope
+    slope_bound: int = 0  # bracket: -1 gentler, +1 steeper end of the slope's 95% interval
 
     def line(self, kind: str) -> Line:
         f = fit(kind)
         base = measured().loc[list(BASE_YEARS)]
         pivot = float(base[f"{kind}_share"].mean())  # steeper/gentler turns the line about today's share
-        slope = f.slope * self.slope_scale
+        slope = bounded_slope(f, self.slope_bound) * self.slope_scale
         return Line(f(pivot) - slope * pivot, slope, f.r2)
 
     def __call__(self, year: int, technology: str, own: float | None = None) -> float:
@@ -216,7 +236,8 @@ def negative_price(kind: str) -> float:
 class NegativeHours:
     """The share of a contract's output in hours its rule leaves unpaid. Same inputs as the discount."""
     path: str = "EEP"
-    slope_scale: float = 1.0  # bracket: steeper or gentler, turned about today's share
+    slope_scale: float = 1.0  # steeper or gentler, turned about today's share
+    slope_bound: int = 0  # bracket: -1 gentler, +1 steeper end of the slope's 95% interval
 
     def __call__(self, year: int, technology: str, rule: str) -> float:
         kind = "wind" if technology in WIND else "solar" if technology in SOLAR else None
@@ -224,6 +245,20 @@ class NegativeHours:
             return 0.0
         f = negative_fit(kind, rule)
         pivot = float(measured().loc[list(BASE_YEARS), f"{kind}_share"].mean())
-        slope = f.slope * self.slope_scale
+        slope = bounded_slope(f, self.slope_bound) * self.slope_scale
         v = f(pivot) + slope * (share(kind, year, self.path) - pivot)
         return float(min(max(v, 0.0), 1.0))
+
+
+@dataclass(frozen=True)
+class SimpleFit:
+    """The Market response today: the British fit for the discount and for unpaid negative hours, on one
+    build path (EEP, or a NESO FES pathway). Each slope can be set to either end of its 95% interval."""
+    path: str = "EEP"
+    discount_bound: int = 0
+    negative_bound: int = 0
+
+    def for_contract(self, year: int, technology: str, rule: str, own: float | None = None) -> tuple[float, float]:
+        d = SimplePattern(self.path, slope_bound=self.discount_bound)(year, technology, own)
+        n = NegativeHours(self.path, slope_bound=self.negative_bound)(year, technology, rule)
+        return d, n

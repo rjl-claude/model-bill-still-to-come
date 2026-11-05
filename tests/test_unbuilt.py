@@ -1,6 +1,8 @@
 """aios-harness#69: unbuilt contracts, against docs/hand-example-unbuilt.md."""
 import pytest
 
+from billtocome.scenario import Scenario
+
 from billtocome import cfd_line as L
 from billtocome import unbuilt as U
 from billtocome.contracts import load
@@ -28,12 +30,12 @@ def test_late_starts_move_only_unbuilt_and_keep_the_term():
 
 @pytest.fixture(scope="module")
 def central():
-    return L.build(last_year=2030)
+    return L.build(last_year=2030).tables["cfd_contract_years"]
 
 
 def test_abandonment_changes_only_unbuilt_renewables(central):
-    a = L.build(L.Settings(abandonment=True), last_year=2030)
-    same = central.built | (central.line != "Renewables")
+    a = L.build(Scenario(abandonment=True), last_year=2030).tables["cfd_contract_years"]
+    same = central.built | (central.line != "CfD renewables")
     assert (a.payment[same.values].values == central.payment[same.values].values).all()
-    k = (~central.built) & (central.line == "Renewables") & (central.technology == "Offshore Wind")
+    k = (~central.built) & (central.line == "CfD renewables") & (central.technology == "Offshore Wind")
     assert a.payment[k.values].values == pytest.approx(central.payment[k.values].values * 0.9)

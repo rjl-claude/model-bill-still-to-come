@@ -1,11 +1,64 @@
-# Written explanations for checks over the 15% margin (build plan point 14). One entry per line and period.
-# Read by the checks report (aios-harness#77); a gap over 15% without an entry fails the build.
-- check: LCCC two-year forecast, base case
-  line: Renewables
-  period: 2027-04 to 2028-03
-  gap: model about 1.7 x LCCC
+# Written explanations for checks over the 15% margin (build plan point 14). One entry per check, line and period;
+# read by billtocome.checks; a gap over 15% without an entry fails the build. Every entry goes into Annex E.
+# Re-derived 5 Nov 2026 (aios-harness#80): the 'price that matches' is found by running the CfD lines at two
+# flat market prices (£60 and £120/MWh, 2024 prices) and solving the straight line for the reference figure.
+- check: OBR
+  line: CfD
+  period: "2026"
+  gap: model 1.75 x OBR (calendarised, cash)
   explanation: >
-    LCCC prices on the market's forward curve (winter 2026-27 reference prices £108-152/MWh cash);
-    the model uses DESNZ Annex M (2026 baseload £75/MWh, 2024 prices), as ruled (ADR 0003), so its
-    top-up per MWh is about £56 cash against LCCC's £41. The model also starts new contracts on
-    LCCC's expected dates at each farm's measured output, about a third more MWh than LCCC's quarters.
+    Market price. The model prices power on DESNZ Annex M (2026: £75.3/MWh, 2024 prices), as ruled
+    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2026 figure at a
+    market price of about £109.6/MWh (2024 prices), all else unchanged.
+- check: OBR
+  line: CfD
+  period: "2027"
+  gap: model 2.54 x OBR (calendarised, cash)
+  explanation: >
+    Market price. The model prices power on DESNZ Annex M (2027: £62.7/MWh, 2024 prices), as ruled
+    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2027 figure at a
+    market price of about £99.3/MWh (2024 prices), all else unchanged.
+- check: OBR
+  line: CfD
+  period: "2028"
+  gap: model 1.50 x OBR (calendarised, cash)
+  explanation: >
+    Market price. The model prices power on DESNZ Annex M (2028: £59.1/MWh, 2024 prices), as ruled
+    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2028 figure at a
+    market price of about £75.4/MWh (2024 prices), all else unchanged. Contracts not yet built are 12% of the model's 2028;
+    a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
+- check: OBR
+  line: CfD
+  period: "2029"
+  gap: model 1.32 x OBR (calendarised, cash)
+  explanation: >
+    Market price. The model prices power on DESNZ Annex M (2029: £57.2/MWh, 2024 prices), as ruled
+    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2029 figure at a
+    market price of about £68.6/MWh (2024 prices), all else unchanged. Contracts not yet built are 24% of the model's 2029;
+    a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
+- check: OBR
+  line: CfD
+  period: "2030"
+  gap: model 1.48 x OBR (calendarised, cash)
+  explanation: >
+    Market price. The model prices power on DESNZ Annex M (2030: £57.9/MWh, 2024 prices), as ruled
+    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2030 figure at a
+    market price of about £73.4/MWh (2024 prices), all else unchanged. Contracts not yet built are 37% of the model's 2030;
+    a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
+- check: OBR
+  line: CfD
+  period: "2031"
+  gap: model 1.67 x OBR (calendarised, cash)
+  explanation: >
+    Market price. The model prices power on DESNZ Annex M (2031: £57.7/MWh, 2024 prices), as ruled
+    (ADR 0003, point 26); the OBR prices on the market. The model meets the OBR's 2031 figure at a
+    market price of about £76.7/MWh (2024 prices), all else unchanged. Contracts not yet built are 53% of the model's 2031;
+    a slower build than LCCC's expected dates in the OBR's forecast would close part of the gap instead.
+- check: LCCC
+  line: CfD renewables
+  period: "2026-10 to 2027-03"
+  gap: model 2.28 x LCCC (cash)
+  explanation: >
+    Market price. LCCC forecasts on market prices (Winter 2026 baseload reference price £114.50/MWh cash,
+    docs/facts.md 21); the model uses Annex M (2026: £75.3/MWh, 2027: £62.7/MWh, 2024 prices), as ruled.
+    Run at £114.50 cash for 2026 and 2027, the model is within 7% of LCCC (model 0.93 x LCCC).

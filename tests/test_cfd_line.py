@@ -1,5 +1,4 @@
 """aios-harness#68: the CfD line, against docs/hand-example-cfd-line.md."""
-import pandas as pd
 import pytest
 
 from billtocome import cfd_line as L
@@ -7,7 +6,7 @@ from billtocome import cfd_line as L
 
 @pytest.fixture(scope="module")
 def o():
-    return L.build()
+    return L.build().tables["cfd_contract_years"]
 
 
 def test_hand_example_ea1_2030(o):
@@ -27,7 +26,7 @@ def test_drax_bridging_2028(o):
 
 
 def test_three_lines_and_built_apart(o):
-    assert set(o.line) == {"Renewables", "Hinkley Point C", "Biomass bridging"}
+    assert set(o.line) == {"CfD renewables", "Hinkley Point C", "Biomass bridging"}
     assert set(o.built) == {True, False}
     assert o.year.min() == 2026
 
@@ -43,24 +42,5 @@ def test_nothing_paid_after_a_contract_ends(o):
     assert (last <= end.reindex(last.index).dt.year).all()
 
 
-def test_join_with_the_clock_2025(o):
-    clock = pd.read_csv("/srv/aios/projects/web-subsidy-clock/site/data/cfd.csv", comment="#").set_index("year")
-    c25 = clock.loc[2025, "cost_real"]
-    m26 = o[(o.year == 2026) & (o.line == "Renewables")].payment.sum()
-    assert abs(m26 / c25 - 1) < 0.15, (m26, c25)
-
-
 def test_hinkley_cap_not_binding_at_central(o):
     assert o[o.line == "Hinkley Point C"].mwh.sum() < 910_000_000
-
-
-def test_lccc_gap_is_explained():
-    import yaml
-    e = yaml.safe_load(open(L.__file__.rsplit("/src/", 1)[0] + "/explanations.yaml"))
-    assert any(x["check"].startswith("LCCC two-year") and x["line"] == "Renewables" for x in e)
-
-
-def test_a_stand_in_discount_runs_the_line():
-    flat = lambda year, technology, own=None: 0.9  # noqa: E731
-    o2 = L.build(L.Settings(discount=flat), last_year=2027)
-    assert (o2[o2.technology == "Offshore Wind"].capture == 0.9).all()
