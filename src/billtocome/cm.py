@@ -24,7 +24,7 @@ import pandas as pd
 from .prices import cpi, cpih
 
 RAW = Path(__file__).resolve().parents[2] / "data" / "raw"
-ENGINE = Path("/srv/aios/projects/web-subsidy-clock/reference/engine/v4-s43.json")  # the released Clock's
+ENGINE = Path("/srv/aios/projects/model-bill-already-paid/reference/engine/v4-s43.json")  # the bill-already-paid model's
 AUCTIONS = ("T-4", "T-3", "T-1", "TR")
 WINTER_MONTHS = ("OCT", "NOV", "DEC", "JAN", "FEB", "MAR", "APR")
 

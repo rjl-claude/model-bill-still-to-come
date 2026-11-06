@@ -4,6 +4,8 @@ Each line in each year against the Clock (the join), the OBR (calendarised) and 
 fails unless `explanations.yaml` holds an entry for that check, line and period. Worked by hand in
 docs/hand-example-checks.md.
 """
+import hashlib
+import json
 from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
@@ -15,7 +17,9 @@ from .prices import cpih
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw"
-CLOCK = Path("/srv/aios/projects/web-subsidy-clock/site/data")  # the released Clock's data files
+# the bill already paid: model-bill-already-paid's results file, which the Clock's site is built from
+# (aios-harness#140); its fingerprint is checked against the .sha256 the model writes beside it
+CLOCK = Path("/srv/aios/projects/model-bill-already-paid/results/clock.json")
 MARGIN = 0.15
 GROUPS = {"CfD": ("CfD renewables", "Hinkley Point C", "Biomass bridging"), "RO": ("RO",), "FiT": ("FiT",),
           "Capacity Market": ("Capacity Market",), "Sizewell C": ("Sizewell C",)}
@@ -28,8 +32,7 @@ OBR_ROWS = {"CfD": "Contracts for difference", "RO": "Renewables obligation",
 # Sizewell C's levy began on 1 December 2025, so its £0.5bn is four months (December-March): an annual
 # rate of £1.5bn, of which calendarise() then puts the January-March part (three quarters of £0.5bn) in 2026.
 OBR_OVERRIDE = {"Capacity Market (whole levy)": {2025: 1.6e9}, "Sizewell C": {2025: 0.5e9 * 12 / 4}}
-CLOCK_FILES = {"CfD": "cfd.csv", "RO": "renewables-obligation.csv", "FiT": "feed-in-tariffs.csv",
-               "Capacity Market": "capacity-market.csv"}
+CLOCK_LINES = {"CfD": "cfd_renewable", "RO": "ro", "FiT": "fit", "Capacity Market": "capacity_market"}
 OBR_YEARS = range(2026, 2032)
 # Budget 2025 policy costings p.12 (fact 13): Exchequer cost of 75% of the RO's domestic share, £ cash, by
 # financial year (keyed by its starting year)
@@ -69,10 +72,23 @@ def obr(group: str) -> dict[int, float]:
     return {y: calendarise(fy, y) for y in OBR_YEARS}
 
 
+@cache
+def _clock_lines() -> dict[str, list[dict]]:
+    data = CLOCK.read_bytes()
+    want = CLOCK.with_name(CLOCK.name + ".sha256").read_text().split()[0]
+    if hashlib.sha256(data).hexdigest() != want:
+        raise ValueError(f"{CLOCK}: fingerprint does not match its .sha256 (not as the model wrote it)")
+    doc = json.loads(data)
+    if doc["meta"]["model"] != "model-bill-already-paid":
+        raise ValueError(f"{CLOCK} is not model-bill-already-paid's results file")
+    return {s["scheme_id"]: s["annual"]["rows"] for s in doc["model"]["schemes"]}
+
+
 def _clock(group: str) -> tuple[int, float]:
-    c = pd.read_csv(CLOCK / CLOCK_FILES[group], comment="#")
-    last = c[c.year <= 2025].iloc[-1]  # the Clock's last measured year (2026 on is its carry-forward)
-    return int(last.year), float(last.cost_real)
+    rows = [r for r in _clock_lines()[CLOCK_LINES[group]] if r["year"] <= 2025]
+    last = max(rows, key=lambda r: r["year"])  # the Clock's last measured year (2026 on is its carry-forward)
+    # to the penny, as the Clock publishes it (its CSVs carry 2 dp)
+    return int(last["year"]), round(float(last["cost_gbp_2024"]), 2)
 
 
 def _lccc() -> float:
@@ -96,7 +112,7 @@ def check(results, explanations: list[dict] | None = None) -> Report:
 
     first = int(t.year.min())
     for g in GROUPS:
-        if not real[g].sum() or g not in CLOCK_FILES:
+        if not real[g].sum() or g not in CLOCK_LINES:
             continue  # a line this run does not have, or one the Clock does not count (Sizewell C)
         y, c = _clock(g)
         add("Clock join", g, f"{first} vs {y}", float(real[g].get(first, 0.0)), c)
