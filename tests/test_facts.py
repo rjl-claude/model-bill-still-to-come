@@ -57,6 +57,6 @@ def test_no_stage_0_fact_is_still_open():
 def test_every_cited_file_is_saved():
     saved = _manifest()
     for p in re.findall(r"`([a-z0-9-]+/[^`*/]+\.[A-Za-z0-9]+)`", FACTS):
-        if p.startswith("model-subsidy-book/"):
+        if p.startswith("model-ending-subsidy-contracts/"):
             continue  # the 16 Oct fetch, kept in its own project
         assert p in saved, f"{p} is cited but not in MANIFEST"

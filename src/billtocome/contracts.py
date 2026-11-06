@@ -24,7 +24,7 @@ HPC_STARTS = (pd.Timestamp("2030-04-01"), pd.Timestamp("2031-04-01"))
 # and 1 Nov 2025, to but excluding the end date), no extension assumed (point 24).
 HPC_WINDOW_LAST_DAY = (pd.Timestamp("2029-04-30"), pd.Timestamp("2029-10-31"))
 HPC_CAP_MWH = 910_000_000
-# Investment Contracts with a fixed end instead of 15 years (DECC FIDeR contracts; model-subsidy-book
+# Investment Contracts with a fixed end instead of 15 years (DECC FIDeR contracts; model-ending-subsidy-contracts
 # gaps-closed.md F02): Drax unit 1 and Lynemouth end 31 Mar 2027.
 FIXED_END = {"INV-DRX-001": pd.Timestamp("2027-03-31"), "INV-LYN-001": pd.Timestamp("2027-03-31")}
 # The two biomass bridging contracts (low-carbon dispatchable CfDs), not in LCCC's portfolio list:
