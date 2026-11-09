@@ -13,7 +13,7 @@ The model behind Report No. 2, *The Price of the Climate Bill*. It builds only *
 ## Rules for using it (Richard, 5 Nov 2026)
 
 - Quotable figures come from the frozen version only, and the answer names that version. "What if" runs are allowed but labelled **not the published figure**.
-- The frozen version is **1.0.0** (git tag `v1.0.0`; cut-off date 9 Nov 2026, valuation date 1 Jan 2026; `results/figures.json`, pinned in `report-series/model-register.yaml`). Figures from any later uncommitted run are provisional and are called that.
+- The frozen version is **1.0.1** (git tag `v1.0.1`; 1.0.0's figures unchanged plus keys for the price path, contract counts and checks, see `CHANGELOG.md`; cut-off date 9 Nov 2026, valuation date 1 Jan 2026; `results/figures.json`, pinned in `report-series/model-register.yaml`). Figures from any later uncommitted run are provisional and are called that.
 - Answer by running the model, never from memory or sums in chat. Name the version and the lines covered (for example: CfD renewables plus Hinkley, central case, 2024 prices).
 - Report 3 pins the frozen version it uses (version and file fingerprint), as `report-series/model-register.yaml` does for Report 1's model. It moves only when Richard moves the pin.
 - A mistake found after the freeze is fixed in a new numbered version with a note of what changed and by how much. The old version stays as it was. Richard decides on any correction notice in the paper.

@@ -31,6 +31,17 @@ LINE_KEYS = {
     "CfD renewables": "cfd_renewables", "Hinkley Point C": "hinkley_point_c", "Biomass bridging": "biomass_bridging",
     "RO": "ro", "FiT": "fit", "Capacity Market": "capacity_market", "Sizewell C": "sizewell_c", "VAT": "vat",
 }
+# The unit of each kind of key 1.0.1 added (a regex on the key); every other key is in UNITS
+KEY_UNITS = {
+    "default": UNITS,
+    r"price_path\.(low|reference|high)\.\d{4}": "£/MWh, 2024 prices (CPIH)",
+    r"[a-z_]+\.(built\.|not_yet_built\.)?contracts": "number (FiT: installations)",
+    r"check(\.[a-z0-9_]+){3}\.(model|reference)": "£ cash; the Clock join in 2024 prices",
+    r"check(\.[a-z0-9_]+){3}\.(gap|ratio)": "gap: model / reference - 1; ratio: model / reference",
+    r"check\.obr\.cfd\.\d{4}\.matching_price": "£/MWh, 2024 prices (CPIH)",
+    r"check\.obr\.cfd\.\d{4}\.not_yet_built_share": "share of the model's CfD that year (0 to 1)",
+    r"check\.lccc(\.[a-z0-9_]+){2}\.at_forward_price\.ratio": "model / LCCC, 2026-27 at LCCC's winter price",
+}
 BUILT = {True: "built", False: "not_yet_built"}
 MEASURES = {"cash": None, "pv_green_book": "green_book", "pv_hurdle": "hurdle"}
 
@@ -79,13 +90,59 @@ def bracket_keys(tornado: pd.DataFrame) -> dict[str, float]:
     return out
 
 
-def write(results, path: Path, tornado: pd.DataFrame | None = None) -> None:
-    """The results file. With `tornado` (from `brackets.tornado()`), its bracket and range keys too."""
+PRICE_CASES = {"low": "FFP_Low", "reference": "Reference", "high": "FFP_High"}
+
+
+def price_path_keys() -> dict[str, float]:
+    """`price_path.<low|reference|high>.<year>`: DESNZ Annex M baseload, £/MWh in 2024 prices (CPIH),
+    2024 to 2050 (later years take 2050's), for each fossil-price case (version 1.0.1, aios-harness#221)."""
+    from .prices import annex_m_path
+    return {f"price_path.{name}.{y}": float(p) for name, case in PRICE_CASES.items()
+            for y, p in annex_m_path(case).items()}
+
+
+def contract_keys(results) -> dict[str, int]:
+    """`<line>.contracts`, `<line>.built.contracts`, `<line>.not_yet_built.contracts`: how many contracts,
+    accreditations and agreements pay from the valuation date, by line (version 1.0.1, aios-harness#221).
+    The FiT line counts installations (its tariff groups' `n`); VAT and the rows moving cost between
+    payers are not contracts."""
+    from .who_pays import MOVES
+    t = results.table
+    t = t[~t.item.isin(MOVES) & (t.line != "VAT")]
+    fit_n = results.tables["fit_groups"].set_index("group").n if "fit_groups" in results.tables else None
+    out: dict[str, int] = {}
+    for (line, built), g in t.groupby(["line", "built"]):
+        key = LINE_KEYS[line]
+        items = g.item.unique()
+        n = int(fit_n.reindex(items).sum()) if key == "fit" and fit_n is not None else len(items)
+        out[f"{key}.{BUILT[built]}.contracts"] = n
+        out[f"{key}.contracts"] = out.get(f"{key}.contracts", 0) + n
+    return out
+
+
+def check_keys(results) -> dict[str, float]:
+    """`check.<check>.<line>.<period>.<model|reference|gap|ratio>` for each row of `checks.check(results)`:
+    model and reference in £ cash (OBR, LCCC, Budget) or 2024 prices (Clock join); gap = model / reference - 1;
+    ratio = model / reference; and the figures the written explanations print (`checks.notes`)
+    (version 1.0.1, aios-harness#221)."""
+    from .checks import check, notes
+    out: dict[str, float] = notes(results)
+    for r in check(results).rows.itertuples():
+        k = f"check.{slug(r.check)}.{slug(r.line)}.{slug(r.period)}"
+        out |= {f"{k}.model": float(r.model), f"{k}.reference": float(r.reference),
+                f"{k}.gap": float(r.gap), f"{k}.ratio": float(r.model / r.reference)}
+    return out
+
+
+def write(results, path: Path, tornado: pd.DataFrame | None = None, checks: bool = False) -> None:
+    """The results file. With `tornado` (from `brackets.tornado()`), its bracket and range keys too; with
+    `checks`, the check keys (`check_keys`), as the frozen release writes them."""
     meta = dict(model="model-bill-still-to-come", version=version("billtocome"),
-                units=UNITS, scenario=repr(results.scenario), valuation_date=results.valuation_date.isoformat(),
+                units=UNITS, key_units=KEY_UNITS, scenario=repr(results.scenario), valuation_date=results.valuation_date.isoformat(),
                 cut_off_date=results.cut_off_date.isoformat() if results.cut_off_date else None,
                 manifest_sha256=results.manifest_sha256)
-    figs = build(results) | (bracket_keys(tornado) if tornado is not None else {})
+    figs = build(results) | price_path_keys() | contract_keys(results) | (bracket_keys(tornado) if tornado is not None else {}) \
+        | (check_keys(results) if checks else {})
     Path(path).write_text(json.dumps(dict(meta=meta, figures=figs), indent=0, sort_keys=True))
 
 

@@ -35,6 +35,10 @@ EXCHEQUER_WINDOW = (pd.Timestamp("2026-04-01"), pd.Timestamp("2029-04-01"))
 BICS_WINDOW = (pd.Timestamp("2027-04-01"), pd.Timestamp("2035-04-01"))
 BICS_BACK = (pd.Timestamp("2026-04-01"), pd.Timestamp("2027-04-01"))
 BICS_LINES = ("RO", "FiT", "Capacity Market")
+# The rows that move cost between payers, not contracts of their own (their item names)
+EXCHEQUER_ITEM = "Exchequer: 75% of households' share, Apr 2026-Mar 2029"
+BICS_ITEM = "Manufacturers' exemption (BICS)"
+MOVES = (EXCHEQUER_ITEM, BICS_ITEM)
 
 
 @cache
@@ -80,7 +84,7 @@ def split(table: pd.DataFrame, s) -> pd.DataFrame:
     for y in sorted(out.year.unique()):
         f = share_of_year(y, EXCHEQUER_WINDOW)
         if f and ("RO", "households", y) in by:
-            move("RO", "Exchequer: 75% of households' share, Apr 2026-Mar 2029", y, "households", "taxpayers",
+            move("RO", EXCHEQUER_ITEM, y, "households", "taxpayers",
                  EXCHEQUER_RO * f * by[("RO", "households", y)])
         e = bics_real(y, s.bics_a_year)
         if e:
@@ -90,7 +94,7 @@ def split(table: pd.DataFrame, s) -> pd.DataFrame:
             for ln, b in base.items():
                 if b:
                     amount = e * b / total * (s.cm_share if ln == "Capacity Market" else 1.0)
-                    move(ln, "Manufacturers' exemption (BICS)", y, "businesses", "taxpayers", amount)
+                    move(ln, BICS_ITEM, y, "businesses", "taxpayers", amount)
     out = pd.concat([out, pd.DataFrame(moves)], ignore_index=True)
     hh = out[out.payer == "households"].groupby(["line", "built", "year"]).cash.sum().reset_index()
     vat = hh.assign(item=hh.line + ("|" + hh.built.map({True: "built", False: "not yet built"})),

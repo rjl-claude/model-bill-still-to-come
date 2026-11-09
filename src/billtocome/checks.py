@@ -121,8 +121,45 @@ def check(results, explanations: list[dict] | None = None) -> Report:
         for yr in range(2026, 2030):
             add("Budget", "RO (Exchequer share)", str(yr), float(x.get(yr, 0.0)) * cpih(yr),
                 calendarise(BUDGET_EXCHEQUER_RO, yr))
-    r = t[t.line == "CfD renewables"].groupby("year").cash.sum()
-    if r.sum():
-        add("LCCC", "CfD renewables", "2026-10 to 2027-03",
-            0.25 * (r.get(2026, 0.0) * cpih(2026) + r.get(2027, 0.0) * cpih(2027)), _lccc())
+    if (t.line == "CfD renewables").any():
+        add("LCCC", "CfD renewables", "2026-10 to 2027-03", _lccc_window(t), _lccc())
     return Report(pd.DataFrame(rows))
+
+
+def _lccc_window(t: pd.DataFrame) -> float:
+    """The model's CfD renewables for LCCC's window, October 2026 to March 2027, £ cash."""
+    r = t[t.line == "CfD renewables"].groupby("year").cash.sum()
+    return 0.25 * (r.get(2026, 0.0) * cpih(2026) + r.get(2027, 0.0) * cpih(2027))
+
+
+# The written explanations' figures (explanations.yaml, Annex E), each a key from 1.0.1 (aios-harness#221)
+FLAT = (60.0, 120.0)  # the two flat market prices the price that matches is solved between (£/MWh, 2024)
+LCCC_WINTER = 114.50  # LCCC's Winter 2026 baseload reference price, £/MWh cash (fact 21)
+
+
+def notes(results) -> dict[str, float]:
+    """`check.obr.cfd.<year>.matching_price` (£/MWh, 2024 prices): the flat market price at which the CfD
+    lines meet the OBR, all else unchanged, from runs at the two FLAT prices (straight line);
+    `check.obr.cfd.<year>.not_yet_built_share`: contracts not yet built, as a share of the model's CfD that
+    year; `check.lccc.cfd_renewables.2026_10_to_2027_03.at_forward_price.ratio`: model / LCCC with 2026
+    and 2027 priced at LCCC's winter price."""
+    from dataclasses import replace
+
+    from . import cfd_line
+    from .model import run
+
+    def cfd(prices):
+        return run(replace(results.scenario, prices=prices), lines=(cfd_line.build,), split=False).table
+
+    out: dict[str, float] = {}
+    lo, hi = (cfd(((2024, p),)) for p in FLAT)
+    t = results.table
+    c = t[t.line.isin(GROUPS["CfD"])]
+    for y, ref in obr("CfD").items():
+        a, b = (float(x[x.line.isin(GROUPS["CfD"]) & (x.year == y)].cash.sum()) * cpih(y) for x in (lo, hi))
+        out[f"check.obr.cfd.{y}.matching_price"] = FLAT[0] + (ref - a) * (FLAT[1] - FLAT[0]) / (b - a)
+        year = c[c.year == y]
+        out[f"check.obr.cfd.{y}.not_yet_built_share"] = float(year[~year.built].cash.sum() / year.cash.sum())
+    fwd = cfd(tuple((y, LCCC_WINTER / cpih(y)) for y in (2026, 2027)))
+    out["check.lccc.cfd_renewables.2026_10_to_2027_03.at_forward_price.ratio"] = _lccc_window(fwd) / _lccc()
+    return out
