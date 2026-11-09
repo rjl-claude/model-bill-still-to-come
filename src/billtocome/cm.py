@@ -100,9 +100,14 @@ def autumn_share() -> float:
     return float((q4 / d.groupby("dy").ND.sum()).mean())
 
 
+def register_file() -> Path:
+    """NESO's newest CMU register on disk (named cmu_YYYYMMDD.csv); the freeze's is the cut-off date's."""
+    return sorted((RAW / "neso").glob("cmu_2*.csv"))[-1]
+
+
 @cache
 def agreements() -> pd.DataFrame:
-    r = pd.read_csv(RAW / "neso" / "cmu_20261028.csv", low_memory=False)
+    r = pd.read_csv(register_file(), low_memory=False)
     r = r[r.Type.isin(AUCTIONS) & (r["Capacity Agreement Awarded"] == "Yes")
           & (r["Capacity Agreement has been Terminated"] != "Yes")]
     s = pd.read_csv(RAW / "neso" / "capacity-market-auction-static-data.csv", encoding="utf-8-sig")

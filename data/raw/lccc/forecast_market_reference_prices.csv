@@ -1,802 +1,1201 @@
 Quarterly_Obligation_Period,DateTime,Technology,Forecast_Reference_Price_GBP_per_MWh
 "Determination 01/01/2027-31/03/2027",2027-01-21 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",144.6680
 "Determination 01/10/2026-31/12/2026",2026-10-20 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",120.0872
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",164.7436
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",151.9730
 "Determination 01/10/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",123.4703
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",178.8225
 "Determination 01/01/2027-31/03/2027",2027-02-20 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",133.2388
 "Determination 01/10/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",142.3328
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",178.8042
 "Determination 01/01/2027-31/03/2027",2027-03-01 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",127.4932
 "Determination 01/10/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",108.2048
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",163.9554
 "Determination 01/01/2027-31/03/2027",2027-03-18 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",121.4475
 "Determination 01/10/2026-31/12/2026",2026-10-13 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",117.8068
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",157.8508
 "Determination 01/01/2027-31/03/2027",2027-03-30 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",123.9759
 "Determination 01/10/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",130.3751
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",187.4538
 "Determination 01/01/2027-31/03/2027",2027-01-11 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",150.1249
 "Determination 01/10/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",142.1210
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",192.3608
 "Determination 01/01/2027-31/03/2027",2027-01-30 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",135.0675
 "Determination 01/10/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",134.5677
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",191.0626
 "Determination 01/01/2027-31/03/2027",2027-02-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",125.3758
 "Determination 01/10/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",122.9416
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",165.8620
 "Determination 01/01/2027-31/03/2027",2027-03-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",129.1771
 "Determination 01/10/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",121.0522
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",195.3919
 "Determination 01/01/2027-31/03/2027",2027-03-18 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",127.2829
 "Determination 01/10/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",128.1470
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",183.6493
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",142.7427
 "Determination 01/10/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",115.1606
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",163.8000
 "Determination 01/01/2027-31/03/2027",2027-02-17 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",143.6499
 "Determination 01/10/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",137.8520
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",169.1938
 "Determination 01/01/2027-31/03/2027",2027-03-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",126.3849
 "Determination 01/10/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",138.7688
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",164.6161
 "Determination 01/01/2027-31/03/2027",2027-03-12 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",125.0786
 "Determination 01/10/2026-31/12/2026",2026-10-01 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",114.6590
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",168.9606
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",137.8994
 "Determination 01/10/2026-31/12/2026",2026-10-25 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",115.3445
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",160.1361
 "Determination 01/01/2027-31/03/2027",2027-01-13 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",149.6352
 "Determination 01/10/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",132.1278
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",180.0460
 "Determination 01/01/2027-31/03/2027",2027-03-06 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",110.5864
 "Determination 01/10/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",129.2219
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",165.4965
 "Determination 01/01/2027-31/03/2027",2027-03-21 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",115.8615
 "Determination 01/10/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",120.7869
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",189.8209
 "Determination 01/01/2027-31/03/2027",2027-03-21 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",115.6912
 "Determination 01/10/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",120.7884
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",172.7717
 "Determination 01/01/2027-31/03/2027",2027-01-05 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",147.8692
 "Determination 01/10/2026-31/12/2026",2026-10-07 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",113.7618
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",174.9380
 "Determination 01/01/2027-31/03/2027",2027-01-27 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",144.2926
 "Determination 01/10/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",120.3733
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",178.6432
 "Determination 01/01/2027-31/03/2027",2027-02-02 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",141.9873
 "Determination 01/10/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",124.6147
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",165.6438
 "Determination 01/01/2027-31/03/2027",2027-02-04 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",144.9099
 "Determination 01/10/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",121.6521
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",163.9510
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",135.9922
 "Determination 01/10/2026-31/12/2026",2026-10-13 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",117.8416
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",188.7380
 "Determination 01/01/2027-31/03/2027",2027-03-01 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",127.4353
 "Determination 01/10/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",132.8240
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",165.4707
 "Determination 01/01/2027-31/03/2027",2027-03-05 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",121.8441
 "Determination 01/10/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",132.2813
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",189.9499
 "Determination 01/01/2027-31/03/2027",2027-03-08 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",126.3631
 "Determination 01/10/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",142.6793
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",164.6514
 "Determination 01/01/2027-31/03/2027",2027-03-21 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",116.0140
 "Determination 01/10/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",122.3545
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",180.0055
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",126.9159
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",182.1642
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-05 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",117.2123
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",181.9790
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",122.1955
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",161.5923
 "Determination 01/01/2027-31/03/2027",2027-01-02 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",133.1475
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",175.8970
 "Determination 01/01/2027-31/03/2027",2027-01-02 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",134.5519
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",180.5073
 "Determination 01/01/2027-31/03/2027",2027-01-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",128.1402
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",194.9990
 "Determination 01/01/2027-31/03/2027",2027-01-03 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-01 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",114.6885
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",185.0972
 "Determination 01/01/2027-31/03/2027",2027-01-03 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-14 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",117.3061
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",176.6220
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-23 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",117.2026
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",168.0456
 "Determination 01/01/2027-31/03/2027",2027-01-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-27 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",123.7668
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",181.8489
 "Determination 01/01/2027-31/03/2027",2027-01-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-04 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",128.6232
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",165.6294
 "Determination 01/01/2027-31/03/2027",2027-01-06 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",117.4007
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",174.3894
 "Determination 01/01/2027-31/03/2027",2027-01-06 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-02 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",110.9006
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",179.5773
 "Determination 01/01/2027-31/03/2027",2027-01-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-21 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",120.3488
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",179.7764
 "Determination 01/01/2027-31/03/2027",2027-01-07 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-30 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",121.7085
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",157.4634
 "Determination 01/01/2027-31/03/2027",2027-01-07 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",147.7868
 "Determination 01/10/2026-31/12/2026",2026-10-31 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",115.3418
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",175.9594
 "Determination 01/01/2027-31/03/2027",2027-01-08 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",124.6139
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",174.9585
 "Determination 01/01/2027-31/03/2027",2027-01-08 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",120.1640
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",189.3290
 "Determination 01/01/2027-31/03/2027",2027-01-08 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",145.3979
 "Determination 01/10/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",123.7898
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",186.2267
 "Determination 01/01/2027-31/03/2027",2027-01-09 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-01 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",157.7547
 "Determination 01/01/2027-31/03/2027",2027-01-09 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",182.4257
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-01 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",193.3289
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-02 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",187.2631
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-02 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",167.8181
 "Determination 01/01/2027-31/03/2027",2027-01-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-02 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",179.1662
 "Determination 01/01/2027-31/03/2027",2027-01-11 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-03 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",164.6223
 "Determination 01/01/2027-31/03/2027",2027-01-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-03 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",166.3429
 "Determination 01/01/2027-31/03/2027",2027-01-12 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-04 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",162.2836
 "Determination 01/01/2027-31/03/2027",2027-01-12 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-04 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",181.8903
 "Determination 01/01/2027-31/03/2027",2027-01-13 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",187.2599
 "Determination 01/01/2027-31/03/2027",2027-01-13 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",191.9420
 "Determination 01/01/2027-31/03/2027",2027-01-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-05 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",165.4262
 "Determination 01/01/2027-31/03/2027",2027-01-14 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",170.5026
 "Determination 01/01/2027-31/03/2027",2027-01-14 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-06 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",157.3531
 "Determination 01/01/2027-31/03/2027",2027-01-15 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-07 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",179.3919
 "Determination 01/01/2027-31/03/2027",2027-01-15 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-07 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",181.2582
 "Determination 01/01/2027-31/03/2027",2027-01-15 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-08 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",164.5899
 "Determination 01/01/2027-31/03/2027",2027-01-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-08 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",177.9800
 "Determination 01/01/2027-31/03/2027",2027-01-16 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",185.5117
 "Determination 01/01/2027-31/03/2027",2027-01-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-09 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",182.6749
 "Determination 01/01/2027-31/03/2027",2027-01-17 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",152.1080
 "Determination 01/01/2027-31/03/2027",2027-01-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-10 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",168.5431
 "Determination 01/01/2027-31/03/2027",2027-01-18 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-11 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",175.2990
 "Determination 01/01/2027-31/03/2027",2027-01-18 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",147.1383
 "Determination 01/10/2026-31/12/2026",2026-10-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",189.8738
 "Determination 01/01/2027-31/03/2027",2027-01-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-11 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",190.9033
 "Determination 01/01/2027-31/03/2027",2027-01-19 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",173.0945
 "Determination 01/01/2027-31/03/2027",2027-01-19 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-13 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",167.6052
 "Determination 01/01/2027-31/03/2027",2027-01-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-13 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",179.8743
 "Determination 01/01/2027-31/03/2027",2027-01-20 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",181.4578
 "Determination 01/01/2027-31/03/2027",2027-01-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-14 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",174.7822
 "Determination 01/01/2027-31/03/2027",2027-01-21 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-15 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",187.5362
 "Determination 01/01/2027-31/03/2027",2027-01-22 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-15 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",192.3330
 "Determination 01/01/2027-31/03/2027",2027-01-22 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-16 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",176.1716
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",180.2415
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-16 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",182.9677
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-17 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",149.8443
 "Determination 01/01/2027-31/03/2027",2027-01-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-17 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",158.6614
 "Determination 01/01/2027-31/03/2027",2027-01-24 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-18 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",168.0691
 "Determination 01/01/2027-31/03/2027",2027-01-24 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-18 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",166.1816
 "Determination 01/01/2027-31/03/2027",2027-01-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",160.0115
 "Determination 01/01/2027-31/03/2027",2027-01-25 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-19 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",173.9918
 "Determination 01/01/2027-31/03/2027",2027-01-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-20 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",185.4101
 "Determination 01/01/2027-31/03/2027",2027-01-26 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-20 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",179.8807
 "Determination 01/01/2027-31/03/2027",2027-01-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-21 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",172.7782
 "Determination 01/01/2027-31/03/2027",2027-01-27 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-21 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",199.1817
 "Determination 01/01/2027-31/03/2027",2027-01-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-22 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",163.9444
 "Determination 01/01/2027-31/03/2027",2027-01-28 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-22 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",197.0143
 "Determination 01/01/2027-31/03/2027",2027-01-28 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-22 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",182.3307
 "Determination 01/01/2027-31/03/2027",2027-01-29 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",189.3235
 "Determination 01/01/2027-31/03/2027",2027-01-29 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-23 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",164.9919
 "Determination 01/01/2027-31/03/2027",2027-01-29 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",141.1245
 "Determination 01/10/2026-31/12/2026",2026-10-24 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",162.2783
 "Determination 01/01/2027-31/03/2027",2027-01-30 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",174.8194
 "Determination 01/01/2027-31/03/2027",2027-01-30 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-24 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",166.8907
 "Determination 01/01/2027-31/03/2027",2027-01-30 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-25 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",183.9261
 "Determination 01/01/2027-31/03/2027",2027-01-31 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-25 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",157.8845
 "Determination 01/01/2027-31/03/2027",2027-02-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-26 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",167.8314
 "Determination 01/01/2027-31/03/2027",2027-02-01 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",175.6474
 "Determination 01/01/2027-31/03/2027",2027-02-01 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-26 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",187.0682
 "Determination 01/01/2027-31/03/2027",2027-02-02 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-27 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",165.0016
 "Determination 01/01/2027-31/03/2027",2027-02-02 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-27 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",179.2358
 "Determination 01/01/2027-31/03/2027",2027-02-02 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",164.8320
 "Determination 01/01/2027-31/03/2027",2027-02-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-28 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",163.8985
 "Determination 01/01/2027-31/03/2027",2027-02-03 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-29 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",165.7265
 "Determination 01/01/2027-31/03/2027",2027-02-04 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-29 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",158.6475
 "Determination 01/01/2027-31/03/2027",2027-02-04 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-29 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",167.2570
 "Determination 01/01/2027-31/03/2027",2027-02-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-30 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",180.4787
 "Determination 01/01/2027-31/03/2027",2027-02-05 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-30 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",172.1405
 "Determination 01/01/2027-31/03/2027",2027-02-05 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",139.1188
 "Determination 01/10/2026-31/12/2026",2026-10-30 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",177.2788
 "Determination 01/01/2027-31/03/2027",2027-02-05 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",139.1307
 "Determination 01/10/2026-31/12/2026",2026-10-31 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",177.2070
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-31 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",165.4880
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-01 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",166.3785
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-01 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",163.0337
 "Determination 01/01/2027-31/03/2027",2027-02-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-02 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",165.8203
 "Determination 01/01/2027-31/03/2027",2027-02-08 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-02 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",167.2378
 "Determination 01/01/2027-31/03/2027",2027-02-08 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-02 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",173.0626
 "Determination 01/01/2027-31/03/2027",2027-02-09 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-03 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",181.4933
 "Determination 01/01/2027-31/03/2027",2027-02-09 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-03 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",164.6224
 "Determination 01/01/2027-31/03/2027",2027-02-10 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-04 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",195.9711
 "Determination 01/01/2027-31/03/2027",2027-02-10 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-04 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",164.9014
 "Determination 01/01/2027-31/03/2027",2027-02-10 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-04 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",165.4228
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",166.5447
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",186.2422
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",178.9735
 "Determination 01/01/2027-31/03/2027",2027-02-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",163.0392
 "Determination 01/01/2027-31/03/2027",2027-02-12 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",174.9959
 "Determination 01/01/2027-31/03/2027",2027-02-13 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",187.7681
 "Determination 01/01/2027-31/03/2027",2027-02-13 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",165.3348
 "Determination 01/01/2027-31/03/2027",2027-02-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",166.5832
 "Determination 01/01/2027-31/03/2027",2027-02-14 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",173.5997
 "Determination 01/01/2027-31/03/2027",2027-02-14 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",163.3701
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",182.9702
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",181.9384
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",182.8652
 "Determination 01/01/2027-31/03/2027",2027-02-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",170.5024
 "Determination 01/01/2027-31/03/2027",2027-02-16 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",165.4747
 "Determination 01/01/2027-31/03/2027",2027-02-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",166.9345
 "Determination 01/01/2027-31/03/2027",2027-02-17 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",152.1163
 "Determination 01/01/2027-31/03/2027",2027-02-17 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",145.5123
 "Determination 01/10/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",175.2772
 "Determination 01/01/2027-31/03/2027",2027-02-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",179.9392
 "Determination 01/01/2027-31/03/2027",2027-02-18 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",176.7210
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",164.9040
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",175.3038
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",164.7522
 "Determination 01/01/2027-31/03/2027",2027-02-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",166.5975
 "Determination 01/01/2027-31/03/2027",2027-02-20 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",167.5006
 "Determination 01/01/2027-31/03/2027",2027-02-20 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-21 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-22 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-22 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-23 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-24 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-24 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-26 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-26 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-27 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-28 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-28 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-01 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-01 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-02 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-02 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-10 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-02 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",131.7957
 "Determination 01/10/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-03 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-04 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-04 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-05 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-05 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-07 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-07 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-08 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-08 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-09 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-09 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-09 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-10 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-10 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-11 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-12 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-13 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-13 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-13 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-14 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-14 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-15 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-15 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-16 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-16 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-19 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-19 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-20 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",174.2115
 "Determination 01/01/2027-31/03/2027",2027-03-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-21 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-22 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-22 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-22 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-22 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-25 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-26 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-27 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-27 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-28 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-29 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",180.3336
 "Determination 01/01/2027-31/03/2027",2027-03-29 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-30 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-30 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-31 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-31 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",133.0047
 "Determination 01/10/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-12 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",149.6266
 "Determination 01/10/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-14 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",133.1804
 "Determination 01/10/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",142.7193
 "Determination 01/10/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-28 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",115.1172
 "Determination 01/10/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-05 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-13 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",148.9827
 "Determination 01/10/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-22 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",141.2554
 "Determination 01/10/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",136.2078
 "Determination 01/10/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-31 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-07 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-24 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",131.8759
 "Determination 01/10/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-06 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-17 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",163.6766
 "Determination 01/01/2027-31/03/2027",2027-03-18 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-18 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",127.2910
 "Determination 01/10/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-23 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-24 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-30 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",141.0539
 "Determination 01/10/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-04 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",125.7568
 "Determination 01/10/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-10 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",123.3757
 "Determination 01/10/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-16 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",121.3191
 "Determination 01/10/2026-31/12/2026",2026-10-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",123.5779
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-25 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",110.0730
 "Determination 01/10/2026-31/12/2026",2026-11-03 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",124.6284
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",115.5352
 "Determination 01/10/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",123.7675
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-05 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",147.8704
 "Determination 01/10/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",128.9035
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-16 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",136.3396
 "Determination 01/10/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",114.7317
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-31 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",133.5721
 "Determination 01/10/2026-31/12/2026",2026-10-04 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",110.2409
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",132.5378
 "Determination 01/10/2026-31/12/2026",2026-10-21 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",121.2495
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",147.9414
 "Determination 01/10/2026-31/12/2026",2026-10-27 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",126.0781
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",137.9883
 "Determination 01/10/2026-31/12/2026",2026-11-17 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",131.7486
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-07 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",147.7636
 "Determination 01/10/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",121.8013
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",148.5941
 "Determination 01/10/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",141.0056
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",139.1059
 "Determination 01/10/2026-31/12/2026",2026-11-25 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",133.1013
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-26 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",132.0472
 "Determination 01/10/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",142.5205
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-04 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",135.2854
 "Determination 01/10/2026-31/12/2026",2026-10-11 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",110.9872
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-26 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",147.3713
 "Determination 01/10/2026-31/12/2026",2026-10-27 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",126.0314
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",148.5851
 "Determination 01/10/2026-31/12/2026",2026-11-04 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",125.3123
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-17 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",143.6502
 "Determination 01/10/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",142.6335
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-05 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",136.0425
 "Determination 01/10/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",133.7218
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-02 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",131.7027
 "Determination 01/10/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",120.1571
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-13 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",119.2175
 "Determination 01/10/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",120.3127
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-18 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",127.3385
 "Determination 01/10/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",124.0397
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",114.2373
 "Determination 01/10/2026-31/12/2026",2026-10-03 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",109.4296
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-22 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",140.5797
 "Determination 01/10/2026-31/12/2026",2026-10-13 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",117.1098
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-12 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",144.0916
 "Determination 01/10/2026-31/12/2026",2026-10-18 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",111.9873
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-13 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",135.3578
 "Determination 01/10/2026-31/12/2026",2026-11-18 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",131.8205
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-20 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",132.3229
 "Determination 01/10/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",146.2485
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-10 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",127.5846
 "Determination 01/10/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",134.8600
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-06 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",146.3591
 "Determination 01/10/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",130.8832
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-09 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",149.1445
 "Determination 01/10/2026-31/12/2026",2026-11-20 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",128.3083
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-20 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",133.2386
 "Determination 01/10/2026-31/12/2026",2026-11-06 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",122.9023
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-02 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",126.3712
 "Determination 01/10/2026-31/12/2026",2026-10-12 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",117.8847
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-15 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",127.8732
 "Determination 01/10/2026-31/12/2026",2026-10-24 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",113.6122
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-28 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",101.7345
 "Determination 01/10/2026-31/12/2026",2026-10-28 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",123.6281
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",132.5241
 "Determination 01/10/2026-31/12/2026",2026-11-08 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",118.0960
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-17 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",128.3079
 "Determination 01/10/2026-31/12/2026",2026-11-14 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",121.6986
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-22 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",118.5929
 "Determination 01/10/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",129.1504
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",145.0527
 "Determination 01/10/2026-31/12/2026",2026-10-02 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",113.9342
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-10 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",132.5455
 "Determination 01/10/2026-31/12/2026",2026-10-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",117.0853
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-07 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",118.4941
 "Determination 01/10/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",133.1084
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-30 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",123.9767
 "Determination 01/10/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",121.7907
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",146.7283
 "Determination 01/10/2026-31/12/2026",2026-12-02 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",137.8715
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-19 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",148.9447
 "Determination 01/10/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",137.9894
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-22 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",141.2599
 "Determination 01/10/2026-31/12/2026",2026-10-10 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",110.9535
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-03 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",144.6563
 "Determination 01/10/2026-31/12/2026",2026-10-24 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",112.2808
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-13 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",135.3296
 "Determination 01/10/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",130.1542
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-08 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",126.4203
 "Determination 01/10/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",128.2532
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-11 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",127.5422
 "Determination 01/10/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",122.7572
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-08 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",145.3973
 "Determination 01/10/2026-31/12/2026",2026-10-08 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",117.0613
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",136.3266
 "Determination 01/10/2026-31/12/2026",2026-10-17 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",111.9935
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",144.2032
 "Determination 01/10/2026-31/12/2026",2026-10-22 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",119.3627
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",133.0091
 "Determination 01/10/2026-31/12/2026",2026-10-25 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",112.6883
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-14 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",146.7222
 "Determination 01/10/2026-31/12/2026",2026-11-13 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",128.9252
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-01 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",141.1135
 "Determination 01/10/2026-31/12/2026",2026-10-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",116.0237
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-14 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-04 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",145.1251
 "Determination 01/10/2026-31/12/2026",2026-10-09 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",114.6694
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",142.7317
 "Determination 01/10/2026-31/12/2026",2026-10-18 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",112.6558
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",132.2514
 "Determination 01/10/2026-31/12/2026",2026-10-22 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",119.3457
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",128.4255
 "Determination 01/10/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",132.0834
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-27 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",127.6151
 "Determination 01/10/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",124.9606
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-23 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",127.4896
 "Determination 01/10/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",128.1751
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-11 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",150.0871
 "Determination 01/10/2026-31/12/2026",2026-11-23 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",131.9683
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-20 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",149.2629
 "Determination 01/10/2026-31/12/2026",2026-12-06 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",123.7968
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-23 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",137.6021
 "Determination 01/10/2026-31/12/2026",2026-12-12 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",124.9652
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-02 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",136.9325
 "Determination 01/10/2026-31/12/2026",2026-10-10 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",103.6714
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",146.6920
 "Determination 01/10/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",120.3812
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-07 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",145.1746
 "Determination 01/10/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",133.3207
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-15 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",144.0655
 "Determination 01/10/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",130.4184
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-12 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",144.1026
 "Determination 01/10/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",138.2785
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-21 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",132.5833
 "Determination 01/10/2026-31/12/2026",2026-10-07 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",116.7012
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",96.0448
 "Determination 01/10/2026-31/12/2026",2026-10-10 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",111.0038
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-23 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",117.2091
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-01 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-09 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",142.5125
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",133.3844
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-04 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-03 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",100.2244
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-19 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-20 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",119.0277
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-06 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-09 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",116.0079
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-17 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",113.5457
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-09 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",124.2786
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",121.4982
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-10 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-16 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",133.4026
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",122.7346
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-14 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-19 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",119.6532
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-21 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-15 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-31 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",116.7031
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-18 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",114.7465
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-18 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",116.1318
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-30 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",120.8334
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-22 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-19 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-12 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",131.6995
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-21 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",147.1106
 "Determination 01/10/2026-31/12/2026",2026-11-21 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",121.3172
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",136.7803
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-23 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",138.0962
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-23 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-24 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",135.1718
 "Determination 01/10/2026-31/12/2026",2026-10-29 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",122.1764
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-27 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-16 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",128.3427
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-27 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-11 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",143.8940
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-01 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",112.6265
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-28 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-06 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",118.1950
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-31 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-06 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",118.1058
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-01-31 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-06 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",113.2214
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-01 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-07 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",116.7507
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-25 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-01 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-16 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",115.3327
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-02 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-24 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",129.9791
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",141.5950
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-05 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",137.9547
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-26 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-26 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",125.4687
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-06 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-27 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",128.4264
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-07 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-29 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",122.1212
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-07 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-17 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",136.1910
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-27 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-09 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",147.6107
 "Determination 01/10/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",129.4202
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-15 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",122.0303
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-10 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",132.2593
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-11 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-01 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",138.3084
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-28 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",123.9571
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-15 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-04 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-19 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-06 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-23 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-23 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-12 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-24 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-12 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-24 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-12 00:00:00.0000000,"Forecast BMRP (Geothermal weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-30 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-13 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-25 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-14 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-28 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-15 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast BMRP (Biomass with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-02-28 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-17 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-31 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",114.5000
 "Determination 01/01/2027-31/03/2027",2027-03-01 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-18 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-09 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",191.8272
 "Determination 01/01/2027-31/03/2027",2027-03-04 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-19 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-13 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",166.5660
 "Determination 01/01/2027-31/03/2027",2027-03-04 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-19 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",119.6498
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-18 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",176.6168
 "Determination 01/01/2027-31/03/2027",2027-03-05 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-20 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-24 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",165.9399
 "Determination 01/01/2027-31/03/2027",2027-03-05 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-21 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-28 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",163.5207
 "Determination 01/01/2027-31/03/2027",2027-03-06 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-23 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-03 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",188.7599
 "Determination 01/01/2027-31/03/2027",2027-03-06 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-25 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-07 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",183.9043
 "Determination 01/01/2027-31/03/2027",2027-03-09 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-27 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-15 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",181.2778
 "Determination 01/01/2027-31/03/2027",2027-03-09 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-28 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-29 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",165.8265
 "Determination 01/01/2027-31/03/2027",2027-03-10 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-29 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",120.8218
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-19 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",179.7970
 "Determination 01/01/2027-31/03/2027",2027-03-10 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-10-31 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-20 00:00:00.0000000,"Forecast IMRP (Onshore Wind weighted)",163.8121
 "Determination 01/01/2027-31/03/2027",2027-03-13 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-01 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-11 00:00:00.0000000,"Forecast IMRP (Offshore Wind weighted)",180.0217
 "Determination 01/01/2027-31/03/2027",2027-03-14 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-03 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-11-26 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",177.9773
 "Determination 01/01/2027-31/03/2027",2027-03-14 00:00:00.0000000,"Forecast BMRP (Energy from Waste with CHP weighted)",111.9037
 "Determination 01/10/2026-31/12/2026",2026-11-05 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
+"In Period Adjustment 05/11/2026-31/12/2026",2026-12-08 00:00:00.0000000,"Forecast IMRP (Solar PV weighted)",189.6388
 "Determination 01/01/2027-31/03/2027",2027-03-16 00:00:00.0000000,"Forecast IMRP (Tidal Stream weighted)",128.2257
 "Determination 01/10/2026-31/12/2026",2026-11-07 00:00:00.0000000,"Forecast BMRP (Biomass Conversion weighted)",108.6526
 "Determination 01/01/2027-31/03/2027",2027-03-17 00:00:00.0000000,"Forecast BMRP (Advanced Conversion Technology weighted)",111.9037

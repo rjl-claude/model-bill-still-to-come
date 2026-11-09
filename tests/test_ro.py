@@ -37,3 +37,13 @@ def test_pre_2008_stations_stop_in_2027(o):
     s = ro.stations()
     old = s.index[s.accredited <= ro.CUTOFF_2008]
     assert o[o.station.isin(old)].year.max() == 2027
+
+
+def test_ro_reads_the_newest_register_by_date_not_name(tmp_path):
+    """Ofgem names its files DD-MM-YYYY: 01-12-2026 is newer than 09-11-2026, though it sorts first."""
+    from billtocome import ro
+    (tmp_path / "ofgem-rer").mkdir()
+    for n in ("RO_Certificates_09-11-2026_04-10.csv", "RO_Certificates_01-12-2026_04-10.csv",
+              "RO_Certificates_04-11-2026_04-10.csv"):
+        (tmp_path / "ofgem-rer" / n).write_text("")
+    assert ro._latest("RO_Certificates_", tmp_path).name == "RO_Certificates_01-12-2026_04-10.csv"

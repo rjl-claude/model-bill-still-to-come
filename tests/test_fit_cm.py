@@ -95,3 +95,8 @@ def test_cm_share_scales_the_line():
     lo = cm.build(Scenario(cm_share=cm.SHARE_LOW)).rows.cash.sum()
     hi = cm.build(Scenario(cm_share=cm.SHARE_HIGH)).rows.cash.sum()
     assert hi / lo == pytest.approx(cm.SHARE_HIGH / cm.SHARE_LOW)
+
+
+def test_cm_reads_the_newest_register():
+    """The freeze (aios-harness#91): the newest NESO CMU register on disk, not a fixed day's."""
+    assert cm.register_file().name == "cmu_20261104.csv"

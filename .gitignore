@@ -5,5 +5,5 @@ __pycache__/
 # not in git. Ofgem republishes them daily; the cut-off-date fetch (aios-harness#78) is the one archived.
 data/raw/ofgem-rer/
 data/raw/ofgem/Feed-in-Tariff-Installation-Report-Part-*.xlsx
-# The run output: written by tools/results.py; frozen and archived on the cut-off date (stage 7).
-results/
+# The run output (results/) is written by tools/results.py and kept in git from the freeze (9 Nov 2026,
+# aios-harness#91): each version's results file is the one the paper reads.

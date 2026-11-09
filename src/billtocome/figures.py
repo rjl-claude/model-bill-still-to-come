@@ -16,6 +16,7 @@ and `typed` lists any money or percentage figure typed outside a key.
 """
 import json
 import re
+from importlib.metadata import version
 from itertools import product
 from pathlib import Path
 
@@ -80,7 +81,8 @@ def bracket_keys(tornado: pd.DataFrame) -> dict[str, float]:
 
 def write(results, path: Path, tornado: pd.DataFrame | None = None) -> None:
     """The results file. With `tornado` (from `brackets.tornado()`), its bracket and range keys too."""
-    meta = dict(units=UNITS, scenario=repr(results.scenario), valuation_date=results.valuation_date.isoformat(),
+    meta = dict(model="model-bill-still-to-come", version=version("billtocome"),
+                units=UNITS, scenario=repr(results.scenario), valuation_date=results.valuation_date.isoformat(),
                 cut_off_date=results.cut_off_date.isoformat() if results.cut_off_date else None,
                 manifest_sha256=results.manifest_sha256)
     figs = build(results) | (bracket_keys(tornado) if tornado is not None else {})

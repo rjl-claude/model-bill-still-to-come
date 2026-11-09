@@ -12,6 +12,7 @@ then CPI-indexed by the previous calendar year (DESNZ, 28 Jan 2026). Recycle val
 of the buy-out price over SY19-SY23 (Ofgem SY23 annual report, Figure A4.1), with the lowest and
 highest of those years as the bracket.
 """
+import re
 from functools import cache
 from pathlib import Path
 
@@ -41,7 +42,11 @@ def _tech(t: str) -> str:
 
 
 def _latest(prefix: str, raw: Path) -> Path:
-    return sorted((raw / "ofgem-rer").glob(prefix + "*.csv"))[-1]
+    """Ofgem's newest file by the date in its name (DD-MM-YYYY_HH-MM), not by the name's own order."""
+    def when(p: Path) -> tuple:
+        d, m, y, hh, mm = re.search(r"(\d\d)-(\d\d)-(\d{4})_(\d\d)-(\d\d)\.csv$", p.name).groups()
+        return (y, m, d, hh, mm)
+    return max((raw / "ofgem-rer").glob(prefix + "*.csv"), key=when)
 
 
 @cache
