@@ -58,6 +58,8 @@ def test_central_bill_by_key():
     f = figures.build(model.run())
     assert f["cfd_renewables.total.cash"] / 1e9 == pytest.approx(38.7, abs=0.05)
     assert f["ro.total.cash"] / 1e9 == pytest.approx(47.8, abs=0.05)
-    assert f["bill.households.total.cash"] / 1e9 == pytest.approx(57.0, abs=0.05)
+    # 57.0 before point 27; the RO on 41% adds £2.16bn by hand: (41% - 34.9%) x RO £47.83bn, less the
+    # Exchequer's 75% to March 2029, plus 5% VAT (Richard, 9 Nov)
+    assert f["bill.households.total.cash"] / 1e9 == pytest.approx(59.2, abs=0.05)
     assert f["bill.total.cash"] == pytest.approx(sum(f[f"{s}.total.cash"] for s in figures.LINE_KEYS.values()))
     assert f["bill.total.pv_hurdle"] < f["bill.total.pv_green_book"] < f["bill.total.cash"]

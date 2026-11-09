@@ -5,6 +5,9 @@ money between payers on rows of their own (each scheme line's whole is unchanged
 - Households' share (point 18, 19): households' share of UK final electricity consumption, 2025, held
   (DUKES 5.1: 96,188.8 of 275,527.5 GWh = 34.9%); bracket: DESNZ's projected share by year (EEP
   2024-2050 Reference, Annex F: residential electricity over total electricity; 2050's after 2050).
+- The RO's households' share (point 27, Richard 9 Nov): DESNZ's domestic share of RO costs, "approximately
+  41 per cent" (Budget 2025 policy costings, p.12; fact 13), the share the Exchequer's 75% is costed on.
+  Held in every scenario: the households' share bracket moves the other lines only.
 - Taxpayers' RO share (fact 13): the Exchequer funds 75% of the domestic share of the RO from 1 April
   2026 to 31 March 2029; moved from households to taxpayers.
 - Manufacturers' exemption, BICS (point 20, 22; fact 20): eligible firms exempt from the RO, FiT and
@@ -25,6 +28,7 @@ from .prices import cpih
 
 RAW = Path(__file__).resolve().parents[2] / "data" / "raw"
 HOUSEHOLDS_2025 = 96_188.8 / 275_527.5  # DUKES 5.1, 2025 (fact 18)
+RO_HOUSEHOLDS = 0.41  # DESNZ's domestic share of RO costs (point 27, fact 13)
 VAT = 0.05
 EXCHEQUER_RO = 0.75
 EXCHEQUER_WINDOW = (pd.Timestamp("2026-04-01"), pd.Timestamp("2029-04-01"))
@@ -63,7 +67,7 @@ def bics_real(year: int, a_year: float) -> float:
 
 def split(table: pd.DataFrame, s) -> pd.DataFrame:
     t = table.drop(columns=[c for c in ("payer",) if c in table])
-    h = t.year.map(lambda y: households_share(y, s.households))
+    h = t.year.map(lambda y: households_share(y, s.households)).where(t.line != "RO", RO_HOUSEHOLDS)
     parts = [t.assign(payer="households", cash=t.cash * h), t.assign(payer="businesses", cash=t.cash * (1 - h))]
     out = pd.concat(parts, ignore_index=True)
     by = out.groupby(["line", "payer", "year"]).cash.sum()

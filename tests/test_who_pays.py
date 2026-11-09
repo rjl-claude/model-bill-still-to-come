@@ -43,11 +43,22 @@ def test_exemption_moves_only_between_businesses_and_taxpayers(both):
 def test_hand_example_ro_2028(both):
     t = both[0].table
     ro = t[(t.line == "RO") & (t.year == 2028)].groupby("payer").cash.sum() / 1e6
-    assert ro["households"] == pytest.approx(492.0, abs=0.1)
-    assert ro["businesses"] == pytest.approx(3384.5, abs=0.1)
-    assert ro["taxpayers"] == pytest.approx(1760.3, abs=0.1)
+    assert ro["households"] == pytest.approx(577.8, abs=0.1)
+    assert ro["businesses"] == pytest.approx(3054.3, abs=0.1)
+    assert ro["taxpayers"] == pytest.approx(2004.7, abs=0.1)
     vat = t[(t.line == "VAT") & (t.item.str.startswith("RO|")) & (t.year == 2028)].cash.sum() / 1e6
-    assert vat == pytest.approx(24.6, abs=0.1)
+    assert vat == pytest.approx(28.9, abs=0.1)
+
+
+def test_ro_splits_on_desnz_41_every_other_line_on_34_9(both):
+    """Point 27 (Richard, 9 Nov): the RO on DESNZ's domestic share of RO costs, all else on DUKES 34.9%."""
+    t = both[0].table
+    t = t[(t.year == 2040) & (t.line != "VAT")]  # after the Exchequer window and the exemption
+    share = t[t.payer == "households"].groupby("line").cash.sum() / t.groupby("line").cash.sum()
+    assert share["FiT"] == pytest.approx(0.34911, abs=1e-5)
+    assert share["CfD renewables"] == pytest.approx(0.34911, abs=1e-5)
+    t30 = both[0].table.query("year == 2036 and line == 'RO'")
+    assert t30[t30.payer == "households"].cash.sum() / t30.cash.sum() == pytest.approx(0.41, abs=1e-9)
 
 
 def test_exchequer_ro_window(both):

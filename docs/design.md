@@ -79,9 +79,9 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 
 ## Stage 4 (5 Nov): who pays
 
-- Every row split households 34.9% / businesses (point 18, 19); Exchequer 75% of households' RO share Apr 2026-Mar 2029; BICS £600m a year Apr 2027-Mar 2035 plus the 2026-27 back payment, shared by businesses' part of RO, FiT and the whole CM levy; VAT 5% of households' part, its own line. Each scheme line's whole unchanged.
-- Totals 2026-2099 (2024 prices): households £57.0bn (incl. VAT £2.7bn), businesses £106.6bn, taxpayers £8.7bn.
-- The Budget's Exchequer cost uses DESNZ's 41% domestic share of the RO; the model's is 18-26% lower (explained).
+- Every row split households 34.9% / businesses (point 18, 19), except the RO, split on DESNZ's 41% domestic share of RO costs in every scenario (point 27, Richard 9 Nov); Exchequer 75% of households' RO share Apr 2026-Mar 2029; BICS £600m a year Apr 2027-Mar 2035 plus the 2026-27 back payment, shared by businesses' part of RO, FiT and the whole CM levy; VAT 5% of households' part, its own line. Each scheme line's whole unchanged.
+- Totals 2026-2099 (2024 prices), after point 27 (9 Nov, before the freeze re-fetch): households £59.2bn, businesses £103.8bn, taxpayers £9.5bn; whole bill £172.5bn (was £172.3bn: VAT on the RO moved to households). Before point 27: households £57.0bn (incl. VAT £2.7bn), businesses £106.6bn, taxpayers £8.7bn.
+- The Budget's Exchequer cost uses DESNZ's 41% domestic share of the RO, as the model now does (point 27); the model's is 4-13% lower, from its RO being below the OBR's (within 15%, no explanation needed). Before point 27 it was 18-26% lower.
 
 ## Stage 5 (5 Nov): present values and the results file
 
