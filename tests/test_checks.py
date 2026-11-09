@@ -48,3 +48,13 @@ def test_no_stale_explanations(report):
     keys = set(zip(report.rows.check, report.rows.line, report.rows.period))
     for e in checks.load_explanations():
         assert (e["check"], e["line"], e["period"]) in keys, e
+
+
+def test_clock_join_reads_the_frozen_day():
+    """The freeze (aios-harness#91): the Clock 2025 join reads one day's results file of
+    model-bill-already-paid, saved in data/raw/ (recorded in MANIFEST, so unchanged since), not its daily file."""
+    import json
+    assert checks.CLOCK.is_relative_to(checks.RAW)
+    meta = json.loads(checks.CLOCK.read_text())["meta"]
+    assert (meta["model"], meta["version"]) == ("model-bill-already-paid", "1.0.0")
+    assert meta["generated_at"].startswith("2026-11-09")

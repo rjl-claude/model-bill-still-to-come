@@ -148,6 +148,10 @@ FILES = {
         "https://escholarship.org/content/qt40x7b47b/qt40x7b47b.pdf",
     "decline/hughes-2012-ref-performance-of-wind-farms-uk-denmark.pdf":  # not on ref.org.uk now; a mirror copy
         "https://s3.amazonaws.com/windaction23/attachments/3106/ref.hughes.19.12.12.pdf",
+    # The freeze (aios-harness#91): the bill already paid, one day's results file (the robot's of 9 Nov 2026,
+    # model 1.0.0), pinned by commit; the Clock 2025 join reads this copy, not the model's daily file.
+    "model-bill-already-paid/clock.json":
+        "https://raw.githubusercontent.com/rjl-claude/model-bill-already-paid/2a63b034566ccb7c17eec179e996f61ba5f6f9b4/results/clock.json",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.

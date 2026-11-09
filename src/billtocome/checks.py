@@ -4,7 +4,6 @@ Each line in each year against the Clock (the join), the OBR (calendarised) and 
 fails unless `explanations.yaml` holds an entry for that check, line and period. Worked by hand in
 docs/hand-example-checks.md.
 """
-import hashlib
 import json
 from dataclasses import dataclass
 from functools import cache
@@ -17,9 +16,10 @@ from .prices import cpih
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw"
-# the bill already paid: model-bill-already-paid's results file, which the Clock's site is built from
-# (aios-harness#140); its fingerprint is checked against the .sha256 the model writes beside it
-CLOCK = Path("/srv/aios/projects/model-bill-already-paid/results/clock.json")
+# the bill already paid: one day's results file of model-bill-already-paid (aios-harness#140), frozen at the
+# freeze (aios-harness#91): the robot's file of 9 Nov 2026, saved in data/raw/ and recorded in MANIFEST
+# (tools/fetch.py, pinned by commit; its fingerprint checked by tests/test_manifest.py and model-register.yaml)
+CLOCK = RAW / "model-bill-already-paid" / "clock.json"
 MARGIN = 0.15
 GROUPS = {"CfD": ("CfD renewables", "Hinkley Point C", "Biomass bridging"), "RO": ("RO",), "FiT": ("FiT",),
           "Capacity Market": ("Capacity Market",), "Sizewell C": ("Sizewell C",)}
@@ -74,11 +74,7 @@ def obr(group: str) -> dict[int, float]:
 
 @cache
 def _clock_lines() -> dict[str, list[dict]]:
-    data = CLOCK.read_bytes()
-    want = CLOCK.with_name(CLOCK.name + ".sha256").read_text().split()[0]
-    if hashlib.sha256(data).hexdigest() != want:
-        raise ValueError(f"{CLOCK}: fingerprint does not match its .sha256 (not as the model wrote it)")
-    doc = json.loads(data)
+    doc = json.loads(CLOCK.read_bytes())
     if doc["meta"]["model"] != "model-bill-already-paid":
         raise ValueError(f"{CLOCK} is not model-bill-already-paid's results file")
     return {s["scheme_id"]: s["annual"]["rows"] for s in doc["model"]["schemes"]}
