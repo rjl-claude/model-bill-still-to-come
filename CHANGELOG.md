@@ -2,6 +2,12 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.2.4 (11 Nov 2026), the households' share words
+
+The recheck of aios-harness#235 found 1.2.3's "(the RO's held throughout)" could be read as the RO held at 2025's households' share. The RO's households' share is DESNZ's 41% in every scenario (`who_pays.RO_HOUSEHOLDS`); the bracket moves the other lines only. **Text keys only; no number moves**: `tests/test_keys_1_2_4.py` checks that against the frozen 1.2.3 file (`tests/fixtures/figures-1.2.3.json`, sha256 7b7f10f0…) only the three `bracket.households_share.setting.*` keys differ, every number to 10 significant figures on any machine and exactly in the committed file (`docs/figures-1.2.3-vs-1.2.4.csv`: 7,181 `same`, 3 `words`). Only `meta.version` moves in the meta; in `results/` only `figures.json` changes (`tools/results.py --reuse-tornado`).
+
+- Low: "DESNZ's projected share by year (the RO at DESNZ's 41% throughout)". Central and high: "households' 2025 share, 34.9%, held (the RO at DESNZ's 41% throughout)". Both percentages are written from `who_pays.HOUSEHOLDS_2025` (DUKES 5.1, 96,188.8 of 275,527.5 GWh) and `who_pays.RO_HOUSEHOLDS`, not typed.
+
 ## 1.2.3 (11 Nov 2026), the bracket settings' words corrected
 
 The checker of aios-harness#235 found words among 1.2.2's `bracket.<name>.setting.*` that do not say what the code does; the paper would print them. **Text keys only; no number moves**: `tests/test_keys_1_2_3.py` checks every key is 1.2.2's (`tests/fixtures/figures-1.2.2.json`, sha256 0cd2e1d3…), every number unchanged (to 10 significant figures on any machine; exactly in the committed file, by the saved comparison `docs/figures-1.2.2-vs-1.2.3.csv`: 7,165 keys `same`, 19 `words`), and only setting words differ. Only `meta.version` moves in the meta; in `results/` only `figures.json` changes (`tools/results.py --reuse-tornado`).

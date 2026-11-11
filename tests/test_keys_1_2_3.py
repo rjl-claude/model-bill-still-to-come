@@ -1,6 +1,7 @@
 """aios-harness#235: version 1.2.3, text keys only. The bracket settings' words (1.2.2's `bracket.*.setting.*`) are
 corrected to say what the code does (the checker's findings, 11 Nov 2026); no number moves. Tested at the seam the
-paper reads: the frozen results file, by key, against the frozen 1.2.2 file."""
+paper reads: the frozen results file, by key, against the frozen 1.2.2 file. From 1.2.4 (the households' share words,
+aios-harness#235, tests/test_keys_1_2_4.py) these checks read the frozen 1.2.3 file, a fixture."""
 import json
 from pathlib import Path
 
@@ -9,8 +10,11 @@ from billtocome import figures
 V122 = Path(__file__).resolve().parent / "fixtures" / "figures-1.2.2.json"  # results/figures.json at tag v1.2.2
 
 
+V123 = Path(__file__).resolve().parent / "fixtures" / "figures-1.2.3.json"  # results/figures.json at tag v1.2.3
+
+
 def frozen() -> dict:
-    return json.loads(figures.FILE.read_text())["figures"]
+    return json.loads(V123.read_text())["figures"]
 
 
 def s(b: str) -> tuple:
@@ -87,6 +91,6 @@ def test_the_saved_proof_shows_every_number_exactly_unchanged_in_the_committed_f
 
 
 def test_only_the_version_moves_in_the_meta():
-    old, new = json.loads(V122.read_text())["meta"], json.loads(figures.FILE.read_text())["meta"]
+    old, new = json.loads(V122.read_text())["meta"], json.loads(V123.read_text())["meta"]
     assert (old["version"], new["version"]) == ("1.2.2", "1.2.3")
     assert {k for k in old if new[k] != old[k]} == {"version"}

@@ -1834,9 +1834,9 @@
 "bracket.households_share.low.pv_green_book": 145420125562.58868,
 "bracket.households_share.low.pv_hurdle": 111446192179.60745,
 "bracket.households_share.rank.cash": 17,
-"bracket.households_share.setting.central": "households' 2025 share held (the RO's held throughout)",
-"bracket.households_share.setting.high": "households' 2025 share held (the RO's held throughout)",
-"bracket.households_share.setting.low": "DESNZ's projected share by year (the RO's held)",
+"bracket.households_share.setting.central": "households' 2025 share, 34.9%, held (the RO at DESNZ's 41% throughout)",
+"bracket.households_share.setting.high": "households' 2025 share, 34.9%, held (the RO at DESNZ's 41% throughout)",
+"bracket.households_share.setting.low": "DESNZ's projected share by year (the RO at DESNZ's 41% throughout)",
 "bracket.households_share.swing.cash": 233818373.56750488,
 "bracket.households_share.swing.pv_green_book": 183690356.78240967,
 "bracket.households_share.swing.pv_hurdle": 120260756.04867554,
@@ -7215,6 +7215,6 @@
 "scenario": "Scenario(case='Reference', prices=None, market=SimpleFit(path='EEP', discount_bound=0, negative_bound=0), decline='central', output='measured', abandonment=False, late_starts=False, hpc_strike_2012=89.5, hpc_term='contract', hpc_shift_years=0, ro_recycle=0.11798257975260892, cm_share=0.14607087756750806, szc_cost=40509000000, szc_ops_return=0.0673, households='held', bics_a_year=600000000)",
 "units": "\u00a3, 2024 prices (CPIH); present values real, to 1 Jan 2026",
 "valuation_date": "2026-01-01",
-"version": "1.2.3"
+"version": "1.2.4"
 }
 }

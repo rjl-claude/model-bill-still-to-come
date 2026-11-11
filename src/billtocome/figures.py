@@ -195,8 +195,6 @@ SETTING_WORDS = {
                            "(the mature rounds' average where fewer than ten measured)",
     ("hpc_term", "contract"): "35 years from the earlier of start and the target commissioning window's end",
     ("hpc_term", "from_start"): "35 years from start",
-    ("households", "held"): "households' 2025 share held (the RO's held throughout)",
-    ("households", "EEP"): "DESNZ's projected share by year (the RO's held)",
     ("output", "measured"): "each farm's own record, 2023-25; farms not yet generating, the median of their "
                             "technology's farms started 2019 or later; no British record, DESNZ 2023 or a stated assumption",
     ("output", "DESNZ 2023"): "DESNZ 2023 load factors for CfD wind and solar",
@@ -211,6 +209,16 @@ def _decline_words(name: str) -> str:
     from .output import DECLINES
     wind, solar = DECLINES[name]
     return f"wind {_pct(wind)} a year, solar PV {_pct(solar)}"
+
+
+def _households_words(path: str) -> str:
+    """The households' share bracket, its shares from who_pays.py; the RO's share is the same in every scenario
+    (version 1.2.4, aios-harness#235)."""
+    from .who_pays import HOUSEHOLDS_2025, RO_HOUSEHOLDS
+    ro = f"(the RO at DESNZ's {_pct(round(RO_HOUSEHOLDS, 3))} throughout)"
+    if path == "held":
+        return f"households' 2025 share, {_pct(round(HOUSEHOLDS_2025, 3))}, held {ro}"
+    return f"DESNZ's projected share by year {ro}"
 
 
 def _flat_at_gentler_end(name: str) -> list[str]:
@@ -232,6 +240,8 @@ def _setting(s, name: str):
         v = "forward"
     if name == "decline":
         return _decline_words(v)
+    if name == "households":
+        return _households_words(v)
     words = SETTING_WORDS.get((name, v), v)
     if name in ("discount_bound", "negative_bound") and v == -1 and (flat := _flat_at_gentler_end(name)):
         words += f" ({' and '.join(flat)} held flat: its gentler end is past zero)"
