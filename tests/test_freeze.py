@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_frozen_results_file_names_version_and_both_dates():
     meta = json.loads(figures.FILE.read_text())["meta"]
     version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
-    assert (meta["model"], meta["version"]) == ("model-bill-still-to-come", version) and version == "1.2.1"  # 1.2.1: self-contained, the Clock export read from its own saved copy (aios-harness#231)
+    assert (meta["model"], meta["version"]) == ("model-bill-still-to-come", version) and version == "1.2.2"  # 1.2.2: keys only, the outline's missing keys (aios-harness#235)
     assert meta["valuation_date"] == "2026-01-01"
     assert meta["cut_off_date"] == "2026-11-09"  # the day every register was re-fetched (point 15)
 
