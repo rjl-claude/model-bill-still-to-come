@@ -1,6 +1,6 @@
 # Hand example: the last five brackets, and the tornado (aios-harness#85, Stage 6)
 
-Rulings: build plan points 7, 17, 25, 26 and "Output" (3 Nov); Richard, 5 Nov (Sizewell C's return after 2039: 3.5% to 6.73%; fetch Hamilton, Hughes and Generation Costs 2023). Facts 21, 22, 33-35. Each bracket moves one input of the Scenario; the rest stay central.
+Rulings: build plan points 7, 17, 25, 26 and "Output" (3 Nov); Richard, 5 Nov (Sizewell C's return after 2039: the Green Book rate to 6.73%, the low end 3.00% from 1.2.0, Richard 11 Nov, aios-harness#257; fetch Hamilton, Hughes and Generation Costs 2023). Facts 21, 22, 33-35. Each bracket moves one input of the Scenario; the rest stay central.
 
 ## 1. Forward prices, then Annex M (point 26, fact 21)
 
@@ -28,7 +28,7 @@ Every CfD wind and solar farm takes DESNZ's 2023 load factor for the commissioni
 
 ## 4. Sizewell C's return after 2039 (Richard, 5 Nov)
 
-Low **3.5%** (the Green Book rate before its 28 Oct 2026 revision; kept as Richard set it, 5 Nov), high central 6.73%. In 2040 (n = 0) at £40.509bn: depreciation 40.509 / 60 = £0.675bn; average RAB 40.509 - 0.675 / 2 = £40.171bn; return 6.73% x 40.171 = £2.704bn at central, 3.5% x 40.171 = **£1.406bn** at the low end (2024/25 prices, before running costs and power sold).
+Low **3.00%** (the Green Book rate, as Richard set it on 5 Nov: the Green Book 2026, revised 28 Oct 2026, para 6.54; Richard, 11 Nov, aios-harness#257; 3.5% in 1.0.0 to 1.1.0, the rate before the revision), high central 6.73%. In 2040 (n = 0) at £40.509bn: depreciation 40.509 / 60 = £0.675bn; average RAB 40.509 - 0.675 / 2 = £40.171bn; return 6.73% x 40.171 = £2.704bn at central, 3.00% x 40.171 = **£1.205bn** at the low end (2024/25 prices, before running costs and power sold).
 
 ## 5. Build path (points 7, 25)
 

@@ -1849,13 +1849,13 @@
 "bracket.sizewell_c_return_after_2039.high.cash": 172451822345.2187,
 "bracket.sizewell_c_return_after_2039.high.pv_green_book": 145603815919.3711,
 "bracket.sizewell_c_return_after_2039.high.pv_hurdle": 111566452935.65613,
-"bracket.sizewell_c_return_after_2039.low.cash": 132870967207.0437,
-"bracket.sizewell_c_return_after_2039.low.pv_green_book": 129330059528.125,
-"bracket.sizewell_c_return_after_2039.low.pv_hurdle": 105268509101.16019,
+"bracket.sizewell_c_return_after_2039.low.cash": 126743899848.19312,
+"bracket.sizewell_c_return_after_2039.low.pv_green_book": 126810902192.01878,
+"bracket.sizewell_c_return_after_2039.low.pv_hurdle": 104293595194.89145,
 "bracket.sizewell_c_return_after_2039.rank.cash": 2,
-"bracket.sizewell_c_return_after_2039.swing.cash": 39580855138.17499,
-"bracket.sizewell_c_return_after_2039.swing.pv_green_book": 16273756391.246094,
-"bracket.sizewell_c_return_after_2039.swing.pv_hurdle": 6297943834.495941,
+"bracket.sizewell_c_return_after_2039.swing.cash": 45707922497.02557,
+"bracket.sizewell_c_return_after_2039.swing.pv_green_book": 18792913727.35231,
+"bracket.sizewell_c_return_after_2039.swing.pv_hurdle": 7272857740.764679,
 "bracket.unbuilt_abandoned.high.cash": 172451822345.2187,
 "bracket.unbuilt_abandoned.high.pv_green_book": 145603815919.3711,
 "bracket.unbuilt_abandoned.high.pv_hurdle": 111566452935.65613,
@@ -4425,7 +4425,7 @@
 "range.high.cash": 221894537898.37698,
 "range.high.pv_green_book": 173307427151.06564,
 "range.high.pv_hurdle": 127242147404.03864,
-"range.low.cash": 132870967207.0437,
+"range.low.cash": 126743899848.19312,
 "range.low.pv_green_book": 124483375051.13544,
 "range.low.pv_hurdle": 96529650665.16269,
 "ro.2026.cash": 7489665659.872017,
@@ -7120,6 +7120,6 @@
 "scenario": "Scenario(case='Reference', prices=None, market=SimpleFit(path='EEP', discount_bound=0, negative_bound=0), decline='central', output='measured', abandonment=False, late_starts=False, hpc_strike_2012=89.5, hpc_term='contract', hpc_shift_years=0, ro_recycle=0.11798257975260892, cm_share=0.14607087756750806, szc_cost=40509000000, szc_ops_return=0.0673, households='held', bics_a_year=600000000)",
 "units": "\u00a3, 2024 prices (CPIH); present values real, to 1 Jan 2026",
 "valuation_date": "2026-01-01",
-"version": "1.1.0"
+"version": "1.2.0"
 }
 }

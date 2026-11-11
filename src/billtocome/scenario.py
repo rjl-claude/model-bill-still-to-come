@@ -84,7 +84,7 @@ BRACKETS = (
     Bracket("Decline with age", replace(_C, decline="gentler"), replace(_C, decline="steeper")),
     Bracket("Output level", _C, replace(_C, output="DESNZ 2023")),
     Bracket("Build path", replace(_C, market=SimpleFit(path=BUILD_LOW)), replace(_C, market=SimpleFit(path=BUILD_HIGH))),
-    Bracket("Sizewell C return after 2039", replace(_C, szc_ops_return=0.035), _C),  # Richard 5 Nov: 3.5% to 6.73%
+    Bracket("Sizewell C return after 2039", replace(_C, szc_ops_return=0.030), _C),  # Richard 5 Nov: the Green Book rate to 6.73%; 3.00% in the Green Book 2026, para 6.54 (Richard 11 Nov, aios-harness#257)
 )
 
 LATER: tuple = ()  # every bracket in the build plan is declared (stage 6)

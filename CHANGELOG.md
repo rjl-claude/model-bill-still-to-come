@@ -2,6 +2,16 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.2.0 (11 Nov 2026), Sizewell C's low return at the Green Book 2026 rate
+
+The low end of the Sizewell C return bracket after 2039 moves from 3.5% to **3.00%**. Richard set that range on 5 Nov as "the Green Book rate" to 6.73%; the Green Book 2026 (revised 28 Oct 2026, para 6.54; saved in `data/raw/hmt/`) sets that rate at 3.00%, so the low end follows it. Found in aios-harness#255; Richard's ruling, choice 1, 11 Nov 2026 (aios-harness#257). It is a cash input (the allowed return on Sizewell C's asset base after 2039), not a discount rate. A minor number, by the reasoning of 1.1.0: patch versions keep every figure, and this version's figures differ.
+
+**Only the keys built from that low end change**: `tests/test_version_1_2_0.py` checks the 7,102 keys are 1.1.0's and that exactly seven keys differ from the frozen 1.1.0 file (`tests/fixtures/figures-1.1.0.json`, sha256 af2634cf…): the bracket's low ends and swings in cash, Green Book and hurdle present value, and the low end of the cash range. Only `meta.version` moves in the meta (same saved sources, same dates). In `results/` only `figures.json` and the Sizewell C row of `tornado.csv` change (full rebuild, `tools/results.py`, brackets rerun).
+
+- Sizewell C return bracket, low end: cash **£126.74bn** (was £132.87bn); Green Book £126.81bn (was £129.33bn); hurdle £104.29bn (was £105.27bn). Swing: cash £45.71bn (was £39.58bn); Green Book £18.79bn (was £16.27bn); hurdle £7.27bn (was £6.30bn). Still second by cash swing, after the Annex M prices.
+- Cash range £126.74bn to £221.89bn (was £132.87bn to £221.89bn).
+- Unchanged: the cash headline £172.45bn, every central figure, the Green Book range £124.48bn to £173.31bn and the hurdle range £96.53bn to £127.24bn (their low ends are the Annex M prices bracket's), every other bracket, check and count.
+
 ## 1.1.0 (11 Nov 2026), the Green Book 2026 discount rates
 
 The Green Book present values move to the rates of the Green Book as published at the cut-off (2026 edition, revised 28 Oct 2026, para 6.54; saved in `data/raw/hmt/`): **3.00% real for years 1 to 30, 2.50% for years 31 to 75** (2.25% from year 76 is past the model's end, year 73). They were 3.5% and 3.0% in 1.0.0 to 1.0.2. Found in the input audit (aios-harness#229); Richard's ruling, choice 1, 11 Nov 2026 (aios-harness#255). Year 0 is still 2026, not discounted; the factors match the Green Book's Table 8 (para 6.57). A minor number, not a patch: 1.0.1 and 1.0.2 each kept every 1.0.0 figure, and this is the first version whose figures differ.

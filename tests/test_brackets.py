@@ -39,11 +39,14 @@ def test_desnz_2023_level_is_cfd_wind_and_solar_only():
 
 
 def test_sizewell_c_return_low_end():
-    y = szc.build(Scenario(szc_ops_return=0.035)).tables["szc_years"].set_index("year")
+    # The low end is the Green Book rate (Richard, 5 Nov): 3.00% in the Green Book 2026, para 6.54 (Richard, 11 Nov, aios-harness#257)
+    b = next(b for b in BRACKETS if b.name == "Sizewell C return after 2039")
+    assert (b.low.szc_ops_return, b.high.szc_ops_return) == (0.030, 0.0673)
+    y = szc.build(b.low).tables["szc_years"].set_index("year")
     c = szc.build(Scenario()).tables["szc_years"].set_index("year")
     dep = 40.509e9 / 60
     assert c.allowed_2425[2040] - dep == pytest.approx(2.704e9, rel=1e-3)
-    assert y.allowed_2425[2040] - dep == pytest.approx(1.406e9, rel=1e-3)
+    assert y.allowed_2425[2040] - dep == pytest.approx(1.205e9, rel=1e-3)
     assert (y.allowed_2425.loc[:2039] == c.allowed_2425.loc[:2039]).all()
 
 
