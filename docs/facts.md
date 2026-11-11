@@ -9,7 +9,7 @@
 3. **Term.** Each reactor runs to the 35th anniversary of the *earlier* of its Start Date and the last day of its Target Commissioning Window (cl. 5). Target commissioning dates: Reactor One 1 May 2025, Reactor Two 1 Nov 2025; each window is four years (cl. 2.1, 2.2), so they end 30 Apr 2029 and 31 Oct 2029, extended day for day only for the delays listed in cl. 2.3. So a reactor that starts after its window is paid for fewer than 35 years. **For Richard to rule** (whether any extension is assumed).
 4. **Generation cap.** The contract expires when 910,000,000 MWh have been paid for (cl. 1.1 "Contracted Generation Cap", cl. 6.1).
 5. **Market reference price** is the baseload (season-ahead) reference price (cl. 12), not the hourly day-ahead price.
-6. **Start.** EDF's 2025 results (Feb 2026) put Unit 1's first power in 2030 (New Civil Engineer, 20 Feb 2026; World Nuclear News). Unit 2: not given in those reports. Open: EDF's own release, to save.
+6. **Start.** EDF's 2025 results (Feb 2026) put Unit 1's first power in 2030 (New Civil Engineer, 20 Feb 2026; World Nuclear News). EDF's own release of 20 Feb 2026: "Schedule for the start of production by Unit 1 adjusted to 2030" (`edf/edf-2025-annual-results-2026-02-20.html`, section "Operational performance and highlights of 2025", Hinkley Point C; saved in 1.0.2, aios-harness#229). Unit 2: no date given.
 
 ## Sizewell C
 
@@ -74,4 +74,4 @@
 
 ## Open (carried to the ticket that needs it)
 
-- EDF's own release on the Hinkley schedule: #65.
+- None. EDF's own release on the Hinkley schedule (#65) is saved in 1.0.2 (fact 6).

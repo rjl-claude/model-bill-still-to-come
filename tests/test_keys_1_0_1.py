@@ -106,11 +106,9 @@ def test_the_written_explanations_figures_are_read_by_key():
         built = re.search(r"Contracts not yet built are (\d+)%", text)
         assert built is None or int(built.group(1)) == round(100 * f[f"check.obr.cfd.{y}.not_yet_built_share"])
     assert [round(100 * f[f"check.obr.cfd.{y}.not_yet_built_share"]) for y in range(2028, 2032)] == [12, 24, 37, 53]
-    # The LCCC note's "model 0.93 x LCCC" (and its gap, 2.28) date from 5 Nov, before the freeze re-fetched
-    # every register; on the frozen inputs the same method gives 1.02 (and 2.33). Its claim, "within 7%",
-    # still holds. The stale prose goes to the input audit (aios-harness#229); Annex E reads the keys.
+    # The LCCC note's rerun at LCCC's own price: its typed figures are tested against the keys in
+    # tests/test_explanations.py (aios-harness#229; 1.0.1 carried a stale 0.93 and 2.28 here).
     ratio = f["check.lccc.cfd_renewables.2026_10_to_2027_03.at_forward_price.ratio"]
-    assert "within 7% of LCCC" in notes[("LCCC", "CfD renewables", "2026-10 to 2027-03")] and abs(ratio - 1) < 0.07
     assert round(ratio, 2) == 1.02 and round(f["check.lccc.cfd_renewables.2026_10_to_2027_03.ratio"], 2) == 2.33
 
 

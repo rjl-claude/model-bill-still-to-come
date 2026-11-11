@@ -54,3 +54,21 @@ def test_ro_registers_present():
     latest = _latest()
     assert any(k.startswith("ofgem-rer/RO_Accredited_Stations_") for k in latest)
     assert any(k.startswith("ofgem-rer/RO_Certificates_") for k in latest)
+
+
+# The input audit (aios-harness#229) found seven sources the model relies on that were not saved here.
+AUDIT_229 = [
+    *(f"desnz/cfd-round-results/{r}.pdf" for r in ("AR1", "AR2", "AR3", "AR4", "AR5", "AR6", "AR7", "AR7a")),
+    "desnz/cfd-ar7-consultation-final-government-response.pdf",  # 20-year AR7 wind and solar contracts, para 2.3
+    "desnz/BEIS_Electricity_Generation_Cost_Report_2016.pdf",  # Table 4, p.26: nuclear fuel and decommissioning
+    "decline/staffell-green-2014-wind-farm-performance-decline-with-age.pdf",  # 1.6% a year
+    "edf/edf-2025-annual-results-2026-02-20.html",  # Hinkley Point C Unit 1 production in 2030
+    "hmt/The_Green_Book_2026.pdf",  # discount rates
+    "legislation/ukpga-1994-23-VATA-schedule-7A-latest.xml",  # VAT at the reduced rate on household power
+]
+
+
+def test_the_sources_the_input_audit_found_unsaved_are_saved():
+    latest = _latest()
+    assert [rel for rel in AUDIT_229 if rel not in latest or not (RAW / rel).is_file()] == []
+    assert set(AUDIT_229) <= set(_fetch_module().FILES)  # fetched again with the rest

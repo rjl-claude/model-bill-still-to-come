@@ -57,21 +57,20 @@
 - check: LCCC
   line: CfD renewables
   period: "2026-10 to 2027-03"
-  gap: model 2.28 x LCCC (cash)
+  gap: model 2.33 x LCCC (cash)
   explanation: >
     Market price. LCCC forecasts on market prices (Winter 2026 baseload reference price £114.50/MWh cash,
     docs/facts.md 21); the model uses Annex M (2026: £75.3/MWh, 2027: £62.7/MWh, 2024 prices), as ruled.
-    Run at £114.50 cash for 2026 and 2027, the model is within 7% of LCCC (model 0.93 x LCCC).
+    Run at £114.50 cash for 2026 and 2027, the model is within 3% of LCCC (model 1.02 x LCCC).
 - check: Clock join
   line: Capacity Market
   period: "2026 vs 2025"
-  gap: model 0.84 x Clock (2024 prices)
+  gap: model 1.60 x Clock (2024 prices)
   explanation: >
-    Two things. (1) The Clock's published 2025 (£382m, 2024 prices; site/data built 1 Nov 2026 12:06) still uses
-    the older 27.7% net-zero share; the Clock's pin to engine v4-s43 (commit 65b0c3c0a, 1 Nov 2026 20:23), whose
-    14.6% share this model uses (point 9), gives 2025 as 14.6% of £1,431m = £209m cash. (2) Against that, the
-    model's 2026 is higher because the 2026/27 four-year-ahead auction cleared at £63/kW/yr against £30.59 for
-    2025/26: its October-December 2026 payments are £0.96bn of the whole levy (cash).
+    A higher auction price. The Clock's 2025 (£201m, 2024 prices) and the model's 2026 (£322m) both count
+    14.6% of the whole levy, the net-zero share of the Clock's engine v4-s43 (point 9). The model's 2026 is
+    higher because the 2026/27 four-year-ahead auction cleared at £63/kW/yr against £30.59 for 2025/26: its
+    October-December 2026 payments are £0.96bn of the whole levy (cash).
 - check: OBR
   line: Capacity Market (whole levy)
   period: "2030"

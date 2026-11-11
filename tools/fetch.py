@@ -152,6 +152,47 @@ FILES = {
     # model 1.0.0), pinned by commit; the Clock 2025 join reads this copy, not the model's daily file.
     "model-bill-already-paid/clock.json":
         "https://raw.githubusercontent.com/rjl-claude/model-bill-already-paid/2a63b034566ccb7c17eec179e996f61ba5f6f9b4/results/clock.json",
+    # 1.0.2 (aios-harness#229, the input audit): seven sources the model relies on that were not saved here.
+    # No figure reads them; they are the evidence for figures already in the code and docs/facts.md.
+    # The Department's results of allocation rounds 1 to 7a (the model reads LCCC's copy, auction_outcomes.csv)
+    "desnz/cfd-round-results/AR1.pdf":
+        "https://assets.publishing.service.gov.uk/media/5a7ffb0ee5274a2e8ab4d776/Contracts_for_Difference_-_Auction_Results_-_Official_Statistics.pdf",
+    "desnz/cfd-round-results/AR2.pdf":
+        "https://assets.publishing.service.gov.uk/media/5a82efe7e5274a2e8ab5a1bb/CFD_allocation_round_2_outcome_FINAL.pdf",
+    "desnz/cfd-round-results/AR3.pdf":
+        "https://assets.publishing.service.gov.uk/media/5f566aff8fa8f5107025c055/cfd-ar3-results-corrected-111019.pdf",
+    "desnz/cfd-round-results/AR4.pdf":
+        "https://assets.publishing.service.gov.uk/media/65b1463d160765000d18f834/contracts-for-difference-cfd-allocation-round-4-results.pdf",
+    "desnz/cfd-round-results/AR5.pdf":
+        "https://assets.publishing.service.gov.uk/media/64fa0473fdc5d10014fce820/cfd-ar5-results.pdf",
+    "desnz/cfd-round-results/AR6.pdf":
+        "https://assets.publishing.service.gov.uk/media/66d6ad7c6eb664e57141db4b/Contracts_for_Difference_Allocation_Round_6_results.pdf",
+    "desnz/cfd-round-results/AR7.pdf":
+        "https://assets.publishing.service.gov.uk/media/6966861de8c04eb2919f773a/contracts-for-difference-allocation-round-7-results-.pdf",
+    "desnz/cfd-round-results/AR7a.pdf":
+        "https://assets.publishing.service.gov.uk/media/698a0dc06da2dee8230a9c3a/contracts-for-difference-AR7a.pdf",
+    # Further reforms to the CfD scheme for AR7, government response (15 Jul 2025), para 2.3: 20-year terms
+    "desnz/cfd-ar7-consultation-final-government-response.pdf":
+        "https://assets.publishing.service.gov.uk/media/68766d6e88da2e5804bb6a94/cfd-ar7-consultation-final-government-response.pdf",
+    # BEIS Electricity Generation Costs 2016, the report: Table 4, p.26 (nuclear fuel, decommissioning; 2014 values)
+    "desnz/BEIS_Electricity_Generation_Cost_Report_2016.pdf":
+        "https://assets.publishing.service.gov.uk/media/5a8155f2e5274a2e87dbd11b/BEIS_Electricity_Generation_Cost_Report.pdf",
+    # Staffell and Green, Renewable Energy 66 (2014): 1.6% a year. The publisher's PDF, a mirror copy (as Hughes)
+    "decline/staffell-green-2014-wind-farm-performance-decline-with-age.pdf":
+        "https://s3.amazonaws.com/windaction23/attachments/3770/1-s2.0-S0960148113005727-main.pdf",
+    # EDF's 2025 annual results release (20 Feb 2026): Hinkley Point C Unit 1 production "adjusted to 2030".
+    # edf.fr refuses automated downloads (403); this is the full release as issued through a news distributor.
+    "edf/edf-2025-annual-results-2026-02-20.html":
+        "https://webdisclosure.com/press-release/credit-cooperatif-epa-edf-2025-annual-results-strong-operational-performance-positive-cash-flow-reducing-net-financial-debt-HS9LOgZBFaD",
+    # HM Treasury, the Green Book, as published at the cut-off (2026 edition, revised 28 Oct 2026 for discounting).
+    # Its para 6.54 now sets 3.00% for years 1-30, 2.50% for 31-75 and 2.25% after; present_value.py still uses
+    # the earlier 3.5% and 3.0%. Found 11 Nov 2026 and left for Richard's ruling (aios-harness#229): 1.0.2
+    # changes no figure.
+    "hmt/The_Green_Book_2026.pdf":
+        "https://assets.publishing.service.gov.uk/media/6ae0ba897b7111c482d80a3b/The_Green_Book_2026.pdf",
+    # Value Added Tax Act 1994, Schedule 7A: the reduced rate on domestic fuel and power
+    "legislation/ukpga-1994-23-VATA-schedule-7A-latest.xml":
+        "https://www.legislation.gov.uk/ukpga/1994/23/schedule/7A/data.xml",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.
