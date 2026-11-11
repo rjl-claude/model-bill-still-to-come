@@ -2,14 +2,18 @@
 lists as missing (outline-beats.md, "Missing figures": S1 the rates, S2 the bracket settings, S4 each line's last
 year, S5 the negative years, S6 the bill without the two nuclear stations), each read from what the model already
 holds or a sum of what it already computes, and moves no 1.2.1 figure. Tested at the seam the paper reads: the
-frozen results file, by key."""
+frozen results file, by key. From 1.2.3 (the settings' words corrected, aios-harness#235) these checks read the frozen
+1.2.2 file, a fixture (tests/test_keys_1_2_3.py checks the current file against it)."""
 import json
 
 from billtocome import figures
 
 
+V122 = figures.FILE.parent.parent / "tests" / "fixtures" / "figures-1.2.2.json"  # results/figures.json at tag v1.2.2
+
+
 def frozen() -> dict:
-    return json.loads(figures.FILE.read_text())["figures"]
+    return json.loads(V122.read_text())["figures"]
 
 
 def test_the_rates_are_read_by_key():
@@ -122,7 +126,7 @@ def test_no_1_2_1_figure_moves_and_only_the_new_keys_are_added():
 
 
 def test_only_the_version_and_the_key_units_move_in_the_meta():
-    old, new = json.loads(V121.read_text())["meta"], json.loads(figures.FILE.read_text())["meta"]
+    old, new = json.loads(V121.read_text())["meta"], json.loads(V122.read_text())["meta"]
     assert (old["version"], new["version"]) == ("1.2.1", "1.2.2")
     assert {k for k in old if new[k] != old[k]} == {"version", "key_units"}  # same saved sources, same dates
     assert set(old["key_units"]) < set(new["key_units"])

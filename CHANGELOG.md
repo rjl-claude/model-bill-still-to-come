@@ -2,6 +2,16 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.2.3 (11 Nov 2026), the bracket settings' words corrected
+
+The checker of aios-harness#235 found words among 1.2.2's `bracket.<name>.setting.*` that do not say what the code does; the paper would print them. **Text keys only; no number moves**: `tests/test_keys_1_2_3.py` checks every key is 1.2.2's (`tests/fixtures/figures-1.2.2.json`, sha256 0cd2e1d3…), every number unchanged (to 10 significant figures on any machine; exactly in the committed file, by the saved comparison `docs/figures-1.2.2-vs-1.2.3.csv`: 7,165 keys `same`, 19 `words`), and only setting words differ. Only `meta.version` moves in the meta; in `results/` only `figures.json` changes (`tools/results.py --reuse-tornado`).
+
+- **Discount slope and negative-hours slope:** "gentler end" and "steeper end" of the 95% interval and "fitted slope", as `discount.bounded_slope` means them (were "low/high end", "central fit"). The discount slope's gentler end adds "(solar held flat: its gentler end is past zero)", found by the code at the time of writing; no negative-hours fit is held flat.
+- **Output level:** the central words now say each farm's own record 2023-25, farms not yet generating at the median of their technology's farms started 2019 or later, and DESNZ 2023 or a stated assumption with no British record (`output.py`); the high end, DESNZ 2023 load factors "for CfD wind and solar".
+- **Hinkley term:** "the target commissioning window's end" (was "the window's end").
+- **Decline with age:** the rates, written from `output.DECLINES`: wind 0.17%, 1.6% and 5.4% a year; solar PV 0.5%, 0.5% and 0.8%.
+- Found on rereading all seventeen against the code: abandonment names "renewable CfDs", the AR1-AR4 rate and the all-technologies fallback; late starts names "allocation-round contracts" and the mature rounds' fallback; the households' share says the RO's share is held throughout.
+
 ## 1.2.2 (11 Nov 2026), keys only
 
 Adds the keys Report No. 2's outline lists as missing from this model (`report-series/price-of-the-climate-bill/outline-beats.md`, "Missing figures": S1, S2, S4, S5, S6; aios-harness#235, plan step 19). Each is read from what the model already holds or summed from what it already computes. A patch number, as 1.0.1: **no figure moves**. `tests/test_keys_1_2_2.py` checks the 7,102 keys of the frozen 1.2.1 file (`tests/fixtures/figures-1.2.1.json`, sha256 c96c950e…) are all present and exactly equal, and that the 82 added keys are only these. The key-by-key comparison is saved as `docs/figures-1.2.1-vs-1.2.2.csv` (every key: its 1.2.1 value, its 1.2.2 value, `same` or `added`). In the meta only `version` and `key_units` move (units for the new keys). Same inputs (MANIFEST unchanged) and dates; in `results/` only `figures.json` changes (written with `tools/results.py --reuse-tornado`).

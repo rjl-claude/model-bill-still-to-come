@@ -176,28 +176,51 @@ def rate_keys() -> dict[str, float]:
 
 
 # Words for a bracket input that is not a number the reader can use: (input, setting) -> label
-# (version 1.2.2, aios-harness#235). The words follow the model's own notes on each input (scenario.py and the
-# modules it names); every other input is printed as the number the Scenario holds.
+# (version 1.2.2, aios-harness#235; corrected against the code in 1.2.3). The words follow what each input does in
+# the code (scenario.py and the modules it names); every other input is printed as the number the Scenario holds.
 SETTING_WORDS = {
     ("case", "FFP_Low"): "DESNZ's low price path", ("case", "Reference"): "DESNZ's central price path",
     ("case", "FFP_High"): "DESNZ's high price path",
     ("prices", None): "DESNZ's central price path",
     ("prices", "forward"): "season-ahead prices to March 2027, then DESNZ's central price path",
     **{(b, v): w for b in ("discount_bound", "negative_bound") for v, w in
-       ((-1, "low end of the 95% interval"), (0, "central fit"), (1, "high end of the 95% interval"))},
+       ((-1, "gentler end of the 95% interval"), (0, "fitted slope"), (1, "steeper end of the 95% interval"))},
     ("path", "Falling Behind"): "NESO FES 2025 Falling Behind", ("path", "EEP"): "DESNZ's EEP build path",
     ("path", "Holistic Transition"): "NESO FES 2025 Holistic Transition",
     ("abandonment", False): "every unbuilt contract built",
-    ("abandonment", True): "unbuilt renewables cut by their technology's termination rate",
+    ("abandonment", True): "unbuilt renewable CfDs cut by their technology's AR1-AR4 termination rate "
+                           "(all technologies' rate where fewer than ten contracts)",
     ("late_starts", False): "LCCC's expected start dates",
-    ("late_starts", True): "unbuilt contracts start late by their round's measured delay",
-    ("hpc_term", "contract"): "35 years from the earlier of start and the window's end",
+    ("late_starts", True): "unbuilt allocation-round contracts start late by their round's measured delay "
+                           "(the mature rounds' average where fewer than ten measured)",
+    ("hpc_term", "contract"): "35 years from the earlier of start and the target commissioning window's end",
     ("hpc_term", "from_start"): "35 years from start",
-    ("households", "held"): "households' 2025 share held", ("households", "EEP"): "DESNZ's projected share",
-    ("decline", "gentler"): "gentler decline", ("decline", "central"): "central decline",
-    ("decline", "steeper"): "steeper decline",
-    ("output", "measured"): "each farm's own record", ("output", "DESNZ 2023"): "DESNZ 2023 load factors",
+    ("households", "held"): "households' 2025 share held (the RO's held throughout)",
+    ("households", "EEP"): "DESNZ's projected share by year (the RO's held)",
+    ("output", "measured"): "each farm's own record, 2023-25; farms not yet generating, the median of their "
+                            "technology's farms started 2019 or later; no British record, DESNZ 2023 or a stated assumption",
+    ("output", "DESNZ 2023"): "DESNZ 2023 load factors for CfD wind and solar",
 }
+
+
+def _pct(rate: float) -> str:
+    return f"{rate * 100:g}%"
+
+
+def _decline_words(name: str) -> str:
+    from .output import DECLINES
+    wind, solar = DECLINES[name]
+    return f"wind {_pct(wind)} a year, solar PV {_pct(solar)}"
+
+
+def _flat_at_gentler_end(name: str) -> list[str]:
+    """The fits whose gentler end is past zero, so held flat (`discount.bounded_slope`)."""
+    from . import discount as D
+    if name == "discount_bound":
+        fits = {k: D.fit(k) for k in ("wind", "solar")}
+    else:
+        fits = {k: D.negative_fit(k, r) for k in ("wind", "solar") for r in ("6h", "any")}
+    return sorted({k for k, f in fits.items() if D.bounded_slope(f, -1) == 0.0})
 
 
 def _setting(s, name: str):
@@ -207,7 +230,12 @@ def _setting(s, name: str):
         v = getattr(s, name)
     if name == "prices" and v is not None:
         v = "forward"
-    return SETTING_WORDS.get((name, v), v)
+    if name == "decline":
+        return _decline_words(v)
+    words = SETTING_WORDS.get((name, v), v)
+    if name in ("discount_bound", "negative_bound") and v == -1 and (flat := _flat_at_gentler_end(name)):
+        words += f" ({' and '.join(flat)} held flat: its gentler end is past zero)"
+    return words
 
 
 def setting_keys() -> dict:
