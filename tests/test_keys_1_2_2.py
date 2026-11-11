@@ -102,11 +102,20 @@ def test_the_fixture_is_the_frozen_1_2_1_file():
     assert hashlib.sha256(V121.read_bytes()).hexdigest().startswith("c96c950e0598b662")
 
 
+def same(a, b) -> bool:
+    """Text, whole numbers and flags exactly; other numbers to 10 significant figures. A rebuild on another kind
+    of machine (the Mac Mini, arm64) differs from this one's (x86_64) in the last binary digits only: at most
+    7.9e-13 relative over 7,184 keys, 11 Nov 2026 (aios-harness#235)."""
+    if isinstance(a, float) or isinstance(b, float):
+        return not isinstance(a, bool) and not isinstance(b, bool) and abs(a - b) <= 1e-10 * max(abs(a), abs(b))
+    return type(a) is type(b) and a == b
+
+
 def test_no_1_2_1_figure_moves_and_only_the_new_keys_are_added():
     import re
     old, new = json.loads(V121.read_text())["figures"], frozen()
     assert [k for k in old if k not in new] == []
-    assert [k for k in old if new[k] != old[k]] == []  # exactly equal, not approximately
+    assert [k for k in old if not same(new[k], old[k])] == []  # a rebuild on any machine
     added = set(new) - set(old)
     assert [k for k in added if not any(re.fullmatch(p, k) for p in NEW)] == []
     assert len(added) == 12 + 2 + 17 * 3 + 8 + 4 * 2 + 1
@@ -120,3 +129,14 @@ def test_only_the_version_and_the_key_units_move_in_the_meta():
     import re
     for k in set(frozen()) - set(json.loads(V121.read_text())["figures"]):
         assert any(re.fullmatch(p, k) for p in new["key_units"] if p != "default"), k  # every new key has its unit
+
+
+def test_the_saved_proof_shows_every_1_2_1_key_exactly_unchanged_in_the_committed_file():
+    """docs/figures-1.2.1-vs-1.2.2.csv, written from the committed 1.2.2 file: every 1.2.1 key `same` (exactly
+    equal, value and type), the rest `added`; its 1.2.1 column is the frozen 1.2.1 file."""
+    import csv
+    rows = list(csv.DictReader((figures.FILE.parent.parent / "docs" / "figures-1.2.1-vs-1.2.2.csv").open()))
+    old = json.loads(V121.read_text())["figures"]
+    assert {r["key"]: r["status"] for r in rows if r["key"] in old} == {k: "same" for k in old}
+    assert sum(r["status"] == "added" for r in rows) == 82 and len(rows) == len(old) + 82
+    assert all(r["v1.2.1"] == repr(old[r["key"]]) == r["v1.2.2"] for r in rows if r["key"] in old)
