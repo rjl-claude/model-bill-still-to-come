@@ -28,7 +28,7 @@ Every CfD wind and solar farm takes DESNZ's 2023 load factor for the commissioni
 
 ## 4. Sizewell C's return after 2039 (Richard, 5 Nov)
 
-Low **3.5%** (the Green Book rate), high central 6.73%. In 2040 (n = 0) at £40.509bn: depreciation 40.509 / 60 = £0.675bn; average RAB 40.509 - 0.675 / 2 = £40.171bn; return 6.73% x 40.171 = £2.704bn at central, 3.5% x 40.171 = **£1.406bn** at the low end (2024/25 prices, before running costs and power sold).
+Low **3.5%** (the Green Book rate before its 28 Oct 2026 revision; kept as Richard set it, 5 Nov), high central 6.73%. In 2040 (n = 0) at £40.509bn: depreciation 40.509 / 60 = £0.675bn; average RAB 40.509 - 0.675 / 2 = £40.171bn; return 6.73% x 40.171 = £2.704bn at central, 3.5% x 40.171 = **£1.406bn** at the low end (2024/25 prices, before running costs and power sold).
 
 ## 5. Build path (points 7, 25)
 

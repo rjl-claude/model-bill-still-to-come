@@ -26,7 +26,7 @@ def test_keys_are_built_from_the_table():
     assert f["cfd_renewables.not_yet_built.total.cash"] == pytest.approx(4e6)
     assert f["bill.households.total.cash"] == pytest.approx(5e6)
     assert f["cfd_renewables.built.businesses.2027.cash"] == pytest.approx(20e6)
-    assert f["hinkley_point_c.total.pv_green_book"] == pytest.approx(-5e6 / 1.035 ** 2)
+    assert f["hinkley_point_c.total.pv_green_book"] == pytest.approx(-5e6 / 1.03 ** 2)
     assert f["hinkley_point_c.total.pv_hurdle"] == pytest.approx(-5e6 / 1.0673 ** 2)
     assert "hinkley_point_c.built.total.cash" not in f  # no rows, no key
 

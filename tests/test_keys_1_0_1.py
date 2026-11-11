@@ -1,6 +1,8 @@
 """aios-harness#221: version 1.0.1 adds the keys the paper needs that 1.0.0 held only in its CSVs or check
 notes (the price path, contract counts, the checks against the OBR, LCCC, the Clock and the Budget), and
-changes no 1.0.0 figure. Tested at the seam the paper reads: the frozen results file, by key."""
+changes no 1.0.0 figure. Tested at the seam the paper reads: the frozen results file, by key. The 1.0.0 figures
+are checked against the frozen 1.0.1 file, saved as a fixture: from 1.1.0 the Green Book present values move
+(aios-harness#255, tests/test_version_1_1_0.py)."""
 import hashlib
 import json
 from pathlib import Path
@@ -12,6 +14,7 @@ from billtocome import figures
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
 V100 = FIXTURES / "figures-1.0.0.json"  # results/figures.json as frozen at tag v1.0.0
+V101 = FIXTURES / "figures-1.0.1.json"  # results/figures.json as frozen at tag v1.0.1
 
 
 def frozen() -> dict[str, float]:
@@ -23,7 +26,7 @@ def test_the_fixture_is_the_frozen_1_0_0_file():
 
 
 def test_every_1_0_0_figure_is_unchanged():
-    old, new = json.loads(V100.read_text())["figures"], frozen()
+    old, new = json.loads(V100.read_text())["figures"], json.loads(V101.read_text())["figures"]
     assert [k for k in old if k not in new] == []
     assert [k for k in old if new[k] != old[k]] == []  # exactly equal, not approximately
 

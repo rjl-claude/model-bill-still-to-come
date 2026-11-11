@@ -185,9 +185,8 @@ FILES = {
     "edf/edf-2025-annual-results-2026-02-20.html":
         "https://webdisclosure.com/press-release/credit-cooperatif-epa-edf-2025-annual-results-strong-operational-performance-positive-cash-flow-reducing-net-financial-debt-HS9LOgZBFaD",
     # HM Treasury, the Green Book, as published at the cut-off (2026 edition, revised 28 Oct 2026 for discounting).
-    # Its para 6.54 now sets 3.00% for years 1-30, 2.50% for 31-75 and 2.25% after; present_value.py still uses
-    # the earlier 3.5% and 3.0%. Found 11 Nov 2026 and left for Richard's ruling (aios-harness#229): 1.0.2
-    # changes no figure.
+    # Its para 6.54 sets 3.00% for years 1-30, 2.50% for 31-75 and 2.25% after. Found 11 Nov 2026 (aios-harness#229);
+    # present_value.py uses these rates from 1.1.0 (Richard's ruling 11 Nov 2026, aios-harness#255).
     "hmt/The_Green_Book_2026.pdf":
         "https://assets.publishing.service.gov.uk/media/6ae0ba897b7111c482d80a3b/The_Green_Book_2026.pdf",
     # Value Added Tax Act 1994, Schedule 7A: the reduced rate on domestic fuel and power

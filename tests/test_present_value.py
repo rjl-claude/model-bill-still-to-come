@@ -15,8 +15,8 @@ def stream(technology="Offshore Wind", line="CfD renewables"):
 
 def test_three_year_stream_green_book():
     t = pv.present_value(stream(), "green_book")
-    assert list(t.pv / 1e6) == pytest.approx([10.0, 19.324, -4.668], abs=1e-3)
-    assert t.pv.sum() / 1e6 == pytest.approx(24.656, abs=1e-3)
+    assert list(t.pv / 1e6) == pytest.approx([10.0, 19.417, -4.713], abs=1e-3)
+    assert t.pv.sum() / 1e6 == pytest.approx(24.704, abs=1e-3)
 
 
 def test_three_year_stream_hurdle():
@@ -26,11 +26,17 @@ def test_three_year_stream_hurdle():
     assert pv.present_value(stream("Nuclear", "Hinkley Point C"), "hurdle").pv.sum() / 1e6 == pytest.approx(24.350, abs=1e-3)
 
 
+def test_green_book_2026_table_8_factors():
+    """The Green Book 2026, para 6.57, Table 8: years 0 to 5 at 3.00%."""
+    assert [round(pv.green_book_factor(2026 + t), 4) for t in range(6)] == [1.0, 0.9709, 0.9426, 0.9151, 0.8885, 0.8626]
+
+
 def test_green_book_step_after_year_30():
+    """Para 6.54 (revised 28 Oct 2026): 3.00% for years 1 to 30, 2.50% for years 31 to 75 (aios-harness#255)."""
     assert pv.green_book_factor(2026) == 1.0
-    assert pv.green_book_factor(2056) == pytest.approx(0.356278, abs=1e-6)
-    assert pv.green_book_factor(2057) == pytest.approx(0.345901, abs=1e-6)
-    assert pv.green_book_factor(2099) == pytest.approx(0.099951, abs=1e-6)
+    assert pv.green_book_factor(2056) == pytest.approx(0.411987, abs=1e-6)
+    assert pv.green_book_factor(2057) == pytest.approx(0.401938, abs=1e-6)
+    assert pv.green_book_factor(2099) == pytest.approx(0.142481, abs=1e-6)
 
 
 @pytest.mark.parametrize("technology, rate", [

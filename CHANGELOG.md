@@ -2,6 +2,16 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.1.0 (11 Nov 2026), the Green Book 2026 discount rates
+
+The Green Book present values move to the rates of the Green Book as published at the cut-off (2026 edition, revised 28 Oct 2026, para 6.54; saved in `data/raw/hmt/`): **3.00% real for years 1 to 30, 2.50% for years 31 to 75** (2.25% from year 76 is past the model's end, year 73). They were 3.5% and 3.0% in 1.0.0 to 1.0.2. Found in the input audit (aios-harness#229); Richard's ruling, choice 1, 11 Nov 2026 (aios-harness#255). Year 0 is still 2026, not discounted; the factors match the Green Book's Table 8 (para 6.57). A minor number, not a patch: 1.0.1 and 1.0.2 each kept every 1.0.0 figure, and this is the first version whose figures differ.
+
+**Only the Green Book present values change**: `tests/test_version_1_1_0.py` checks the 7,102 keys are 1.0.2's and every key not ending `.pv_green_book` is exactly equal to the frozen 1.0.2 file (`tests/fixtures/figures-1.0.2.json`, sha256 e7bf817e…). 2,222 of the 2,281 Green Book keys move; the other 59 are 2026's, not discounted. Only `meta.version` moves in the meta (same saved sources, same dates). In `results/` only `figures.json` and `tornado.csv` change, and in `tornado.csv` only its four Green Book columns; every other CSV is byte for byte as 1.0.2 (full rebuild, `tools/results.py`, brackets rerun).
+
+- Whole bill 2026-2099, Green Book present value: **£145.60bn** (was £141.23bn). Built £83.35bn (was £81.87bn); not yet built £62.25bn (was £59.36bn). Range £124.48bn to £173.31bn (was £120.80bn to £166.86bn). Hinkley Point C £19.25bn (was £17.99bn); Sizewell C £28.62bn (was £27.49bn).
+- Unchanged: the cash headline £172.45bn, the cash range £132.87bn to £221.89bn, every hurdle-rate present value, every check and count.
+- The Sizewell C return bracket's low end stays at 3.5% as Richard set it on 5 Nov (the Green Book's rate before the revision); it is a cash input, not a discount rate, and is not changed here.
+
 ## 1.0.2 (11 Nov 2026), notes and saved sources only
 
 From the input audit (aios-harness#229; Richard's yes, choice 1, 11 Nov 2026). **No key or figure changes**: `tests/test_version_1_0_2.py` checks the 7,102 keys are the 1.0.1 keys and every value is exactly equal to the frozen 1.0.1 file (`tests/fixtures/figures-1.0.1.json`, sha256 e79c8e92…). Only `meta.version` and `meta.manifest_sha256` move. Same cut-off and valuation dates; every CSV in `results/` byte for byte as in 1.0.1 (written with `tools/results.py --reuse-tornado`).

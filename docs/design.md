@@ -23,7 +23,7 @@ results = run(Scenario(case="FFP_High"))   # one bracket
 | **Prices** | `annex_m_path(case)` and `forward_then_annex_m()` give price tables for Scenario; `cpih`, `cpi_to_cpih` | data, not a seam: any price path is just another table | built (`prices.annex_m_path`, `prices.forward_then_annex_m`) |
 | **Market response** (seam, 2 adapters) | `for_contract(year, technology, rule, own) -> (discount, unpaid share)` | simple British fit now; Grid Sim later (point 7) | one interface (`MarketResponse.for_contract`, adapter `SimpleFit`) |
 | **Who pays** | `split(rows, scenario) -> rows` | households/businesses/taxpayers, VAT line, RO taxpayer share, manufacturers' exemption | built (`who_pays.py`) |
-| **Present value** | `present_value(results, rate) -> table` | Green Book (3.5%/3.0%), hurdle rate by technology, to 1 Jan 2026 | built (`present_value.py`) |
+| **Present value** | `present_value(results, rate) -> table` | Green Book (3.00%/2.50%, since 1.1.0), hurdle rate by technology, to 1 Jan 2026 | built (`present_value.py`) |
 | **Figures** | `figure(key) -> number`, keys built from the table (line.year.measure, line.total.measure ...), not a fixed list | the one results file the paper reads by key | built (`figures.py`, `results/figures.json`) |
 | **Checks** | `check(results) -> report`; fails on an unexplained gap over 15% | Clock 2025 join, OBR (calendarised), LCCC; `explanations.yaml` | built (`checks.py`) |
 
@@ -85,7 +85,7 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 
 ## Stage 5 (5 Nov): present values and the results file
 
-- Year 0 is 2026, not discounted (Green Book convention; Richard, 5 Nov). Green Book 3.5% to 2056, 3.0% from 2057.
+- Year 0 is 2026, not discounted (Green Book convention; Richard, 5 Nov). Green Book 3.5% to 2056, 3.0% from 2057 in 1.0.0 to 1.0.2; from 1.1.0, 3.00% to 2056 and 2.50% from 2057 (Green Book 2026, revised 28 Oct 2026, para 6.54; Richard, 11 Nov, aios-harness#255). The figures below are 1.0.0's.
 - Hurdle rates (point 8, DESNZ 2025 medium): solar, onshore 7.6%; fixed offshore, gas 8.9%; floating, tidal, geothermal 10.1%. No 2025 rate, nearest (Richard, 5 Nov): nuclear 6.73% (Sizewell C licence WACC); hydro, small wind and solar 7.6%; other fuelled or firm 8.9%. VAT's PV is 5% of households' PV of its line; Exchequer and exemption rows take their line's factor.
 - Keys `line[.built][.payer].period.measure` (measures cash, pv_green_book, pv_hurdle), every combination with rows; `tools/results.py` writes `results/figures.json` with the run's dates and MANIFEST hash (`results/` in git from the freeze, 9 Nov 2026; `meta` names the model, version, valuation and cut-off dates and MANIFEST hash). Paper source writes `{{key}}`; `figures.typed` lists any money or % typed outside a key.
 - Central, 2026-2099, £bn 2024 prices (cash / Green Book / hurdle): whole bill 172.3 / 141.1 / 111.5; built 93.3 / 81.8 / 69.6; not yet built 79.1 / 59.4 / 41.9.
