@@ -24,7 +24,10 @@ import pandas as pd
 from .prices import cpi, cpih
 
 RAW = Path(__file__).resolve().parents[2] / "data" / "raw"
-ENGINE = Path("/srv/aios/projects/model-bill-already-paid/reference/engine/v4-s43.json")  # the bill-already-paid model's
+# The Clock export of Report No. 1's engine release v4-s43, via model-bill-already-paid, saved here (MANIFEST,
+# sha256 e1cf23af..., the file model-register.yaml pins). From 1.2.1 the model reads its own copy, not that
+# model's folder; a new engine release is never applied by itself.
+ENGINE = RAW / "model-bill-already-paid" / "v4-s43.json"
 AUCTIONS = ("T-4", "T-3", "T-1", "TR")
 WINTER_MONTHS = ("OCT", "NOV", "DEC", "JAN", "FEB", "MAR", "APR")
 

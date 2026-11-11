@@ -152,6 +152,11 @@ FILES = {
     # model 1.0.0), pinned by commit; the Clock 2025 join reads this copy, not the model's daily file.
     "model-bill-already-paid/clock.json":
         "https://raw.githubusercontent.com/rjl-claude/model-bill-already-paid/2a63b034566ccb7c17eec179e996f61ba5f6f9b4/results/clock.json",
+    # 1.2.1 (self-contained): the Capacity Market's net-zero shares. The Clock export of Report No. 1's engine
+    # release v4-s43, as model-bill-already-paid keeps it (reference/engine/v4-s43.json), pinned by commit;
+    # model-register.yaml pins it by sha256 (e1cf23af...). A new engine release is never applied by itself.
+    "model-bill-already-paid/v4-s43.json":
+        "https://raw.githubusercontent.com/rjl-claude/model-bill-already-paid/cc9866b4e9e37716a2a60441d0b1d9d5181c01e2/reference/engine/v4-s43.json",
     # 1.0.2 (aios-harness#229, the input audit): seven sources the model relies on that were not saved here.
     # No figure reads them; they are the evidence for figures already in the code and docs/facts.md.
     # The Department's results of allocation rounds 1 to 7a (the model reads LCCC's copy, auction_outcomes.csv)

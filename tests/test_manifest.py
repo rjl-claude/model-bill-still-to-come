@@ -6,7 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
-OLD_SUMS = Path("/srv/aios/projects/model-ending-subsidy-contracts/data/raw/SHA256SUMS")
+# The 16 Oct fetch's checksum list (model-ending-subsidy-contracts data/raw/SHA256SUMS, Gitea commit 760c84c), saved
+# here from 1.2.1 so the test reads nothing outside the model
+OLD_SUMS = ROOT / "tests" / "fixtures" / "model-ending-subsidy-contracts-SHA256SUMS"
 # MANIFEST records copies under the project's name at copy time, before the 6 Nov 2026 rename (aios-harness#101)
 COPIED = "copied from model-subsidy-book"
 
@@ -43,7 +45,7 @@ def test_every_file_on_disk_matches_its_latest_record():
         # Either fetched from its publisher, or copied from the 16 Oct fetch (now model-ending-subsidy-contracts), whose
         # own checksum list must then hold the same file.
         if rec["url"].startswith(COPIED):
-            sums = OLD_SUMS.read_text() if OLD_SUMS.exists() else ""
+            sums = OLD_SUMS.read_text()
             assert rec["sha256"] in sums, f"{rel}: copied, but not in the old checksum list"
         else:
             assert rec["url"].startswith("https://"), rel
@@ -72,3 +74,7 @@ def test_the_sources_the_input_audit_found_unsaved_are_saved():
     latest = _latest()
     assert [rel for rel in AUDIT_229 if rel not in latest or not (RAW / rel).is_file()] == []
     assert set(AUDIT_229) <= set(_fetch_module().FILES)  # fetched again with the rest
+
+
+def test_the_old_checksum_list_is_the_saved_copy():
+    assert hashlib.sha256(OLD_SUMS.read_bytes()).hexdigest().startswith("8e65c005afa95bbb")

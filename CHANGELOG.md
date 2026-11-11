@@ -2,6 +2,15 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.2.1 (11 Nov 2026), self-contained
+
+A clean copy of the tag, plus the saved inputs `data/raw/MANIFEST.jsonl` lists out of git, now reruns on any machine (spec user story 24). At 1.2.0 the Capacity Market line (`src/billtocome/cm.py`) read its net-zero shares from another model's working folder by absolute path (`/srv/aios/projects/model-bill-already-paid/reference/engine/v4-s43.json`), so a clean copy failed on the Mac Mini (found in aios-harness#231). A patch number: **no figure moves**.
+
+- **The Capacity Market shares** are read from the model's own saved copy, `data/raw/model-bill-already-paid/v4-s43.json`: the Clock export of Report No. 1's engine release v4-s43, as model-bill-already-paid keeps it (`reference/engine/v4-s43.json`), fetched by commit (cc9866b4) and listed in `MANIFEST.jsonl` with its sha256, e1cf23af…, the fingerprint `report-series/model-register.yaml` pins. Byte for byte the file 1.2.0 read. A new engine release is never applied by itself: it is saved here, cut as a new version, and the pin moves on Richard's yes.
+- **One test read outside the model:** `tests/test_manifest.py` checked copied files against model-ending-subsidy-contracts' checksum list by absolute path. That list is saved as `tests/fixtures/model-ending-subsidy-contracts-SHA256SUMS` (sha256 8e65c005…, checked).
+- New test `tests/test_self_contained.py`: no file in `src/`, `tools/` or `tests/` names a path outside the model, and the shares load from the saved copy at the pinned fingerprint.
+- `tests/test_version_1_2_1.py` checks the 7,102 keys and values are exactly 1.2.0's (`tests/fixtures/figures-1.2.0.json`, sha256 0ef2f7e4…); only `meta.version` and `meta.manifest_sha256` move (MANIFEST gains one file). In `results/` only `figures.json` and `run.json` change, in those two meta fields (written with `tools/results.py --reuse-tornado`; the full rebuild from a clean copy on the Mac Mini gives the same file).
+
 ## 1.2.0 (11 Nov 2026), Sizewell C's low return at the Green Book 2026 rate
 
 The low end of the Sizewell C return bracket after 2039 moves from 3.5% to **3.00%**. Richard set that range on 5 Nov as "the Green Book rate" to 6.73%; the Green Book 2026 (revised 28 Oct 2026, para 6.54; saved in `data/raw/hmt/`) sets that rate at 3.00%, so the low end follows it. Found in aios-harness#255; Richard's ruling, choice 1, 11 Nov 2026 (aios-harness#257). It is a cash input (the allowed return on Sizewell C's asset base after 2039), not a discount rate. A minor number, by the reasoning of 1.1.0: patch versions keep every figure, and this version's figures differ.
