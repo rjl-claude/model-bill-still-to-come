@@ -6,7 +6,10 @@ data/raw/hmt/budget-2026.pdf para 2.48; AB26_Policy_Costing.pdf p.12, "effective
 2027") extends it, announced, not yet law at the cut-off. The model counts the extension (the conductor's ruling,
 11 Nov 2026), as it counts the Budget's other announced measures. 1.2.4 charged 5% throughout.
 
-Tested at the seam the paper reads: the frozen results file, by key, against the frozen 1.2.4 file."""
+Tested at the seam the paper reads: the frozen results file, by key, against the frozen 1.2.4 file. From 1.2.6
+(Northern Ireland's window, aios-harness#236, tests/test_version_1_2_6.py) these checks read the frozen 1.2.5 file, a
+fixture, as 1.2.6 moves its two Northern Ireland keys; 1.2.5's mirror test of the Northern Ireland key was replaced by
+a hand calculation from the run's own rows, and its meta test allows only what its name says (the checker, 14 Nov)."""
 import csv
 import hashlib
 import json
@@ -14,10 +17,13 @@ import math
 import re
 from pathlib import Path
 
+import pandas as pd
+
 from billtocome import figures
 
 ROOT = Path(__file__).resolve().parents[1]
 V124 = ROOT / "tests" / "fixtures" / "figures-1.2.4.json"  # results/figures.json at tag v1.2.4
+V125 = ROOT / "tests" / "fixtures" / "figures-1.2.5.json"  # results/figures.json at tag v1.2.5
 COMPARE = ROOT / "docs" / "figures-1.2.4-vs-1.2.5.csv"
 ADDED = {
     "vat.rate.reduced": 0.05,
@@ -39,7 +45,7 @@ def _same(a, b) -> bool:
 
 
 def frozen() -> dict:
-    return json.loads(figures.FILE.read_text())["figures"]
+    return json.loads(V125.read_text())["figures"]
 
 
 def old() -> dict:
@@ -80,10 +86,13 @@ def test_the_new_keys_have_units():
         assert any(re.fullmatch(p, k) for p in figures.KEY_UNITS if p != "default"), k
 
 
-def test_only_the_version_moves_in_the_meta():
-    o, n = json.loads(V124.read_text())["meta"], json.loads(figures.FILE.read_text())["meta"]
+def test_only_the_version_the_manifest_fingerprint_and_new_units_move_in_the_meta():
+    """The MANIFEST gained SI 2026/987's two files; key_units gained the new keys' units and changed none."""
+    o, n = json.loads(V124.read_text())["meta"], json.loads(V125.read_text())["meta"]
     assert (o["version"], n["version"]) == ("1.2.4", "1.2.5")
-    assert {k for k in o if n[k] != o[k]} <= {"version", "manifest_sha256", "key_units"}
+    assert set(n) == set(o)
+    assert {k for k in o if n[k] != o[k]} == {"version", "manifest_sha256", "key_units"}
+    assert all(n["key_units"][k] == v for k, v in o["key_units"].items())
 
 
 def test_the_saved_comparison_lists_every_key_and_its_move():
@@ -127,19 +136,17 @@ NI_WORDS = "vat.zero_rate.northern_ireland_upper_bound.words"
 
 
 def test_the_northern_ireland_overstatement_is_sized_by_key():
-    from billtocome import model
-    r = model.run()
-    st = r.tables["ro_stations"]
+    """1.2.5's key, by hand from the run's own rows (results/results.csv and results/ro_stations.csv, which 1.2.6 does
+    not change): 5% on households' part of the Northern Ireland stations' RO rows over 92 of 365 days of 2026 and 181
+    of 365 of 2027. The checker's own figure is £5.923m. 1.2.6 sizes it over 1 Oct 2026 to 31 Mar 2027 only."""
+    st = pd.read_csv(ROOT / "results" / "ro_stations.csv", usecols=["Accreditation reference", "Country"])
     ni = set(st.loc[st.Country == "Northern Ireland", "Accreditation reference"])
-    t = r.table
+    t = pd.read_csv(ROOT / "results" / "results.csv", usecols=["line", "item", "payer", "year", "cash"])
     hh = t[(t.line == "RO") & (t.payer == "households") & t.item.isin(ni)].groupby("year").cash.sum()
-    expected = 0.05 * (92 / 365 * hh[2026] + 181 / 365 * hh[2027])
-    k = figures.vat_keys(r)
-    assert abs(k[NI_KEY] - expected) < 1.0
-    assert 5e6 < k[NI_KEY] < 7e6  # about £5.9m (13 Nov 2026, from the 1.2.5 results)
-    assert k[NI_WORDS] == (
+    f = frozen()
+    assert abs(f[NI_KEY] - 0.05 * (92 / 365 * hh[2026] + 181 / 365 * hh[2027])) < 1.0
+    assert 5.92e6 < f[NI_KEY] < 5.93e6  # the checker's £5.923m (14 Nov 2026)
+    assert f[NI_WORDS] == (
         "at most the VAT that 5% on households' part of the Renewables Obligation's Northern Ireland stations would "
         "have kept from 1 October 2026 to 30 June 2027; an upper bound, because Northern Ireland's certificates can "
         "be presented in Great Britain")
-    assert any(re.fullmatch(p, NI_KEY) for p in figures.KEY_UNITS if p != "default")
-    assert any(re.fullmatch(p, NI_WORDS) for p in figures.KEY_UNITS if p != "default")

@@ -62,7 +62,9 @@ KEY_UNITS = {
     r"vat\.zero_rate\.(in_law|announced|modelled)\.(period|source|basis)": "words",
     r"(vat|bill)\.zero_rate_in_law_only\.total\.cash": "£, 2024 prices (CPIH), had the zero rate ended on 31 March 2027",
     r"bill\.zero_rate_in_law_only\.difference\.cash": "£, 2024 prices (CPIH): the bill had the zero rate ended on 31 March 2027, less the bill",
-    r"vat\.zero_rate\.northern_ireland_upper_bound\.cash": "£, 2024 prices (CPIH): at most the VAT the model leaves out for Northern Ireland, which stays at 5%",
+    r"vat\.zero_rate\.northern_ireland_upper_bound\.cash": (
+        "£, 2024 prices (CPIH): at most the VAT the model leaves out for Northern Ireland, at 5% from 1 October 2026 "
+        "to 31 March 2027"),  # 1.2.6: the window (Budget 2026 para 3.4)
     r"vat\.zero_rate\.northern_ireland_upper_bound\.words": "words",
 }
 BUILT = {True: "built", False: "not_yet_built"}
@@ -322,24 +324,35 @@ def without_nuclear_keys(results) -> dict[str, float]:
     return {"bill.without_nuclear.total.cash": float(t.cash[keep].sum())}
 
 
+def _last_day(window) -> str:
+    """(1 Oct 2026, 1 Apr 2027) -> "31 March 2027" (the window's end is the first day outside it)."""
+    b = window[1] - pd.Timedelta(days=1)
+    return f"{b.day} {b:%B %Y}"
+
+
 def _period(window) -> str:
     """(1 Oct 2026, 1 Jul 2027) -> "1 October 2026 to 30 June 2027" (the window's end is the first day outside it)."""
-    a, b = window[0], window[1] - pd.Timedelta(days=1)
-    return f"{a.day} {a:%B %Y} to {b.day} {b:%B %Y}"
+    return f"{window[0].day} {window[0]:%B %Y} to {_last_day(window)}"
 
 
 def vat_keys(results) -> dict:
     """The VAT rates and the zero rate's periods, in law and as modelled, and the VAT line and the bill had the zero
     rate ended on 31 March 2027 as in law: each VAT row at that year's rate in law over its rate as modelled, the
     same method by days (`who_pays.vat_rate`); and the upper bound of what zero-rating every household overstates for
-    Northern Ireland, which SI 2026/987 leaves at 5% (the conductor's ruling, 13 Nov 2026) (version 1.2.5, aios-harness#236)."""
+    Northern Ireland, which SI 2026/987 leaves at 5% to 31 March 2027 (the conductor's ruling, 13 Nov 2026) (version 1.2.5,
+    aios-harness#236); from 1.2.6 sized over that window only, as Budget 2026 expects the relief in Northern Ireland from
+    April 2027 (para 3.4, para 6.210). The certificate counts in its words: Ofgem's RO annual report SY23 (Northern
+    Ireland's obligation 0.192 ROCs/MWh on 7.26 TWh, paras 5.1 and 5.3) and the RO certificates register (compliance
+    period 2024/2025, Northern Ireland's stations)."""
     from .who_pays import VAT, VAT_ZERO, VAT_ZERO_IN_LAW, VAT_ZERO_WINDOW, vat_rate
     t = results.table
     vat = t[t.line == "VAT"]
     st = results.tables.get("ro_stations")  # a run without the RO line has no stations
     ni = set() if st is None else set(st.loc[st.Country == "Northern Ireland", "Accreditation reference"])
     ni_hh = t[(t.line == "RO") & (t.payer == "households") & t.item.isin(ni)]
-    ni_kept = float((ni_hh.cash * (VAT - ni_hh.year.map(vat_rate))).sum())
+    # 1.2.6: Northern Ireland at 5% only while the order runs (art. 1(2), art. 4); Budget 2026 expects the relief
+    # there from April 2027 (para 3.4, para 6.210), as the model counts the extension for Great Britain.
+    ni_kept = float((ni_hh.cash * (VAT - ni_hh.year.map(lambda y: vat_rate(y, VAT_ZERO_IN_LAW)))).sum())
     scale = vat.year.map(lambda y: vat_rate(y, VAT_ZERO_IN_LAW) / vat_rate(y))
     extra = float((vat.cash * (scale - 1)).sum())
     return {
@@ -355,9 +368,17 @@ def vat_keys(results) -> dict:
         "bill.zero_rate_in_law_only.difference.cash": extra,
         "vat.zero_rate.northern_ireland_upper_bound.cash": ni_kept,
         "vat.zero_rate.northern_ireland_upper_bound.words": (
-            "at most the VAT that 5% on households' part of the Renewables Obligation's Northern Ireland stations would "
-            "have kept from 1 October 2026 to 30 June 2027; an upper bound, because Northern Ireland's certificates can "
-            "be presented in Great Britain"),
+            f"At most the VAT that 5% on households' part of the Renewables Obligation's Northern Ireland stations "
+            f"would have raised from {_period(VAT_ZERO_IN_LAW)}. The order (SI 2026/987) zero-rates households' "
+            f"electricity in Great Britain only and keeps Northern Ireland at 5% to {_last_day(VAT_ZERO_IN_LAW)}. "
+            "Budget 2026 says the extended relief is expected to apply in Northern Ireland from April 2027 (paragraphs "
+            "3.4 and 6.210), so the model counts Northern Ireland at 0% from then, as it counts the extension for Great "
+            "Britain. The model does not split households by area, so before April 2027 it zero-rates Northern "
+            "Ireland's households too. The figure is an upper bound because Northern Ireland's households do not pay "
+            "for all of these stations. Northern Ireland's stations make far more certificates than Northern Ireland's "
+            "suppliers must present, and most are presented by suppliers in Great Britain, where the zero rate "
+            "applies. In the year to March 2025 Northern Ireland's stations were issued 5.6 million certificates, and "
+            "Northern Ireland's suppliers had to present 1.4 million."),
     }
 
 

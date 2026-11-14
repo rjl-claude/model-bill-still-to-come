@@ -7194,8 +7194,8 @@
 "vat.zero_rate.in_law.source": "the Value Added Tax (Supplies of Domestic Electricity) Order 2026 (SI 2026/987)",
 "vat.zero_rate.modelled.basis": "the zero rate in law with the extension Budget 2026 announced",
 "vat.zero_rate.modelled.period": "1 October 2026 to 30 June 2027",
-"vat.zero_rate.northern_ireland_upper_bound.cash": 5923100.859381396,
-"vat.zero_rate.northern_ireland_upper_bound.words": "at most the VAT that 5% on households' part of the Renewables Obligation's Northern Ireland stations would have kept from 1 October 2026 to 30 June 2027; an upper bound, because Northern Ireland's certificates can be presented in Great Britain",
+"vat.zero_rate.northern_ireland_upper_bound.cash": 3996218.3994149547,
+"vat.zero_rate.northern_ireland_upper_bound.words": "At most the VAT that 5% on households' part of the Renewables Obligation's Northern Ireland stations would have raised from 1 October 2026 to 31 March 2027. The order (SI 2026/987) zero-rates households' electricity in Great Britain only and keeps Northern Ireland at 5% to 31 March 2027. Budget 2026 says the extended relief is expected to apply in Northern Ireland from April 2027 (paragraphs 3.4 and 6.210), so the model counts Northern Ireland at 0% from then, as it counts the extension for Great Britain. The model does not split households by area, so before April 2027 it zero-rates Northern Ireland's households too. The figure is an upper bound because Northern Ireland's households do not pay for all of these stations. Northern Ireland's stations make far more certificates than Northern Ireland's suppliers must present, and most are presented by suppliers in Great Britain, where the zero rate applies. In the year to March 2025 Northern Ireland's stations were issued 5.6 million certificates, and Northern Ireland's suppliers had to present 1.4 million.",
 "vat.zero_rate_in_law_only.total.cash": 2743582663.0885515
 },
 "meta": {
@@ -7226,7 +7226,7 @@
 "sizewell_c\\.allowed_return\\.[a-z0-9_]+": "allowed return a year on the asset base, real CPIH (0 to 1)",
 "vat\\.rate\\.(reduced|zero)": "VAT rate on households' electricity (0 to 1)",
 "vat\\.zero_rate\\.(in_law|announced|modelled)\\.(period|source|basis)": "words",
-"vat\\.zero_rate\\.northern_ireland_upper_bound\\.cash": "\u00a3, 2024 prices (CPIH): at most the VAT the model leaves out for Northern Ireland, which stays at 5%",
+"vat\\.zero_rate\\.northern_ireland_upper_bound\\.cash": "\u00a3, 2024 prices (CPIH): at most the VAT the model leaves out for Northern Ireland, at 5% from 1 October 2026 to 31 March 2027",
 "vat\\.zero_rate\\.northern_ireland_upper_bound\\.words": "words"
 },
 "manifest_sha256": "e6b3af1835c0d2fd161712c9a651a839abc63788c3aa3d1f977899b8251cf6b5",
@@ -7234,6 +7234,6 @@
 "scenario": "Scenario(case='Reference', prices=None, market=SimpleFit(path='EEP', discount_bound=0, negative_bound=0), decline='central', output='measured', abandonment=False, late_starts=False, hpc_strike_2012=89.5, hpc_term='contract', hpc_shift_years=0, ro_recycle=0.11798257975260892, cm_share=0.14607087756750806, szc_cost=40509000000, szc_ops_return=0.0673, households='held', bics_a_year=600000000)",
 "units": "\u00a3, 2024 prices (CPIH); present values real, to 1 Jan 2026",
 "valuation_date": "2026-01-01",
-"version": "1.2.5"
+"version": "1.2.6"
 }
 }

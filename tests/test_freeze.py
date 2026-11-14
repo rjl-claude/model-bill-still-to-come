@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_frozen_results_file_names_version_and_both_dates():
     meta = json.loads(figures.FILE.read_text())["meta"]
     version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
-    assert (meta["model"], meta["version"]) == ("model-bill-still-to-come", version) and version == "1.2.5"  # 1.2.5: VAT at 0% from 1 Oct 2026 to 30 Jun 2027 (aios-harness#236)
+    assert (meta["model"], meta["version"]) == ("model-bill-still-to-come", version) and version == "1.2.6"  # 1.2.6: Northern Ireland's VAT window (aios-harness#236)
     assert meta["valuation_date"] == "2026-01-01"
     assert meta["cut_off_date"] == "2026-11-09"  # the day every register was re-fetched (point 15)
 
