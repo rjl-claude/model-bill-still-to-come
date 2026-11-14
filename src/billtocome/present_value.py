@@ -8,13 +8,13 @@
   (Richard, 5 Nov): nuclear at Sizewell C's licence WACC, 6.73% real; hydro and small wind and solar
   7.6%; every other fuelled or firm technology 8.9% (gas).
 Year 0 is the valuation year, 2026, not discounted (the Green Book's convention; Richard, 5 Nov).
-Rows with no technology take their line's rate: VAT's present value is 5% of households' part of
-its line, year by year; the Exchequer and exemption rows take their line's cash-weighted factor.
+Rows with no technology take their line's rate: VAT's present value is its year's rate (`who_pays.vat_rate`: 5%,
+0% from 1 Oct 2026 to 30 Jun 2027, from 1.2.5) times households' part of its line, year by year; the Exchequer and exemption rows take their line's cash-weighted factor.
 """
 import pandas as pd
 
 from .model import VALUATION_DATE, Results
-from .who_pays import VAT
+from .who_pays import vat_rate
 
 GREEN_BOOK = ((30, 0.030), (75, 0.025))  # (last year at this rate, rate); the model ends at year 73
 NUCLEAR = 0.0673  # Sizewell C licence IWACC, real CPIH (facts 7, 30)
@@ -62,10 +62,10 @@ def present_value(results: Results, rate: str) -> pd.DataFrame:
     line_factor = (w.wf / w.w).to_dict()
     moved = ~own & (t.line != "VAT")
     t.loc[moved, "pv"] = t.cash[moved] * [line_factor[k] for k in zip(t.line[moved], t.year[moved])]
-    # VAT: 5% of households' part of its line, built or not, that year.
+    # VAT: that year's rate on households' part of its line, built or not.
     hh = t[(t.payer == "households") & (t.line != "VAT")]
     hh_pv = hh.assign(built=hh.built.map({True: "built", False: "not yet built"})).groupby(["line", "built", "year"]).pv.sum()
     vat = t.line == "VAT"
     keys = [tuple(item.split("|")) + (y,) for item, y in zip(t.item[vat], t.year[vat])]
-    t.loc[vat, "pv"] = [VAT * hh_pv.get(k, 0.0) for k in keys]
+    t.loc[vat, "pv"] = [vat_rate(k[-1]) * hh_pv.get(k, 0.0) for k in keys]
     return t

@@ -17,7 +17,13 @@ money between payers on rows of their own (each scheme line's whole is unchanged
   CfD. Shared across the three schemes in proportion to businesses' part of each (the Capacity Market
   at its whole levy, of which only net zero's share is in the line); moved from businesses to
   taxpayers.
-- VAT (point 18): 5% on what households pay of each line, its own line ("VAT"), item = the scheme.
+- VAT (point 18): 5%, the reduced rate on domestic fuel and power (VAT Act 1994, Sch. 7A), on what households
+  pay of each line, its own line ("VAT"), item = the scheme; 0% from 1 October 2026 to 30 June 2027 (version 1.2.5).
+  The Value Added Tax (Supplies of Domestic Electricity) Order 2026 (SI 2026/987, made 7 Sep 2026) zero-rates
+  supplies made 1 October 2026 to 31 March 2027; Budget 2026 (28 Oct 2026, para 2.48; policy costings p.12:
+  "effective from 1 October 2026 until 1 July 2027") extends it, announced, not yet law at the cut-off; the model
+  counts it, as it counts the Budget's other announced measures (conductor's ruling, aios-harness#236). Applied
+  by days in each calendar year, as the Exchequer's and BICS windows are (`share_of_year`).
 """
 from functools import cache
 from pathlib import Path
@@ -29,7 +35,10 @@ from .prices import cpih
 RAW = Path(__file__).resolve().parents[2] / "data" / "raw"
 HOUSEHOLDS_2025 = 96_188.8 / 275_527.5  # DUKES 5.1, 2025 (fact 18)
 RO_HOUSEHOLDS = 0.41  # DESNZ's domestic share of RO costs (point 27, fact 13)
-VAT = 0.05
+VAT = 0.05  # the reduced rate (VAT Act 1994, Sch. 7A)
+VAT_ZERO = 0.0
+VAT_ZERO_IN_LAW = (pd.Timestamp("2026-10-01"), pd.Timestamp("2027-04-01"))  # SI 2026/987, art. 1(2)
+VAT_ZERO_WINDOW = (pd.Timestamp("2026-10-01"), pd.Timestamp("2027-07-01"))  # with Budget 2026's extension
 EXCHEQUER_RO = 0.75
 EXCHEQUER_WINDOW = (pd.Timestamp("2026-04-01"), pd.Timestamp("2029-04-01"))
 BICS_WINDOW = (pd.Timestamp("2027-04-01"), pd.Timestamp("2035-04-01"))
@@ -62,6 +71,12 @@ def share_of_year(year: int, window: tuple[pd.Timestamp, pd.Timestamp]) -> float
     y0, y1 = pd.Timestamp(f"{year}-01-01"), pd.Timestamp(f"{year + 1}-01-01")
     lo, hi = max(y0, window[0]), min(y1, window[1])
     return max(0.0, (hi - lo).days) / (y1 - y0).days
+
+
+def vat_rate(year: int, window: tuple[pd.Timestamp, pd.Timestamp] = VAT_ZERO_WINDOW) -> float:
+    """VAT on households' part in calendar `year`: 0% for the days in `window`, 5% for the rest."""
+    f = share_of_year(year, window)
+    return VAT_ZERO * f + VAT * (1 - f)
 
 
 def bics_real(year: int, a_year: float) -> float:
@@ -98,5 +113,5 @@ def split(table: pd.DataFrame, s) -> pd.DataFrame:
     out = pd.concat([out, pd.DataFrame(moves)], ignore_index=True)
     hh = out[out.payer == "households"].groupby(["line", "built", "year"]).cash.sum().reset_index()
     vat = hh.assign(item=hh.line + ("|" + hh.built.map({True: "built", False: "not yet built"})),
-                    line="VAT", technology="", payer="households", cash=hh.cash * VAT)
+                    line="VAT", technology="", payer="households", cash=hh.cash * hh.year.map(vat_rate))
     return pd.concat([out, vat[out.columns]], ignore_index=True)

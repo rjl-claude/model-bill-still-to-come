@@ -1,17 +1,20 @@
 """aios-harness#235: version 1.2.4, text keys only. The households' share bracket's words say the RO is at DESNZ's 41%
 in every scenario (who_pays.RO_HOUSEHOLDS), not held at 2025's share (the recheck's finding, 11 Nov 2026); no other
-key changes. Tested at the seam the paper reads: the frozen results file, by key, against the frozen 1.2.3 file."""
+key changes. Tested at the seam the paper reads: the frozen results file, by key, against the frozen 1.2.3 file. From
+1.2.5 (VAT's zero rate, aios-harness#236, tests/test_version_1_2_5.py) these checks read the frozen 1.2.4 file, a
+fixture."""
 import json
 from pathlib import Path
 
 from billtocome import figures
 
 V123 = Path(__file__).resolve().parent / "fixtures" / "figures-1.2.3.json"  # results/figures.json at tag v1.2.3
+V124 = Path(__file__).resolve().parent / "fixtures" / "figures-1.2.4.json"  # results/figures.json at tag v1.2.4
 KEYS = {f"bracket.households_share.setting.{end}" for end in ("low", "central", "high")}
 
 
 def frozen() -> dict:
-    return json.loads(figures.FILE.read_text())["figures"]
+    return json.loads(V124.read_text())["figures"]
 
 
 def test_the_fixture_is_the_frozen_1_2_3_file():
@@ -45,6 +48,6 @@ def test_the_saved_proof_shows_only_the_three_keys_changed_in_the_committed_file
 
 
 def test_only_the_version_moves_in_the_meta():
-    old, new = json.loads(V123.read_text())["meta"], json.loads(figures.FILE.read_text())["meta"]
+    old, new = json.loads(V123.read_text())["meta"], json.loads(V124.read_text())["meta"]
     assert (old["version"], new["version"]) == ("1.2.3", "1.2.4")
     assert {k for k in old if new[k] != old[k]} == {"version"}

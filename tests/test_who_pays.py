@@ -24,11 +24,15 @@ def test_shares_add_to_each_whole(both):
     assert (a - b).abs().max() < 1.0  # pounds
 
 
-def test_vat_is_five_percent_of_households(both):
+def test_vat_is_zero_from_october_2026_to_june_2027_and_five_percent_otherwise(both):
+    """Version 1.2.5: 0% on households' electricity from 1 Oct 2026 (SI 2026/987) to 30 Jun 2027 (the Budget 2026
+    extension, announced 28 Oct 2026), 5% otherwise, by days in each calendar year: 2026 pays 5% on 273 of 365
+    days (Jan-Sep), 2027 on 184 of 365 (Jul-Dec)."""
     t = both[0].table
     hh = t[(t.payer == "households") & (t.line != "VAT")].groupby("year").cash.sum()
     vat = t[t.line == "VAT"].groupby("year").cash.sum()
-    assert ((vat - 0.05 * hh).abs() < 1.0).all()
+    rate = {2026: 0.05 * 273 / 365, 2027: 0.05 * 184 / 365}
+    assert ((vat - hh * [rate.get(y, 0.05) for y in hh.index]).abs() < 1.0).all()
     assert set(t[t.line == "VAT"].payer) == {"households"}
 
 

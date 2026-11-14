@@ -65,12 +65,15 @@ def test_every_row_has_a_present_value(central):
         assert (t.drop(columns="pv") == r.table).all().all()
 
 
-def test_vat_present_value_is_five_percent_of_households(central):
+def test_vat_present_value_follows_the_zero_rate(central):
+    """Version 1.2.5: VAT's present value is its year's rate times households' present value of its line: 5% on 273
+    of 2026's 365 days and 184 of 2027's (0% 1 Oct 2026 to 30 Jun 2027), 5% after."""
     _, gb, h = central
+    rate = {2026: 0.05 * 273 / 365, 2027: 0.05 * 184 / 365}
     for t in (gb, h):
         hh = t[(t.payer == "households") & (t.line != "VAT")].groupby("year").pv.sum()
         vat = t[t.line == "VAT"].groupby("year").pv.sum()
-        assert ((vat - 0.05 * hh).abs() < 1.0).all()
+        assert ((vat - hh * [rate.get(y, 0.05) for y in hh.index]).abs() < 1.0).all()
 
 
 def test_transfers_still_net_to_zero(central):

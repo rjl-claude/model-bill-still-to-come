@@ -34,6 +34,6 @@ The factors match the Green Book's own Table 8 (para 6.57) to four places: 1.000
 
 - 2025 rates (Table 6 and Annex A, medium, 2035 on): solar and onshore wind **7.6%**; fixed offshore wind and gas **8.9%**; floating offshore wind, tidal stream and geothermal **10.1%**.
 - No 2025 rate, nearest: nuclear (Hinkley Point C, Sizewell C, nuclear in the Capacity Market) at Sizewell C's licence WACC, **6.73%** real (fact 7, 30); hydro and small wind and solar (FiT, RO) **7.6%**; every other fuelled or firm technology (biomass, waste, ACT, AD, landfill and sewage gas, CHP, diesel, storage, DSR, interconnectors) **8.9%**.
-- Rows with no technology take their line's rate: VAT is 5% of households' part of a line, so its present value is 5% of that part's present value, year by year; the Exchequer and exemption rows take the cash-weighted factor of their line's own rows that year.
+- Rows with no technology take their line's rate: VAT is its year's rate of households' part of a line, so its present value is that rate of that part's present value, year by year (5% to 1.2.4; from 1.2.5, `who_pays.vat_rate`: 0% from 1 Oct 2026 to 30 Jun 2027 by days, so 5% x 273/365 in 2026, 5% x 184/365 in 2027, 5% after); the Exchequer and exemption rows take the cash-weighted factor of their line's own rows that year.
 
 The same stream at nuclear's 6.73%: 10.000 + 20 x 0.936944 - 5 x 0.877863 = **£24.350m**.

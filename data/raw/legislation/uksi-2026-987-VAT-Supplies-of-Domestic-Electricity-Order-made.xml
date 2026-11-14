@@ -1,0 +1,484 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987" NumberOfProvisions="12" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="2.0"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/uksi/2026/987/made</dc:identifier><dc:title>The Value Added Tax (Supplies of Domestic Electricity) Order 2026</dc:title><dc:language>en</dc:language><dc:publisher>King's Printer of Acts of Parliament</dc:publisher><dc:modified>2026-09-08</dc:modified><dc:subject scheme="SIheading">VALUE ADDED TAX</dc:subject>
+					<dc:description>This Order introduces a temporary zero rate of VAT on supplies of domestic electricity in England and Wales and Scotland. The zero rate applies to supplies made in the period beginning with 1st October 2026 and ending with 31st March 2027 by modifying Schedule 8 (zero-rating) to the Value Added Tax Act 1994 (“VATA”) so it has effect as if it contained a new Group 24 which specifies the descriptions of supplies to which the zero rate applies (see article 3).</dc:description>
+					<atom:link rel="self" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/uksi/2026/987/resources" title="More Resources"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/memorandum" href="http://www.legislation.gov.uk/uksi/2026/987/memorandum" title="Explanatory Memorandum"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/memorandum/toc" href="http://www.legislation.gov.uk/uksi/2026/987/memorandum/contents" title="Explanatory Memorandum Table of Contents"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/uksi/2026/987/made" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/uksi/2026/987/introduction/made" title="introduction"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/uksi/2026/987/signature/made" title="signature"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/note" href="http://www.legislation.gov.uk/uksi/2026/987/note/made" title="note"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/uksi/2026/987/body/made" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/uksi/2026/987/made/data.html" title="HTML5 snippet"/>
+
+					<atom:link rel="alternate" href="http://www.legislation.gov.uk/uksi/2026/987/pdfs/uksi_20260987_en.pdf" type="application/pdf" title="Original PDF"/>
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/uksi/2026/987/contents/made" title="Table of Contents"/>
+					
+					
+					
+					
+					<ukm:SecondaryMetadata><ukm:DocumentClassification>
+<ukm:DocumentCategory Value="secondary"/>
+<ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument"/>
+<ukm:DocumentStatus Value="final"/>
+<ukm:DocumentMinorType Value="order"/>
+</ukm:DocumentClassification><ukm:Year Value="2026"/><ukm:Number Value="987"/><ukm:Made Date="2026-09-07"/><ukm:Laid Date="2026-09-08" Time="00:00:00" Class="UnitedKingdomParliament"/><ukm:ComingIntoForce>
+<ukm:DateTime Date="2026-10-01" Time="00:00:00"/>
+</ukm:ComingIntoForce><ukm:ISBN Value="9780348286892"/></ukm:SecondaryMetadata>
+					
+
+                    
+									<ukm:Notes><ukm:Note IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/notes"/><ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2026/987/pdfs/uksiem_20260987_en_001.pdf" Date="2026-09-08" Title="UK Explanatory Memorandum" Size="692149"/></ukm:Alternatives>       
+								</ukm:Notes> 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2026/987/pdfs/uksi_20260987_en.pdf" Date="2026-09-08" Size="207252" Print="true"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="12"/>
+									<ukm:BodyParagraphs Value="12"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Secondary>
+<SecondaryPrelims DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/introduction/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/introduction">
+<Number>2026 No. 987</Number>
+<SubjectInformation>
+<Subject>
+<Title>VALUE ADDED TAX</Title>
+</Subject>
+</SubjectInformation>
+<Title>The Value Added Tax (Supplies of Domestic Electricity) Order 2026</Title>
+<MadeDate>
+<Text>Made</Text>
+<DateText>7th September 2026</DateText>
+</MadeDate>
+<LaidDate>
+<Text>Laid before the House of Commons</Text>
+<DateText>8th September 2026</DateText>
+</LaidDate>
+<ComingIntoForce>
+<Text>Coming into force</Text>
+<DateText>1st October 2026</DateText>
+</ComingIntoForce>
+<SecondaryPreamble>
+<EnactingText>
+<Para>
+<Text>The Treasury make this Order in exercise of the powers conferred by sections 29A(3), 30(4) and 96(9) of the Value Added Tax Act 1994<FootnoteRef Ref="f00001"/>.</Text>
+</Para>
+</EnactingText>
+</SecondaryPreamble>
+</SecondaryPrelims>
+<Body DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/body/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/body" NumberOfProvisions="12">
+<P1group>
+<Title>Citation, commencement and effect</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/1/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/1" id="article-1">
+<Pnumber>1</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/1/1/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/1/1" id="article-1-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>This Order may be cited as the Value Added Tax (Supplies of Domestic Electricity) Order 2026 and comes into force on 1st October 2026.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/1/2/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/1/2" id="article-1-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The modifications made by articles 2 to 4 have effect in relation to supplies made in the period beginning with 1st October 2026 and ending with 31st March 2027.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Modifications of the Value Added Tax Act 1994</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/2/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/2" id="article-2">
+<Pnumber>2</Pnumber>
+<P1para>
+<Text>The Value Added Tax Act 1994 is modified as follows.</Text>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Zero-rating of supplies of domestic electricity: England and Wales and Scotland</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/3/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/3" id="article-3">
+<Pnumber>3</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/3/1/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/3/1" id="article-3-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Schedule 8 (zero-rating)<FootnoteRef Ref="f00002"/> is modified as follows.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/3/2/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/3/2" id="article-3-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The table in Part 1 (index) has effect as if, at the appropriate place, there were inserted—</Text>
+<BlockAmendment Context="main" Format="double" TargetClass="secondary" TargetSubClass="unknown">
+<Tabular Orientation="portrait">
+<table xmlns="http://www.w3.org/1999/xhtml" class="allBorders tableleft width100" cols="2">
+<colgroup><col width="80%"/><col width="20%"/></colgroup>
+<tbody><tr><td>Domestic electricity: England and Wales and Scotland</td><td>Group 24</td></tr></tbody>
+</table>
+</Tabular>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/3/3/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/3/3" id="article-3-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>Part 2 (the Groups) has effect as if, at the end, there were inserted—</Text>
+<BlockAmendment Context="main" Format="double" TargetClass="secondary" TargetSubClass="unknown">
+<Pblock>
+<Title>GROUP 24: SUPPLIES OF DOMESTIC ELECTRICITY: ENGLAND AND WALES AND SCOTLAND</Title>
+<P>
+<Text><Strong>Item No. 1</Strong></Text>
+</P>
+<P>
+<Text>Supplies in England and Wales and Scotland of electricity for qualifying use.</Text>
+</P>
+<P>
+<Text><Strong>NOTES</Strong></Text>
+</P>
+<P1group>
+<Title>Meaning of “supplies in England and Wales and Scotland”</Title>
+<P1>
+<Pnumber>1</Pnumber>
+<P1para>
+<P2>
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>For the purposes of this Group electricity is supplied in England and Wales and Scotland if—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>it is to be treated as supplied in the United Kingdom by virtue of the Value Added Tax (Place of Supply of Goods) Order 2004<FootnoteRef Ref="f00003"/>, and</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>it is supplied to a place, or to a recipient at a place, in England, Wales or Scotland.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2>
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>References in this paragraph to England and Wales and Scotland include the territorial sea of the United Kingdom.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Meaning of “qualifying use”</Title>
+<P1>
+<Pnumber>2</Pnumber>
+<P1para>
+<Text>In this Group “<Term>qualifying use</Term>” means—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>domestic use, or</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>use by a charity otherwise than in the course or furtherance of a business.</Text>
+</P3para>
+</P3>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Supplies only partly for qualifying use</Title>
+<P1>
+<Pnumber>3</Pnumber>
+<P1para>
+<Text>For the purposes of this Group, where there is a supply of electricity partly for qualifying use and partly not—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>if at least 60% of the electricity is supplied for qualifying use, the whole supply is to be treated as a supply for qualifying use, and</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>in any other case, an apportionment is to be made to determine the extent to which the supply is a supply for qualifying use.</Text>
+</P3para>
+</P3>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Supplies deemed to be for domestic use</Title>
+<P1>
+<Pnumber>4</Pnumber>
+<P1para>
+<Text>A supply of electricity is deemed to be for domestic use for the purposes of this Group if it is made to a person at any premises where the electricity (together with any other electricity provided to the person at the premises by the same supplier) was not provided at a rate exceeding 1000 kilowatt hours a month.</Text>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Other supplies that are for domestic use</Title>
+<P1>
+<Pnumber>5</Pnumber>
+<P1para>
+<Text>For the purposes of this Group supplies not within paragraph 4 are for domestic use if and only if the electricity supplied is for use in—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>a building, or part of a building, that consists of a dwelling or number of dwellings,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>a building, or part of a building, used for a relevant residential purpose,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>self-catering holiday accommodation,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>d</Pnumber>
+<P3para>
+<Text>a caravan, or</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>e</Pnumber>
+<P3para>
+<Text>a houseboat.</Text>
+</P3para>
+</P3>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Interpretation of paragraph 5</Title>
+<P1>
+<Pnumber>6</Pnumber>
+<P1para>
+<P2>
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>For the purposes of this Group “<Term>use for a relevant residential purpose</Term>” means use as—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>a home or other institution providing residential accommodation for children,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>a home or other institution providing residential accommodation with personal care for persons in need of personal care by reason of old age, disablement, past or present dependence on alcohol or drugs or past or present mental disorder,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>a hospice,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>d</Pnumber>
+<P3para>
+<Text>residential accommodation for students or school pupils,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>e</Pnumber>
+<P3para>
+<Text>residential accommodation for members of any of the armed forces,</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>f</Pnumber>
+<P3para>
+<Text>a monastery, nunnery or similar establishment, or</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>g</Pnumber>
+<P3para>
+<Text>an institution which is the sole or main residence of at least 90% of its residents,</Text>
+</P3para>
+</P3>
+<Text>except use as a hospital, a prison or similar institution or an hotel or inn or similar establishment.</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>For the purposes of this Group “<Term>self-catering holiday accommodation</Term>” includes any accommodation advertised or held out as such.</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>In paragraph 5 “<Term>houseboat</Term>” means a boat or other floating decked structure designed or adapted for use solely as a place of permanent habitation and not having means of, or capable of being readily adapted for, self-propulsion.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+</Pblock>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Consequential modifications to Schedule 7A</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/4/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/4" id="article-4">
+<Pnumber>4</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/4/1/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/4/1" id="article-4-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Schedule 7A (charge at reduced rate)<FootnoteRef Ref="f00004"/> is modified as follows.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/4/2/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/4/2" id="article-4-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>In Part 2 (the Groups), Group 1 (supplies of domestic fuel or power) has effect as if—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/4/2/a/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/4/2/a" id="article-4-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>in item 1(e), “electricity,” were omitted;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/4/2/b/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/4/2/b" id="article-4-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>after item 1 there were inserted—</Text>
+<BlockAmendment Context="schedule" Format="double" TargetClass="primary" TargetSubClass="unknown">
+<P1>
+<Pnumber>2</Pnumber>
+<P1para>
+<Text>Supplies in Northern Ireland of electricity for qualifying use.</Text>
+</P1para>
+</P1>
+</BlockAmendment>
+<AppendText>;</AppendText>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/article/4/2/c/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/article/4/2/c" id="article-4-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>in the Notes, after paragraph 1 (matters included or not included in the supplies), there were inserted—</Text>
+<BlockAmendment Context="main" Format="double" TargetClass="secondary" TargetSubClass="unknown">
+<P1group>
+<Title>Meaning of “supplies in Northern Ireland”</Title>
+<P1>
+<Pnumber>1A</Pnumber>
+<P1para>
+<P2>
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Electricity is supplied in Northern Ireland for the purposes of item 2 if—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>it is to be treated as supplied in the United Kingdom by virtue of the Value Added Tax (Place of Supply of Goods) Order 2004, and</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>it is supplied to a place, or a recipient at a place, in Northern Ireland.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2>
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>References in this paragraph to Northern Ireland do not include any of the territorial sea of the United Kingdom.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P3para>
+</P3>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<SignedSection DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/signature/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/signature">
+<Signatory>
+<Signee>
+<PersonName>Jade Botterill</PersonName>
+<PersonName>Christian Wakeford</PersonName>
+<JobTitle>Two of the Lords Commissioners of His Majesty’s Treasury</JobTitle>
+<DateSigned Date="2026-09-07">
+<DateText>7th September 2026</DateText>
+</DateSigned>
+</Signee>
+</Signatory>
+</SignedSection>
+</Body>
+<ExplanatoryNotes DocumentURI="http://www.legislation.gov.uk/uksi/2026/987/note/made" IdURI="http://www.legislation.gov.uk/id/uksi/2026/987/note">
+<Title>Explanatory Note</Title>
+<Comment>
+<Para>
+<Text>(This note is not part of the Order)</Text>
+</Para>
+</Comment>
+<P>
+<Text>This Order introduces a temporary zero rate of VAT on supplies of domestic electricity in England and Wales and Scotland. The zero rate applies to supplies made in the period beginning with 1st October 2026 and ending with 31st March 2027 by modifying Schedule 8 (zero-rating) to the Value Added Tax Act 1994 (“<Term>VATA</Term>”) so it has effect as if it contained a new Group 24 which specifies the descriptions of supplies to which the zero rate applies (see article 3).</Text>
+</P>
+<P>
+<Text>Article 4 makes consequential modifications to Group 1 of Schedule 7A (charge at reduced rate) to VATA to maintain the reduced rate of VAT on the supply of domestic electricity in Northern Ireland.</Text>
+</P>
+<P>
+<Text>A Tax Information and Impact Note covering this instrument will be published on the website at  
+<ExternalLink Title="GOV.UK Website" URI="https://www.gov.uk/government/collections/tax-information-and-impact-notes-tiins">https://www.gov.uk/government/collections/tax-information-and-impact-notes-tiins</ExternalLink>.</Text>
+</P>
+</ExplanatoryNotes>
+</Secondary><Footnotes><Footnote id="f00001">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/1994/23" id="c00001" Year="1994" Number="23" Class="UnitedKingdomPublicGeneralAct">1994 c. 23</Citation>. Section 29A was inserted by section 99(4) of the Finance Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/2001/9" id="c00002" Year="2001" Number="9" Class="UnitedKingdomPublicGeneralAct">2001 (c. 9)</Citation>; section 96(9) was amended by paragraph 5 of Schedule 31 to the Finance Act 2001.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00002">
+<FootnoteText>
+<Para>
+<Text>Relevant amendments to Schedule 8 were made by section 126 of the Finance Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/2016/24" id="c00003" Year="2016" Number="24" Class="UnitedKingdomPublicGeneralAct">2016 (c. 24)</Citation> and by section 7 of, and paragraph 16 of Schedule 3 to, the Taxation (Post-transition Period) Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/2020/26" id="c00004" Year="2020" Number="26" Class="UnitedKingdomPublicGeneralAct">2020 (c. 26)</Citation>. Relevant amending instruments are <Citation URI="http://www.legislation.gov.uk/id/uksi/1999/1642" id="c00005" Year="1999" Number="1642" Class="UnitedKingdomStatutoryInstrument">S.I. 1999/1642</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2009/2093" id="c00006" Year="2009" Number="2093" Class="UnitedKingdomStatutoryInstrument">2009/2093</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2010/2549" id="c00007" Year="2010" Number="2549" Class="UnitedKingdomStatutoryInstrument">2010/2549</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2012/2907" id="c00008" Year="2012" Number="2907" Class="UnitedKingdomStatutoryInstrument">2012/2907</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2021/1156" id="c00009" Year="2021" Number="1156" Class="UnitedKingdomStatutoryInstrument">2021/1156</Citation> and <Citation URI="http://www.legislation.gov.uk/id/uksi/2022/361" id="c00010" Year="2022" Number="361" Class="UnitedKingdomStatutoryInstrument">2022/361</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00003">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/uksi/2004/3148" id="c00011" Year="2004" Number="3148" Class="UnitedKingdomStatutoryInstrument">S.I. 2004/3148</Citation>, to which there amendments not relevant to this Order.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00004">
+<FootnoteText>
+<Para>
+<Text>Schedule 7A was inserted by section 99(5) of, and paragraph 1 of Schedule 31 to, the Finance Act 2001. Relevant amendments were made by <Citation URI="http://www.legislation.gov.uk/id/uksi/2008/2676" id="c00012" Year="2008" Number="2676" Class="UnitedKingdomStatutoryInstrument">S.I. 2008/2676</Citation> and section 89 of, and paragraph 15 of Schedule 11 to, the Finance Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/2020/14" id="c00013" Year="2020" Number="14" Class="UnitedKingdomPublicGeneralAct">2020 (c. 14)</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote></Footnotes></Legislation>

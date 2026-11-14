@@ -197,6 +197,13 @@ FILES = {
     # Value Added Tax Act 1994, Schedule 7A: the reduced rate on domestic fuel and power
     "legislation/ukpga-1994-23-VATA-schedule-7A-latest.xml":
         "https://www.legislation.gov.uk/ukpga/1994/23/schedule/7A/data.xml",
+    # The Value Added Tax (Supplies of Domestic Electricity) Order 2026, SI 2026/987, as made (7 Sep 2026): 0% on
+    # domestic electricity in Great Britain for supplies 1 Oct 2026 to 31 Mar 2027 (art. 1(2)); Northern Ireland
+    # stays at 5% (art. 4). who_pays.py from 1.2.5 (aios-harness#236).
+    "legislation/uksi-2026-987-VAT-Supplies-of-Domestic-Electricity-Order-made.pdf":
+        "https://www.legislation.gov.uk/uksi/2026/987/made/data.pdf",
+    "legislation/uksi-2026-987-VAT-Supplies-of-Domestic-Electricity-Order-made.xml":
+        "https://www.legislation.gov.uk/uksi/2026/987/made/data.xml",
 }
 # Ofgem's Renewable Electricity Register publishes its reports as daily-named files behind share links
 # on its dashboard; the RO ones are kept (stations and certificates), named as Ofgem names them.

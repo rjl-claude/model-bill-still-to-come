@@ -59,7 +59,8 @@ def test_central_bill_by_key():
     assert f["cfd_renewables.total.cash"] / 1e9 == pytest.approx(38.7, abs=0.05)
     assert f["ro.total.cash"] / 1e9 == pytest.approx(47.8, abs=0.05)
     # 57.0 before point 27; the RO on 41% adds £2.16bn by hand: (41% - 34.9%) x RO £47.83bn, less the
-    # Exchequer's 75% to March 2029, plus 5% VAT (Richard, 9 Nov)
-    assert f["bill.households.total.cash"] / 1e9 == pytest.approx(59.2, abs=0.05)
+    # Exchequer's 75% to March 2029, plus 5% VAT (Richard, 9 Nov): £59.2bn to 1.2.4. From 1.2.5 £59.1bn: VAT at 0%
+    # from 1 Oct 2026 to 30 Jun 2027 takes £0.11bn off households (aios-harness#236, tests/test_version_1_2_5.py)
+    assert f["bill.households.total.cash"] / 1e9 == pytest.approx(59.1, abs=0.05)
     assert f["bill.total.cash"] == pytest.approx(sum(f[f"{s}.total.cash"] for s in figures.LINE_KEYS.values()))
     assert f["bill.total.pv_hurdle"] < f["bill.total.pv_green_book"] < f["bill.total.cash"]

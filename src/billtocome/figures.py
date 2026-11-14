@@ -57,6 +57,13 @@ KEY_UNITS = {
     r"[a-z_]+\.negative_years\.cash": "£, 2024 prices (CPIH), summed over the years in .years",
     r"[a-z_]+\.negative_years\.years": "calendar years, as words",
     r"bill\.without_nuclear\.total\.cash": "£, 2024 prices (CPIH)",
+    # 1.2.5 (aios-harness#236)
+    r"vat\.rate\.(reduced|zero)": "VAT rate on households' electricity (0 to 1)",
+    r"vat\.zero_rate\.(in_law|announced|modelled)\.(period|source|basis)": "words",
+    r"(vat|bill)\.zero_rate_in_law_only\.total\.cash": "£, 2024 prices (CPIH), had the zero rate ended on 31 March 2027",
+    r"bill\.zero_rate_in_law_only\.difference\.cash": "£, 2024 prices (CPIH): the bill had the zero rate ended on 31 March 2027, less the bill",
+    r"vat\.zero_rate\.northern_ireland_upper_bound\.cash": "£, 2024 prices (CPIH): at most the VAT the model leaves out for Northern Ireland, which stays at 5%",
+    r"vat\.zero_rate\.northern_ireland_upper_bound\.words": "words",
 }
 BUILT = {True: "built", False: "not_yet_built"}
 MEASURES = {"cash": None, "pv_green_book": "green_book", "pv_hurdle": "hurdle"}
@@ -315,6 +322,45 @@ def without_nuclear_keys(results) -> dict[str, float]:
     return {"bill.without_nuclear.total.cash": float(t.cash[keep].sum())}
 
 
+def _period(window) -> str:
+    """(1 Oct 2026, 1 Jul 2027) -> "1 October 2026 to 30 June 2027" (the window's end is the first day outside it)."""
+    a, b = window[0], window[1] - pd.Timedelta(days=1)
+    return f"{a.day} {a:%B %Y} to {b.day} {b:%B %Y}"
+
+
+def vat_keys(results) -> dict:
+    """The VAT rates and the zero rate's periods, in law and as modelled, and the VAT line and the bill had the zero
+    rate ended on 31 March 2027 as in law: each VAT row at that year's rate in law over its rate as modelled, the
+    same method by days (`who_pays.vat_rate`); and the upper bound of what zero-rating every household overstates for
+    Northern Ireland, which SI 2026/987 leaves at 5% (the conductor's ruling, 13 Nov 2026) (version 1.2.5, aios-harness#236)."""
+    from .who_pays import VAT, VAT_ZERO, VAT_ZERO_IN_LAW, VAT_ZERO_WINDOW, vat_rate
+    t = results.table
+    vat = t[t.line == "VAT"]
+    st = results.tables.get("ro_stations")  # a run without the RO line has no stations
+    ni = set() if st is None else set(st.loc[st.Country == "Northern Ireland", "Accreditation reference"])
+    ni_hh = t[(t.line == "RO") & (t.payer == "households") & t.item.isin(ni)]
+    ni_kept = float((ni_hh.cash * (VAT - ni_hh.year.map(vat_rate))).sum())
+    scale = vat.year.map(lambda y: vat_rate(y, VAT_ZERO_IN_LAW) / vat_rate(y))
+    extra = float((vat.cash * (scale - 1)).sum())
+    return {
+        "vat.rate.reduced": VAT, "vat.rate.zero": VAT_ZERO,
+        "vat.zero_rate.in_law.period": _period(VAT_ZERO_IN_LAW),
+        "vat.zero_rate.in_law.source": "the Value Added Tax (Supplies of Domestic Electricity) Order 2026 (SI 2026/987)",
+        "vat.zero_rate.announced.period": _period(VAT_ZERO_WINDOW),
+        "vat.zero_rate.announced.source": "Budget 2026, 28 October 2026 (announced; not yet law at 9 November 2026)",
+        "vat.zero_rate.modelled.period": _period(VAT_ZERO_WINDOW),
+        "vat.zero_rate.modelled.basis": "the zero rate in law with the extension Budget 2026 announced",
+        "vat.zero_rate_in_law_only.total.cash": float(vat.cash.sum()) + extra,
+        "bill.zero_rate_in_law_only.total.cash": float(t.cash.sum()) + extra,
+        "bill.zero_rate_in_law_only.difference.cash": extra,
+        "vat.zero_rate.northern_ireland_upper_bound.cash": ni_kept,
+        "vat.zero_rate.northern_ireland_upper_bound.words": (
+            "at most the VAT that 5% on households' part of the Renewables Obligation's Northern Ireland stations would "
+            "have kept from 1 October 2026 to 30 June 2027; an upper bound, because Northern Ireland's certificates can "
+            "be presented in Great Britain"),
+    }
+
+
 def write(results, path: Path, tornado: pd.DataFrame | None = None, checks: bool = False) -> None:
     """The results file. With `tornado` (from `brackets.tornado()`), its bracket and range keys too; with
     `checks`, the check keys (`check_keys`), as the frozen release writes them."""
@@ -323,7 +369,8 @@ def write(results, path: Path, tornado: pd.DataFrame | None = None, checks: bool
                 cut_off_date=results.cut_off_date.isoformat() if results.cut_off_date else None,
                 manifest_sha256=results.manifest_sha256)
     figs = build(results) | price_path_keys() | contract_keys(results) | (bracket_keys(tornado) if tornado is not None else {}) \
-        | (check_keys(results) if checks else {}) | rate_keys() | setting_keys() | line_year_keys(results) | without_nuclear_keys(results)
+        | (check_keys(results) if checks else {}) | rate_keys() | setting_keys() | line_year_keys(results) | without_nuclear_keys(results) \
+        | vat_keys(results)
     figs |= negative_year_keys(figs)
     Path(path).write_text(json.dumps(dict(meta=meta, figures=figs), indent=0, sort_keys=True))
 

@@ -78,3 +78,18 @@ def test_the_sources_the_input_audit_found_unsaved_are_saved():
 
 def test_the_old_checksum_list_is_the_saved_copy():
     assert hashlib.sha256(OLD_SUMS.read_bytes()).hexdigest().startswith("8e65c005afa95bbb")
+
+
+# Version 1.2.5 (aios-harness#236): the order behind the VAT zero rate, saved as made, with its fingerprint.
+SI_2026_987 = {
+    "legislation/uksi-2026-987-VAT-Supplies-of-Domestic-Electricity-Order-made.pdf": "e7f8af96ef2f4d36",
+    "legislation/uksi-2026-987-VAT-Supplies-of-Domestic-Electricity-Order-made.xml": "8446ec591afed914",
+}
+
+
+def test_the_vat_zero_rate_order_is_saved():
+    latest = _latest()
+    for rel, sha in SI_2026_987.items():
+        assert latest[rel]["sha256"].startswith(sha)
+        assert hashlib.sha256((RAW / rel).read_bytes()).hexdigest() == latest[rel]["sha256"]
+    assert set(SI_2026_987) <= set(_fetch_module().FILES)
