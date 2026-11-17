@@ -2,6 +2,14 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.3.0 (17 Nov 2026), the price of power after 2050 (aios-harness#243)
+
+Richard's rulings of 16 Nov 2026 on Report No. 2 (rulings sheet points 11 and 16, choice b of each). 11b is built. 16b needs no model change: Richard ruled (17 Nov 2026) that no fair published basis exists for a Sizewell C return above 6.73% after 2039, so `bracket.sizewell_c_return_after_2039` keeps its high side at the central 6.73% and the paper says why in words.
+
+- **11b.** DESNZ's Annex M stops at 2050 and the model holds 2050's price to 2099 (build plan point 3). New case (`prices.path_average_after_2050`): DESNZ's central path to 2050, then its average over 2026 to 2050, £75.59/MWh in place of £105.32/MWh, every year from 2051 to 2099 (ASSUMPTION, `docs/design.md`, "Version 1.3.0"). It is the eighteenth bracket, "Price after 2050" (`scenario.BRACKETS`), one-sided: central, or the case. Effect: the bill £172.34bn to £221.57bn cash (+£49.22bn); Green Book +£14.93bn; commercial rates +£3.80bn; Sizewell C's paybacks £18.07bn in 2072 to 2099 to £2.85bn in 2089 to 2099; Sizewell C £31.08bn to £68.76bn; Hinkley Point C £30.07bn to £40.53bn. The range does not move (£126.63bn to £221.78bn).
+- Keys: 25 added (`brackets.count`, `brackets.count_in_words`, `price_after_2050.*`, `bracket.price_after_2050.*`), 16 moved (the ranks of the brackets the new one passes, each down one place), none removed, 7,181 identical. Every key: `docs/figures-1.2.6-vs-1.3.0.csv`; in plain words: `docs/figures-1.2.6-vs-1.3.0.md`; tests: `tests/test_version_1_3_0.py` against the frozen 1.2.6 file (`tests/fixtures/figures-1.2.6.json`, sha256 92c1b5c1…). `tools/results.py` runs the case once more for its keys.
+- `tests/test_version_1_2_6.py` now reads the frozen 1.2.6 file. `tests/test_freeze.py`: version 1.3.0.
+
 ## 1.2.6 (14 Nov 2026), Northern Ireland's VAT window
 
 The independent checker of 1.2.5 (14 Nov 2026, `report-series/price-of-the-climate-bill/handover/checker-model-1.2.5.md`, section D) found one fault: the Northern Ireland upper bound assumed Northern Ireland pays 5% until 30 June 2027. SI 2026/987 keeps Northern Ireland at the reduced rate for supplies from 1 October 2026 to 31 March 2027 (art. 1(2), art. 4). Budget 2026 says "Extended VAT relief is expected to apply in Northern Ireland from April 2027" (`hmt/budget-2026.pdf` para 3.4, printed p.43, pdf p.49) and "This is expected to apply UK-wide from April 2027" (para 6.210, printed p.132, pdf p.138). The model counts the Budget's extension for Great Britain, so on the same basis Northern Ireland is at 0% from April 2027, and the window the model overstates is 1 October 2026 to 31 March 2027 only (92 days of 2026 and 90 of 2027).

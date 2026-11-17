@@ -6,7 +6,9 @@ at the reduced rate for supplies from 1 October 2026 to 31 March 2027 (art. 1(2)
 Budget's extension for Great Britain, so on the same basis Northern Ireland is at 0% from April 2027 and the window
 the model overstates is 1 October 2026 to 31 March 2027 only. 1.2.6 moves only the two Northern Ireland keys.
 
-Tested at the seam the paper reads: the frozen results file, by key, against the frozen 1.2.5 file."""
+Tested at the seam the paper reads: the frozen results file, by key, against the frozen 1.2.5 file. From 1.3.0
+(aios-harness#243, tests/test_version_1_3_0.py) these checks read the frozen 1.2.6 file, a fixture, as 1.3.0 adds keys
+and moves bracket ranks; the central run's rows (results/results.csv, results/ro_stations.csv) do not move."""
 import csv
 import hashlib
 import json
@@ -18,6 +20,7 @@ from billtocome import figures
 
 ROOT = figures.FILE.parent.parent
 V125 = ROOT / "tests" / "fixtures" / "figures-1.2.5.json"  # results/figures.json at tag v1.2.5
+V126 = ROOT / "tests" / "fixtures" / "figures-1.2.6.json"  # results/figures.json at tag v1.2.6
 COMPARE = ROOT / "docs" / "figures-1.2.5-vs-1.2.6.csv"
 NI_KEY = "vat.zero_rate.northern_ireland_upper_bound.cash"
 NI_WORDS = "vat.zero_rate.northern_ireland_upper_bound.words"
@@ -31,7 +34,7 @@ def _same(a, b) -> bool:
 
 
 def frozen() -> dict:
-    return json.loads(figures.FILE.read_text())["figures"]
+    return json.loads(V126.read_text())["figures"]
 
 
 def old() -> dict:
@@ -89,7 +92,7 @@ def test_no_other_key_moves():
 
 
 def test_only_the_version_and_the_northern_ireland_units_move_in_the_meta():
-    o, n = json.loads(V125.read_text())["meta"], json.loads(figures.FILE.read_text())["meta"]
+    o, n = json.loads(V125.read_text())["meta"], json.loads(V126.read_text())["meta"]
     assert (o["version"], n["version"]) == ("1.2.5", "1.2.6")
     assert {k for k in o if n[k] != o[k]} == {"version", "key_units"}
     assert set(n) == set(o)

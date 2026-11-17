@@ -20,5 +20,6 @@ if __name__ == "__main__":
     else:
         t = brackets.tornado()
         t.to_csv(tornado, index=False)
-    figures.write(r, figures.FILE, tornado=t, checks=True)
+    price_case = next(b for b in brackets.BRACKETS if b.name == "Price after 2050").high  # ruling 11b, 1.3.0
+    figures.write(r, figures.FILE, tornado=t, checks=True, price_case=run(price_case))
     print(figures.FILE)

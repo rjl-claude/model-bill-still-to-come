@@ -66,6 +66,18 @@ KEY_UNITS = {
         "£, 2024 prices (CPIH): at most the VAT the model leaves out for Northern Ireland, at 5% from 1 October 2026 "
         "to 31 March 2027"),  # 1.2.6: the window (Budget 2026 para 3.4)
     r"vat\.zero_rate\.northern_ireland_upper_bound\.words": "words",
+    # 1.3.0 (aios-harness#243)
+    r"bracket\.price_after_2050\.setting\.(low|central|high)": "the bracket's input at that end, in words",
+    r"bracket\.price_after_2050\.(low|high|swing)\.(cash|pv_green_book|pv_hurdle)": UNITS,
+    r"bracket\.price_after_2050\.rank\.cash": "rank by swing in cash among the brackets (1 is the largest)",
+    r"brackets\.count": "number of brackets",
+    r"brackets\.count_in_words": "number of brackets, in words",
+    r"price_after_2050\.(held|path_average)\.price": "£/MWh, 2024 prices (CPIH), each year from 2051 to 2099",
+    r"price_after_2050\.path_average\.[a-z_]+\.total\.cash": "£, 2024 prices (CPIH), with prices after 2050 at the path's average",
+    r"price_after_2050\.path_average\.bill\.difference\.cash": "£, 2024 prices (CPIH): the bill with prices after 2050 at the path's average, less the bill",
+    r"price_after_2050\.path_average\.sizewell_c\.negative_years\.cash": "£, 2024 prices (CPIH), with prices after 2050 at the path's average, summed over the years in .years",
+    r"price_after_2050\.path_average\.sizewell_c\.negative_years\.years": "calendar years, as words",
+    r"price_after_2050\.path_average\.words": "words",
 }
 BUILT = {True: "built", False: "not_yet_built"}
 MEASURES = {"cash": None, "pv_green_book": "green_book", "pv_hurdle": "hurdle"}
@@ -257,6 +269,15 @@ def _setting(s, name: str):
     return words
 
 
+# 1.3.0 (aios-harness#243, ruling 11b): the price after 2050 bracket moves the price path, as the forward-prices
+# bracket does, so its words are its own (by end), not the path's.
+PRICE_AFTER_2050_HELD = "DESNZ's central price path to 2050, then its 2050 price held to 2099"
+PRICE_AFTER_2050_WORDS = {
+    "low": PRICE_AFTER_2050_HELD, "central": PRICE_AFTER_2050_HELD,
+    "high": "DESNZ's central price path to 2050, then its average over 2026 to 2050 held to 2099",
+}
+
+
 def setting_keys() -> dict:
     """`bracket.<name>.setting.<low|central|high>`: the input each bracket moves, at each end and central; a number
     where the Scenario holds one, else words (`SETTING_WORDS`). A one-sided bracket's other end is central."""
@@ -270,7 +291,8 @@ def setting_keys() -> dict:
             names = [n for n in ("path", "discount_bound", "negative_bound") if getattr(b.low.market, n) != getattr(b.high.market, n)]
         (name,) = names
         for end, s in (("low", b.low), ("central", c), ("high", b.high)):
-            out[f"bracket.{slug(b.name)}.setting.{end}"] = _setting(s, name)
+            words = PRICE_AFTER_2050_WORDS[end] if b.name == "Price after 2050" else _setting(s, name)
+            out[f"bracket.{slug(b.name)}.setting.{end}"] = words
     return out
 
 
@@ -382,17 +404,55 @@ def vat_keys(results) -> dict:
     }
 
 
-def write(results, path: Path, tornado: pd.DataFrame | None = None, checks: bool = False) -> None:
+COUNT_WORDS = {17: "seventeen", 18: "eighteen", 19: "nineteen", 20: "twenty"}
+
+
+def bracket_count_keys() -> dict:
+    """`brackets.count` and `brackets.count_in_words`: how many brackets the range is taken over (version 1.3.0,
+    aios-harness#243)."""
+    from .scenario import BRACKETS
+    return {"brackets.count": len(BRACKETS), "brackets.count_in_words": COUNT_WORDS[len(BRACKETS)]}
+
+
+PRICE_CASE = "price_after_2050.path_average"
+PRICE_CASE_LINES = ("bill", "sizewell_c", "hinkley_point_c", "cfd_renewables")
+
+
+def price_after_2050_keys(results, case) -> dict:
+    """Ruling 11b's case (version 1.3.0, aios-harness#243): the two prices after 2050, held (central) and the path's
+    average (`prices.path_average_after_2050`), £/MWh; and from the case's own run (`case`, a Results), the bill, the
+    lines that run past 2050, Sizewell C's paybacks and their years, and the bill's difference from central."""
+    from .prices import LAST_ANNEX_M
+    path = case.scenario.price_path()
+    figs = build(case)
+    figs |= negative_year_keys(figs)
+    out = {"price_after_2050.held.price": results.scenario.power(LAST_ANNEX_M),
+           f"{PRICE_CASE}.price": path[LAST_ANNEX_M + 1]}
+    out |= {f"{PRICE_CASE}.{line}.total.cash": figs[f"{line}.total.cash"] for line in PRICE_CASE_LINES}
+    out |= {f"{PRICE_CASE}.sizewell_c.negative_years.{m}": figs[f"sizewell_c.negative_years.{m}"] for m in ("cash", "years")}
+    out[f"{PRICE_CASE}.bill.difference.cash"] = figs["bill.total.cash"] - float(results.table.cash.sum())
+    out[f"{PRICE_CASE}.words"] = (
+        "DESNZ's price path stops at 2050, and the central case holds its 2050 price, the highest on the path, to "
+        "2099. This case holds instead the average of the path over 2026 to 2050 from 2051. Lower prices after 2050 "
+        "mean larger top-ups for Hinkley Point C and the other contracts that run past 2050, and a larger Sizewell C "
+        "charge, and Sizewell C pays back less.")
+    return out
+
+
+def write(results, path: Path, tornado: pd.DataFrame | None = None, checks: bool = False, price_case=None) -> None:
     """The results file. With `tornado` (from `brackets.tornado()`), its bracket and range keys too; with
-    `checks`, the check keys (`check_keys`), as the frozen release writes them."""
+    `checks`, the check keys (`check_keys`), as the frozen release writes them; with `price_case` (the run of
+    ruling 11b's case, a Results), its keys (`price_after_2050_keys`)."""
     meta = dict(model="model-bill-still-to-come", version=version("billtocome"),
                 units=UNITS, key_units=KEY_UNITS, scenario=repr(results.scenario), valuation_date=results.valuation_date.isoformat(),
                 cut_off_date=results.cut_off_date.isoformat() if results.cut_off_date else None,
                 manifest_sha256=results.manifest_sha256)
     figs = build(results) | price_path_keys() | contract_keys(results) | (bracket_keys(tornado) if tornado is not None else {}) \
         | (check_keys(results) if checks else {}) | rate_keys() | setting_keys() | line_year_keys(results) | without_nuclear_keys(results) \
-        | vat_keys(results)
+        | vat_keys(results) | bracket_count_keys()
     figs |= negative_year_keys(figs)
+    if price_case is not None:
+        figs |= price_after_2050_keys(results, price_case)
     Path(path).write_text(json.dumps(dict(meta=meta, figures=figs), indent=0, sort_keys=True))
 
 

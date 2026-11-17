@@ -128,3 +128,14 @@ def forward_then_annex_m(case: str = "Reference") -> dict[int, float]:
         rest = 12 - len(months)
         path[y] = (sum(months) / cpih(y) + rest * path[y]) / 12
     return path
+
+
+AVERAGE_FROM, LAST_YEAR = 2026, 2099  # 1.3.0: the average's first year (the valuation year); the last year paid
+
+
+def path_average_after_2050(case: str = "Reference") -> dict[int, float]:
+    """Ruling 11b's case (version 1.3.0, aios-harness#243): Annex M to 2050, then every year to 2099 at the average
+    of Annex M's path over 2026 to 2050 in place of 2050's price (ASSUMPTION, design.md "Version 1.3.0")."""
+    path = annex_m_path(case)
+    mean = sum(path[y] for y in range(AVERAGE_FROM, LAST_ANNEX_M + 1)) / (LAST_ANNEX_M + 1 - AVERAGE_FROM)
+    return path | {y: mean for y in range(LAST_ANNEX_M + 1, LAST_YEAR + 1)}
