@@ -25,6 +25,6 @@ The model behind Report No. 2, *The Price of the Climate Bill*. It builds only *
 
 ## Outside this folder
 
-- Rulings behind every choice (points 1 to 26): `/srv/aios/projects/report-series/price-of-the-climate-bill/bill-still-to-come-build-plan.md`
+- Rulings behind every choice (points 1 to 26): `/srv/aios/projects/report-series/price-of-the-climate-bill/plan/model-bill-still-to-come/build-plan.md`
 - Terms: `/srv/aios/projects/report-series/GLOSSARY.md`. Decisions: `/srv/aios/projects/report-series/docs/adr/`
 - Build progress and build rules: map #61 on GitHub `richardjlyon/aios-harness`
