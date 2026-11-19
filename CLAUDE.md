@@ -2,7 +2,7 @@
 
 # model-bill-still-to-come
 
-The model behind Report No. 2, *The Price of the Climate Bill*. It builds only **the bill still to come**: what contracts already signed oblige Britain's bill-payers and taxpayers to pay for climate policy on electricity, from 1 Jan 2026 to each contract's end, in 2024 prices. The bill already paid (2002 to 2025) comes from `/srv/aios/projects/model-bill-already-paid` (the Subsidy Clock's sums; its results file `results/clock.json`), not from here. It is chapter 12 of `/srv/aios/projects/report-series/price-of-the-climate-bill/outline.md`.
+The model behind Report No. 2, *The Price of Climate Policy* (titled *The Price of the Climate Bill* until 19 Nov 2026). It builds only **the bill still to come**: what contracts already signed oblige Britain's bill-payers and taxpayers to pay for climate policy on electricity, from 1 Jan 2026 to each contract's end, in 2024 prices. The bill already paid (2002 to 2025) comes from `/srv/aios/projects/model-bill-already-paid` (the Subsidy Clock's sums; its results file `results/clock.json`), not from here. It is chapter 12 of `/srv/aios/projects/report-series/price-of-the-climate-bill/outline.md`.
 
 ## Who uses it (Richard, 5 Nov 2026)
 
