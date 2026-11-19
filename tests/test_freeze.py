@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_frozen_results_file_names_version_and_both_dates():
     meta = json.loads(figures.FILE.read_text())["meta"]
     version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
-    assert (meta["model"], meta["version"]) == ("model-bill-still-to-come", version) and version == "1.3.0"  # 1.3.0: Richard's rulings 11b and 16b (aios-harness#243)
+    assert (meta["model"], meta["version"]) == ("model-bill-still-to-come", version) and version == "1.4.0"  # 1.4.0: the steep end of decline with age from Staffell and Green (aios-harness#268)
     assert meta["valuation_date"] == "2026-01-01"
     assert meta["cut_off_date"] == "2026-11-09"  # the day every register was re-fetched (point 15)
 

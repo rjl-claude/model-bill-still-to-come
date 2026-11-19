@@ -63,7 +63,7 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 - Slope brackets (discount, negative hours): each end of the fitted slope's 95% interval (eight years, t = 2.447); a gentler end past zero is held flat.
 - The Clock's RO record ends in 2024, so the RO join sets the model's 2026 against 2024.
 - Checks, central: RO within 7% of the OBR every year 2026-31; CfD joins the Clock within 2%; CfD runs 1.3-2.5 x the OBR and 2.3 x LCCC, each explained by the market price (`explanations.yaml`).
-- Still missing for stage 6: the steeper decline rate from Hughes (REF 2012) is not in `docs/facts.md`.
+- Still missing for stage 6: the steeper decline rate is not in `docs/facts.md`.
 
 ## Stage 2 (5 Nov): FiT and Capacity Market
 
@@ -92,7 +92,7 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 
 ## Stage 6 (5 Nov): brackets and the tornado
 
-- Five brackets added, each one Scenario input: forward prices to Mar 2027 then Annex M (2026 £81.59, 2027 £72.84/MWh vs Annex M £75.26, £62.66); decline with age as one setting (gentler: wind 0.17%/yr, Hamilton 2020; steeper: wind 5.4%/yr, Hughes 2012, solar 0.8%/yr, Jordan & Kurtz mean; facts 33-34); output level high end, CfD wind and solar at DESNZ 2023 load factors by commissioning year (fact 35; RO and FiT on their own records, Richard 5 Nov); build path, ends Falling Behind (lowest) and Holistic Transition (highest) of the four FES pathways, all above central EEP; Sizewell C return after 2039, 3.5% to 6.73% (Richard 5 Nov: the Green Book rate to 6.73%; from 1.2.0 the low end is the Green Book 2026 rate, 3.00%, para 6.54; Richard, 11 Nov, aios-harness#257).
+- Five brackets added, each one Scenario input: forward prices to Mar 2027 then Annex M (2026 £81.59, 2027 £72.84/MWh vs Annex M £75.26, £62.66); decline with age as one setting (gentler: wind 0.17%/yr, Hamilton 2020; steeper: wind 1.8%/yr, Staffell & Green 2014's upper bound from 1.4.0, solar 0.8%/yr, Jordan & Kurtz mean; facts 33-34); output level high end, CfD wind and solar at DESNZ 2023 load factors by commissioning year (fact 35; RO and FiT on their own records, Richard 5 Nov); build path, ends Falling Behind (lowest) and Holistic Transition (highest) of the four FES pathways, all above central EEP; Sizewell C return after 2039, 3.5% to 6.73% (Richard 5 Nov: the Green Book rate to 6.73%; from 1.2.0 the low end is the Green Book 2026 rate, 3.00%, para 6.54; Richard, 11 Nov, aios-harness#257).
 - `brackets.tornado()`: each bracket's ends run, the rest central; whole bill at each end, swing, ranked; also at both present values. `figures.bracket_keys`: `bracket.<name>.<low|high|swing|rank>.<measure>`, `range.<low|high>.<measure>`; `tools/results.py` writes them into `results/figures.json` (about five minutes).
 - Central £172.3bn cash; range £132.8bn (Sizewell C return 3.5%; £126.74bn at 3.00% from 1.2.0) to £221.8bn (Annex M low prices); Green Book £120.7-166.8bn; hurdle £96.5-127.2bn. Largest swings: Annex M prices £74.6bn, Sizewell C return £39.6bn, Sizewell C cost £33.9bn, decline £19.7bn, output £15.1bn.
 
@@ -121,3 +121,9 @@ Checks moved to stage 1 (not last); a fact stage 0 so no build stage researches;
 - Effect, cash: the bill +£49.22bn; Sizewell C £31.08bn to £68.76bn, its paybacks £18.07bn (2072 to 2099) to £2.85bn (2089 to 2099); Hinkley Point C £30.07bn to £40.53bn; CfD renewables £38.67bn to £38.91bn (contracts to 2052). Green Book +£14.93bn, commercial rates +£3.80bn: the later years weigh less once discounted.
 - Keys (`figures.price_after_2050_keys`, `figures.bracket_count_keys`, the bracket's own words in `figures.PRICE_AFTER_2050_WORDS`): the two prices, the case's bill, difference, Sizewell C, its paybacks and their years, Hinkley Point C, CfD renewables, its words; the bracket's ends, swing, rank and settings; the count of brackets in figures and words. `tools/results.py` runs the case once more for them (about ten seconds).
 - Ruling 16b needs no model change: Richard ruled (17 Nov 2026) that no fair published basis exists for a Sizewell C return above 6.73% after 2039, so `bracket.sizewell_c_return_after_2039` stays one-sided (3.00% to the central 6.73%) and the paper says why in words.
+
+## Version 1.4.0 (19 Nov 2026): the steep end of decline with age
+
+- Richard, 19 Nov 2026 (aios-harness#268): the steep end of "Decline with age" for wind is Staffell and Green 2014's upper bound, 1.6 + 0.2 = **1.8%/year** (fact 34), the steepest published estimate the model holds; in place of 5.4%/year, from a 2012 report no longer used or saved. Solar's steep end (0.8%, Jordan & Kurtz mean), the gentle end and central are unchanged (`output.DECLINES`).
+- Staffell and Green's six methods give relative rates from 1.24% to 1.90% a year; their combined average is the 1.6 ± 0.2% used. 1.8% is the top of that interval, not of the six methods' spread.
+- Effect: the steep end £171.24bn cash (was £158.52bn), swing £7.04bn (was £19.76bn), rank 6th of 18 (was 5th). The bill and the range do not move.

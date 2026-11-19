@@ -2,6 +2,14 @@
 
 Each version is a git tag; its `results/figures.json` is the file products read by key. A version never changes an older one.
 
+## 1.4.0 (19 Nov 2026), the steep end of output's decline with age (aios-harness#268)
+
+Richard's ruling of 19 Nov 2026. The steep end of the "Decline with age" bracket for wind is now Staffell and Green's upper bound, **1.8% a year**, in place of 5.4% a year, an estimate from a 2012 report that the model no longer uses or saves. Staffell and Green, *Renewable Energy* 66 (2014): "Wind turbines are found to lose 1.6 ± 0.2% of their output per year" (abstract, p.775; `docs/facts.md` fact 34). Solar's steep end (Jordan and Kurtz's mean, 0.8%), the gentle end (Hamilton 2020, 0.17%) and the central settings (1.6% and 0.5%) do not change.
+
+- The bracket's steep end, cash, £158.52bn to £171.24bn (central £172.34bn: losing 1.8% of output a year cuts the bill by less than losing 5.4%); its swing £19.76bn to **£7.04bn** (Green Book £16.71bn to £5.94bn; commercial rates £12.54bn to £4.45bn). Its rank, 5th to **6th**; output level, 6th to 5th.
+- Nothing else moves: not the bill, not the range (£126.63bn to £221.78bn), not the gentle end. 7,222 keys in each; none added or removed; 9 moved (`bracket.decline_with_age.high.*`, `.swing.*`, `.rank.cash`, `.setting.high`, now "wind 1.8% a year, solar PV 0.8%", and `bracket.output_level.rank.cash`); 7,213 identical (both runs are the Mac Mini's). In the meta only `version` and `manifest_sha256` move. Every key: `docs/figures-1.3.0-vs-1.4.0.csv`; in plain words: `docs/figures-1.3.0-vs-1.4.0.md`; tests: `tests/test_version_1_4_0.py` against the frozen 1.3.0 file (`tests/fixtures/figures-1.3.0.json`, sha256 4e2d0251…).
+- The 2012 report's saved copy leaves `data/raw/decline/`, the MANIFEST and `tools/fetch.py`; `docs/design.md`, `docs/hand-example-brackets.md` and the code's notes now name Staffell and Green. `tests/test_brackets.py`: the steep end 1.8%. `tests/test_version_1_3_0.py` now reads the frozen 1.3.0 file. `tests/test_freeze.py`: version 1.4.0.
+
 ## 1.3.0 (17 Nov 2026), the price of power after 2050 (aios-harness#243)
 
 Richard's rulings of 16 Nov 2026 on Report No. 2 (rulings sheet points 11 and 16, choice b of each). 11b is built. 16b needs no model change: Richard ruled (17 Nov 2026) that no fair published basis exists for a Sizewell C return above 6.73% after 2039, so `bracket.sizewell_c_return_after_2039` keeps its high side at the central 6.73% and the paper says why in words.

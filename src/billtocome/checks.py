@@ -100,10 +100,10 @@ def check(results, explanations: list[dict] | None = None) -> Report:
         real["Capacity Market (whole levy)"] = results.tables["cm_agreement_years"].groupby("year").whole_real.sum()
     rows = []
 
-    def add(name, line, period, model, ref):
-        gap = model / ref - 1 if ref else float("inf")
+    def add(name, line, period, model, reference):
+        gap = model / reference - 1 if reference else float("inf")
         explained = (name, line, period) in known
-        rows.append(dict(check=name, line=line, period=period, model=model, reference=ref, gap=gap,
+        rows.append(dict(check=name, line=line, period=period, model=model, reference=reference, gap=gap,
                          explained=explained, ok=abs(gap) <= MARGIN or explained))
 
     first = int(t.year.min())
@@ -114,8 +114,8 @@ def check(results, explanations: list[dict] | None = None) -> Report:
         add("Clock join", g, f"{first} vs {y}", float(real[g].get(first, 0.0)), c)
     for g in OBR_ROWS:
         if g in real and real[g].sum():
-            for yr, ref in obr(g).items():
-                add("OBR", g, str(yr), float(real[g].get(yr, 0.0)) * cpih(yr), ref)
+            for yr, reference in obr(g).items():
+                add("OBR", g, str(yr), float(real[g].get(yr, 0.0)) * cpih(yr), reference)
     x = t[t.item.str.startswith("Exchequer") & (t.payer == "taxpayers")].groupby("year").cash.sum()
     if x.sum():
         for yr in range(2026, 2030):
@@ -155,9 +155,9 @@ def notes(results) -> dict[str, float]:
     lo, hi = (cfd(((2024, p),)) for p in FLAT)
     t = results.table
     c = t[t.line.isin(GROUPS["CfD"])]
-    for y, ref in obr("CfD").items():
+    for y, reference in obr("CfD").items():
         a, b = (float(x[x.line.isin(GROUPS["CfD"]) & (x.year == y)].cash.sum()) * cpih(y) for x in (lo, hi))
-        out[f"check.obr.cfd.{y}.matching_price"] = FLAT[0] + (ref - a) * (FLAT[1] - FLAT[0]) / (b - a)
+        out[f"check.obr.cfd.{y}.matching_price"] = FLAT[0] + (reference - a) * (FLAT[1] - FLAT[0]) / (b - a)
         year = c[c.year == y]
         out[f"check.obr.cfd.{y}.not_yet_built_share"] = float(year[~year.built].cash.sum() / year.cash.sum())
     fwd = cfd(tuple((y, LCCC_WINTER / cpih(y)) for y in (2026, 2027)))

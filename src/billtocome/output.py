@@ -21,7 +21,7 @@ WIND_TECH = {"Offshore Wind", "Onshore Wind", "Floating Offshore Wind", "Remote 
 # Point 17's brackets, the same in every scheme (facts 22, 33, 34): (wind, solar PV) per year.
 DECLINES = {"gentler": (0.0017, 0.005),  # Hamilton et al. 2020, newer plants; solar: no gentler source
             "central": (DECLINE, 0.005),  # Staffell & Green 2014; Jordan & Kurtz median
-            "steeper": (0.054, 0.008)}  # Hughes 2012, UK onshore 24% to 11% over ages 1-15; J&K mean
+            "steeper": (0.018, 0.008)}  # Staffell & Green 2014's upper bound, 1.6 + 0.2%/yr (1.4.0); J&K mean
 
 # The output bracket's high end (build plan "Output"; fact 35): DESNZ Electricity Generation Costs 2023,
 # Annex A, average net load factor by commissioning year. CfD wind and solar only (Richard, 5 Nov).

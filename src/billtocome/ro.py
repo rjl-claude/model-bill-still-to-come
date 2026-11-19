@@ -95,7 +95,7 @@ def build(s=None, first: int = 2026, last: int = 2037):
     s = s or Scenario()
     st = stations()
     rows = []
-    for ref, r in st.iterrows():
+    for station, r in st.iterrows():
         d = decline_for(_tech(r.Technology), s.wind_decline, s.solar_decline)
         for y in range(first, last + 1):
             f = share_of_year(y, r.end)
@@ -103,7 +103,7 @@ def build(s=None, first: int = 2026, last: int = 2037):
                 continue
             rocs = r.rocs_a_year * (1 - d) ** (y - 2024) * f
             v = roc_value(y, s.ro_recycle)
-            rows.append(dict(station=ref, technology=r.Technology, country=r.Country, year=y, rocs=rocs,
+            rows.append(dict(station=station, technology=r.Technology, country=r.Country, year=y, rocs=rocs,
                              value=v, payment=rocs * v))
     out = pd.DataFrame(rows)
     tidy = out.rename(columns={"station": "item", "payment": "cash"}).assign(line="RO", built=True)

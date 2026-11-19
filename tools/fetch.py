@@ -146,8 +146,6 @@ FILES = {
         "https://assets.publishing.service.gov.uk/media/6555cb6d046ed4000d8b99bb/annex-a-additional-estimates-and-key-assumptions.xlsx",
     "decline/hamilton-2020-wind-performance-with-age-joule.pdf":  # LBNL's open-access copy (eScholarship)
         "https://escholarship.org/content/qt40x7b47b/qt40x7b47b.pdf",
-    "decline/hughes-2012-ref-performance-of-wind-farms-uk-denmark.pdf":  # not on ref.org.uk now; a mirror copy
-        "https://s3.amazonaws.com/windaction23/attachments/3106/ref.hughes.19.12.12.pdf",
     # The freeze (aios-harness#91): the bill already paid, one day's results file (the robot's of 9 Nov 2026,
     # model 1.0.0), pinned by commit; the Clock 2025 join reads this copy, not the model's daily file.
     "model-bill-already-paid/clock.json":
@@ -182,7 +180,8 @@ FILES = {
     # BEIS Electricity Generation Costs 2016, the report: Table 4, p.26 (nuclear fuel, decommissioning; 2014 values)
     "desnz/BEIS_Electricity_Generation_Cost_Report_2016.pdf":
         "https://assets.publishing.service.gov.uk/media/5a8155f2e5274a2e87dbd11b/BEIS_Electricity_Generation_Cost_Report.pdf",
-    # Staffell and Green, Renewable Energy 66 (2014): 1.6% a year. The publisher's PDF, a mirror copy (as Hughes)
+    # Staffell and Green, Renewable Energy 66 (2014): 1.6 ± 0.2% a year (the steeper end, 1.8%, from 1.4.0). The
+    # publisher's PDF, a mirror copy
     "decline/staffell-green-2014-wind-farm-performance-decline-with-age.pdf":
         "https://s3.amazonaws.com/windaction23/attachments/3770/1-s2.0-S0960148113005727-main.pdf",
     # EDF's 2025 annual results release (20 Feb 2026): Hinkley Point C Unit 1 production "adjusted to 2030".

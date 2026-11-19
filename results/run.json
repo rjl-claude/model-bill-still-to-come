@@ -2,5 +2,5 @@
  "scenario": "Scenario(case='Reference', prices=None, market=SimpleFit(path='EEP', discount_bound=0, negative_bound=0), decline='central', output='measured', abandonment=False, late_starts=False, hpc_strike_2012=89.5, hpc_term='contract', hpc_shift_years=0, ro_recycle=0.11798257975260892, cm_share=0.14607087756750806, szc_cost=40509000000, szc_ops_return=0.0673, households='held', bics_a_year=600000000)",
  "valuation_date": "2026-01-01",
  "cut_off_date": "2026-11-09",
- "manifest_sha256": "e6b3af1835c0d2fd161712c9a651a839abc63788c3aa3d1f977899b8251cf6b5"
+ "manifest_sha256": "9dba7d8b414c812671f212f6ce1041aeb7cc1f58e1109bf0af94e9721ff17550"
 }

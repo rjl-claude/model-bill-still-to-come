@@ -1,6 +1,6 @@
 # Hand example: the last five brackets, and the tornado (aios-harness#85, Stage 6)
 
-Rulings: build plan points 7, 17, 25, 26 and "Output" (3 Nov); Richard, 5 Nov (Sizewell C's return after 2039: the Green Book rate to 6.73%, the low end 3.00% from 1.2.0, Richard 11 Nov, aios-harness#257; fetch Hamilton, Hughes and Generation Costs 2023). Facts 21, 22, 33-35. Each bracket moves one input of the Scenario; the rest stay central.
+Rulings: build plan points 7, 17, 25, 26 and "Output" (3 Nov); Richard, 5 Nov (Sizewell C's return after 2039: the Green Book rate to 6.73%, the low end 3.00% from 1.2.0, Richard 11 Nov, aios-harness#257; fetch Hamilton and Generation Costs 2023). Facts 21, 22, 33-35. Each bracket moves one input of the Scenario; the rest stay central.
 
 ## 1. Forward prices, then Annex M (point 26, fact 21)
 
@@ -18,9 +18,9 @@ Higher prices mean smaller CfD top-ups, so this end lowers the bill: low = forwa
 |---|---|---|
 | Gentler | 0.17%/yr (Hamilton, newer plants) | 0.5%/yr (no gentler source; central) |
 | Central | 1.6%/yr (Staffell & Green) | 0.5%/yr (Jordan & Kurtz median) |
-| Steeper | 5.4%/yr (Hughes: 24% to 11%, ages 1-15) | 0.8%/yr (Jordan & Kurtz mean) |
+| Steeper | 1.8%/yr (Staffell & Green: 1.6 ± 0.2%, its upper end; from 1.4.0) | 0.8%/yr (Jordan & Kurtz mean) |
 
-The same in CfD, RO and FiT. A farm measured at 40% in 2024, ten years later: gentler 40 x 0.9983^10 = 39.3%; central 40 x 0.984^10 = 34.0%; steeper 40 x 0.946^10 = **23.0%**.
+The same in CfD, RO and FiT. A farm measured at 40% in 2024, ten years later: gentler 40 x 0.9983^10 = 39.3%; central 40 x 0.984^10 = 34.0%; steeper 40 x 0.982^10 = **33.4%**.
 
 ## 3. Output level, high end (build plan "Output"; fact 35)
 

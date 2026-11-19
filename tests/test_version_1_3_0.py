@@ -7,7 +7,8 @@ new case puts every year from 2051 at the average of DESNZ's central path over 2
 model change (Richard, 17 Nov 2026: no fair published basis for a Sizewell C return above 6.73% after 2039).
 
 Tested at the seams the paper reads: the price path and the brackets the model declares, and the frozen results
-file, by key, against the frozen 1.2.6 file."""
+file, by key, against the frozen 1.2.6 file. From 1.4.0 (aios-harness#268, tests/test_version_1_4_0.py) these
+checks read the frozen 1.3.0 file, a fixture, as 1.4.0 moves the decline bracket's steep end."""
 import hashlib
 import json
 import math
@@ -16,6 +17,7 @@ from billtocome import figures, prices
 
 ROOT = figures.FILE.parent.parent
 V126 = ROOT / "tests" / "fixtures" / "figures-1.2.6.json"  # results/figures.json at tag v1.2.6
+V130 = ROOT / "tests" / "fixtures" / "figures-1.3.0.json"  # results/figures.json at tag v1.3.0
 
 
 def old() -> dict:
@@ -75,7 +77,7 @@ CASE = "price_after_2050.path_average"
 
 
 def frozen() -> dict:
-    return json.loads(figures.FILE.read_text())["figures"]
+    return json.loads(V130.read_text())["figures"]
 
 
 def test_the_brackets_are_counted_in_figures_and_words():
@@ -169,7 +171,7 @@ def test_the_new_keys_have_units():
 
 
 def test_only_the_version_and_new_units_move_in_the_meta():
-    o, n = json.loads(V126.read_text())["meta"], json.loads(figures.FILE.read_text())["meta"]
+    o, n = json.loads(V126.read_text())["meta"], json.loads(V130.read_text())["meta"]
     assert (o["version"], n["version"]) == ("1.2.6", "1.3.0")
     assert {k for k in o if n[k] != o[k]} == {"version", "key_units"}
     assert set(n) == set(o)

@@ -20,10 +20,10 @@ def test_forward_then_annex_m():
 
 
 def test_decline_ends():
-    for d, wind, solar in (("gentler", 0.0017, 0.005), ("central", 0.016, 0.005), ("steeper", 0.054, 0.008)):
+    for d, wind, solar in (("gentler", 0.0017, 0.005), ("central", 0.016, 0.005), ("steeper", 0.018, 0.008)):
         s = Scenario(decline=d)
         assert (s.wind_decline, s.solar_decline) == (wind, solar)
-    assert output.yearly_mwh(1, 0.40, 2020, 2034, decline=0.054) / 8760 == pytest.approx(0.2296, abs=1e-4)
+    assert output.yearly_mwh(1, 0.40, 2020, 2034, decline=0.018) / 8760 == pytest.approx(0.3336, abs=1e-4)
 
 
 @pytest.mark.parametrize("technology, start, lf", [
